@@ -1,0 +1,70 @@
+
+.c-accordion{
+    position: relative;
+    background: $main-color--w;
+    border: 2px solid $site-color02;
+    border-radius: 10px;
+    .toggle{display: none;}
+    .label{
+        position: relative;
+        display: block;
+        padding: 1rem 3rem 1rem 3.5rem;
+        @include min(768){padding: 2rem 3rem 2rem 3.5rem;}
+        &::before{
+            content:"";
+            width: 6px;
+            height: 6px;
+            border-top: 2px solid $site-color02;
+            border-right: 2px solid $site-color02;
+            transition: all 0.3s;
+
+            position: absolute;
+            top: calc( 50% - 3px);
+            right: 2%;
+            transform: rotate(135deg);
+        }
+        &::after{
+            content: "Q";
+            color: $site-color02;
+            font-size: 2rem;
+            font-weight: bold;
+            @include min(768){font-size: clamp(1.6rem, 2vw, 2rem);}
+
+            position: absolute;
+            top: calc(50% - 1%);
+            left: 1.15rem;
+            transform: translateY(-50%);
+        }
+    }
+    // .label,
+    &-text {
+        padding: 0 30px;
+        @include min(768){
+            padding: 0 40px;
+        }
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        transition: all 0.3s;
+    }
+    &-text{
+        height: 0;
+        overflow: hidden;
+    }
+
+    // 開閉時
+    .toggle:checked + .label + .c-accordion-text {
+        height: auto;
+        background: #f7f7f7;
+        border-top: 1px dotted $site-color02;
+        border-radius: 0 0 10px 10px;
+
+        padding: 15px 20px 15px 30px;
+        @include min(768){padding: 15px 40px;}
+        transition: all .3s;
+    }
+    .toggle:checked + .label::before {
+        transform: rotate(-45deg) !important;
+    }
+}
