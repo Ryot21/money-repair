@@ -405,7 +405,7 @@ h1.s-LL, h2.s-LL, h3.s-LL, h4.s-LL, h5.s-LL, h6.s-LL, p.s-LL, a.s-LL, span.s-LL,
 }
 @media (width >= 768px) {
   h1.s-LL, h2.s-LL, h3.s-LL, h4.s-LL, h5.s-LL, h6.s-LL, p.s-LL, a.s-LL, span.s-LL, label.s-LL, button.s-LL {
-    font-size: clamp(1.8rem, 3vw, 5.4rem);
+    font-size: clamp(1.8rem, 2.5vw, 4.5rem);
   }
 }
 h1.s-3L, h2.s-3L, h3.s-3L, h4.s-3L, h5.s-3L, h6.s-3L, p.s-3L, a.s-3L, span.s-3L, label.s-3L, button.s-3L {
