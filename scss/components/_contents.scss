@@ -22,10 +22,19 @@
 
 	&.-f-view{//ファーストビュー
 		position: relative;
-		overflow: hidden;
-		.fvBg{
-			position: relative;
-			width: 100lvw;
+		.c-contentsBox{
+			position: absolute;
+			&.-fv-btn{
+				top: 85%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 55%;
+				@include min(768){
+					top: 85%;
+					left: 34%;
+					width: 20%;
+				}
+			}
 		}
 	}
 
