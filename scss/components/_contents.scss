@@ -56,7 +56,9 @@
 			}
 			&.-c04{
 				overflow: hidden;
-				.imgBox{@include min(768){max-height: 940px;}}
+				.Bg{
+					@include min(768){max-height: 600px;}
+				}
 			}
 			&.-campaign{
 				.imgBox{@include min(768){max-height: 750px;}}
@@ -70,7 +72,7 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 				width: 100%;
-				height: 100%;
+				// height: 100%;
 			}
 			// ヘッダーロゴ
 			&.-logo{

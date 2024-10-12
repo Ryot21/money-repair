@@ -69,6 +69,13 @@
             @include min(768){width: 100%;}
         }
     }
+    // コンテンツ_カラム（sp:1 pc:3）
+    &.-col1_3{
+        .flexItem{// li
+            width: 100%;
+            @include min(768){width: 33%;}
+        }
+    }
     // コンテンツ_カラム（sp:2 pc:3）
     &.-col2_3{
         .flexItem{// li
