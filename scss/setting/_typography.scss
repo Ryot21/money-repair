@@ -224,6 +224,8 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,button{
         &.-s16{@include max(768){font-size: 1.6rem;}}
         &.-s18{@include max(768){font-size: 1.8rem;}}
         &.-s20{@include max(768){font-size: 2rem;}}
+        &.-s22{@include max(768){font-size: 2.2rem;}}
+        &.-s24{@include max(768){font-size: 2.4rem;}}
 }
 
 // ナビゲーション
@@ -419,4 +421,37 @@ p, span, a {
 // span
 span{
     &.-block{display: block !important;}
+}
+
+.c01-title{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16%;
+        height: 100%;
+        display: inline-block;
+        background-position: center;
+        background-size: cover;
+        vertical-align: middle;
+        @include min(768){
+            width: 4%;
+        }
+    }
+    &::before{
+        left: -16%;
+        background-image: url(../images/item/title/contents01-title_left.png);
+        @include min(768){left: -5%;}
+    }
+    &::after{
+        right: -16%;
+        background-image: url(../images/item/title/contents01-title_right.png);
+        @include min(768){right: -5%;}
+    }
 }

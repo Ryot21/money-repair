@@ -487,6 +487,16 @@ h1.s-profile, h2.s-profile, h3.s-profile, h4.s-profile, h5.s-profile, h6.s-profi
     font-size: 2rem;
   }
 }
+@media (768px >= width) {
+  h1.-s22, h2.-s22, h3.-s22, h4.-s22, h5.-s22, h6.-s22, p.-s22, a.-s22, span.-s22, label.-s22, button.-s22 {
+    font-size: 2.2rem;
+  }
+}
+@media (768px >= width) {
+  h1.-s24, h2.-s24, h3.-s24, h4.-s24, h5.-s24, h6.-s24, p.-s24, a.-s24, span.-s24, label.-s24, button.-s24 {
+    font-size: 2.4rem;
+  }
+}
 
 p.Top, p.concept, p.plan, p.Grallery, p.Location, p.Information, span.Top, span.concept, span.plan, span.Grallery, span.Location, span.Information, a.Top, a.concept, a.plan, a.Grallery, a.Location, a.Information {
   position: relative;
@@ -719,6 +729,48 @@ p.Information::after, span.Information::after, a.Information::after {
 
 span.-block {
   display: block !important;
+}
+
+.c01-title {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.c01-title::before, .c01-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16%;
+  height: 100%;
+  display: inline-block;
+  background-position: center;
+  background-size: cover;
+  vertical-align: middle;
+}
+@media (width >= 768px) {
+  .c01-title::before, .c01-title::after {
+    width: 4%;
+  }
+}
+.c01-title::before {
+  left: -16%;
+  background-image: url(../images/item/title/contents01-title_left.png);
+}
+@media (width >= 768px) {
+  .c01-title::before {
+    left: -5%;
+  }
+}
+.c01-title::after {
+  right: -16%;
+  background-image: url(../images/item/title/contents01-title_right.png);
+}
+@media (width >= 768px) {
+  .c01-title::after {
+    right: -5%;
+  }
 }
 
 /* ------------------------------------------------------------------------
