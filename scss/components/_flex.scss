@@ -73,7 +73,7 @@
     &.-col1_3{
         .flexItem{// li
             width: 100%;
-            @include min(768){width: 33%;}
+            @include min(768){width: 32%;}
         }
     }
     // コンテンツ_カラム（sp:2 pc:3）

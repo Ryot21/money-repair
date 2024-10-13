@@ -120,7 +120,34 @@
 					width: 100%;
 				}
 			}
-			&.-contents03{
+			&.-contents05{
+				&-title{
+					top: 21%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+				}
+				&-blueBox{
+					top: 53%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 95%;
+
+					padding: 4% 5px;
+					background: $site-color02;
+					border-radius: 20px;
+				}
+				&-text{
+					top: 88%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+				}
+			}
+			.-contents05-whiteBox{
+				padding: 2.5% 0;
+				background: $main-color--w;
+				border-radius: 20px;
 			}
 
 		}
