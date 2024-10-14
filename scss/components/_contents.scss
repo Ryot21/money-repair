@@ -48,6 +48,23 @@
 		}
 	}
 }
+.contactArea{
+	margin: 10% auto 5%;
+	@include min(768){
+		margin: 5% auto 0;
+	}
+	a{
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+		@include min(768){
+			max-width: 350px;
+		}
+	}
+	@include min(768){
+
+	}
+}
 
 .c-contents{
 	&-inner{

@@ -4048,6 +4048,24 @@ button.swiper-pagination-bullet {
   border-radius: 30px;
 }
 
+.contactArea {
+  margin: 10% auto 5%;
+}
+@media (width >= 768px) {
+  .contactArea {
+    margin: 5% auto 0;
+  }
+}
+.contactArea a {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+@media (width >= 768px) {
+  .contactArea a {
+    max-width: 350px;
+  }
+}
 .c-contents-inner {
   width: 90%;
   margin: auto;
