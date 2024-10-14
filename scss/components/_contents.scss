@@ -68,6 +68,11 @@
 		}
 	}
 }
+#c09{
+	@include min(768){
+		background: $site-color01;
+	}
+}
 .contactArea{
 	margin: 10% auto 5%;
 	@include min(768){

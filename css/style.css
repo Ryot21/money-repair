@@ -4066,6 +4066,12 @@ button.swiper-pagination-bullet {
   border-radius: 30px;
 }
 
+@media (width >= 768px) {
+  #c09 {
+    background: #EBF9FF;
+  }
+}
+
 .contactArea {
   margin: 10% auto 5%;
 }
