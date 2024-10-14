@@ -4018,6 +4018,36 @@ button.swiper-pagination-bullet {
   border-radius: 30px;
 }
 
+#c07 .contentBox {
+  position: relative;
+}
+#c07 .contentBox-title {
+  position: absolute;
+  top: -11%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  max-width: 700px;
+  background: #194299;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+#c07 .contentBox-In {
+  width: 100%;
+  background: #EBF9FF;
+  padding: 5% 2% 3%;
+  margin-top: -3%;
+  border-radius: 10px;
+}
+#c07 .contentBox .point {
+  width: 35%;
+  max-width: 180px;
+  margin: 0 auto 0 0;
+  padding: 2px 10px;
+  background: #ffffff;
+  border-radius: 30px;
+}
+
 .c-contents-inner {
   width: 90%;
   margin: auto;
@@ -4784,7 +4814,7 @@ button.swiper-pagination-bullet {
   }
 }
 .c-flex.-col2_2 .flexItem {
-  width: 48.5%;
+  width: 48.5% !important;
 }
 .c-flex.-col2M1_3 .flexItem {
   width: 48.5%;

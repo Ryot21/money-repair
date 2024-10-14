@@ -50,7 +50,7 @@
     }
     // コンテンツカラム（sp:pc 2:2）
     &.-col2_2{
-        .flexItem{width: 48.5%;}// li
+        .flexItem{width: 48.5% !important;}// li
     }
     // コンテンツ_カラム（sp:大1小2、pc:3）
     &.-col2M1_3{
