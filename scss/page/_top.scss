@@ -1,7 +1,7 @@
 // 1. TOPページ
 
 .p-top{
-	background: $site-color01;
+	// background: $site-color01;
 	animation: fadeAnime 3s forwards;
 	@include min(768){
 		animation: fadeAnime 2s forwards;
