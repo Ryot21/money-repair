@@ -111,10 +111,10 @@ button{
 		transition: all .5s;
 		z-index: 99;
 		@include min(768){
-			top: 50%;
+			top: 35%;
 			left: auto;
-			right: 3%;
-			width: 6rem;
+			right: 0;
+			width: 4.5rem;
 			box-shadow: 2px 3px 5px 0px #3b3b3b54;
 			border-radius: 10px;
 			.imgBox{

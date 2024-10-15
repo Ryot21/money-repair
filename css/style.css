@@ -5414,10 +5414,10 @@ button:hover {
 }
 @media (width >= 768px) {
   .c-btn-contact {
-    top: 50%;
+    top: 35%;
     left: auto;
-    right: 3%;
-    width: 6rem;
+    right: 0;
+    width: 4.5rem;
     box-shadow: 2px 3px 5px 0px rgba(59, 59, 59, 0.3294117647);
     border-radius: 10px;
   }
