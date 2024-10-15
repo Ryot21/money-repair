@@ -1,36 +1,60 @@
-.contactItem{
-	position: relative;
-	&_main{
-		position: absolute;
-		top: 40%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		white-space: nowrap;
-		@include min(768){
-			top: 45%;
+// お問い合わせページ
+
+label{
+	&.required{
+		position: relative;
+		&::after{
+			content: "必須";
+			font-size: 1rem;
+
+			position: absolute;
+			top: 55%;
+			right: -45px;
+			transform: translateY(-50%);
+			color: #ffffff;
+			background: #8b8b8b;
+			padding: 1px 5px 2px;
+			border-radius: 3px;
+			@include min(768){
+				font-size: 1.1rem;
+			}
 		}
 	}
-	&_sub{
-		position: absolute;
-		top: 70%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		white-space: nowrap;
-		@include min(768){
-			top: 65%;
-		}
+}
+
+input,
+textarea{
+	padding: 1.5% 1%;
+	margin: 0 20px;
+	border: 1px solid $main-color--Dgray;
+	border-radius: 5px;
+	@include min(768){
+		padding: 1% 1%;
+		margin: 0 40px;
 	}
-	&_sub02{
-		position: absolute;
-		top: 70%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		white-space: nowrap;
-		@include min(768){
-			top: 72%;
-		}
-		@include min(1400){
-			top: 65%;
-		}
+
+	&#name{
+		width: 45%;
+		max-width: 180px;
+	}
+	&#company{
+		width: 50%;
+		max-width: 300px;
+	}
+	&#email{
+		width: 50%;
+		max-width: 300px;
+	}
+	&#message{
+		resize: none;
+		width: 85%;
+		height: 200px;
+		@include min(768){width: 80%;}
+	}
+}
+
+dd{
+	@include max(768){
+		margin: 0 20px;
 	}
 }

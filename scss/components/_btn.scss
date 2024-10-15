@@ -126,6 +126,42 @@ button{
 			}
 		}
 	}
+	&.-pageLink{
+		position: relative;
+		width: 35%;
+		margin: auto;
+		transition: all .5s;
+		@include min(768){
+			width: 200px;
+		}
+
+		button{
+			width: 100%;
+			background: inherit;
+			border: none;
+		}
+		a,button{
+			position: relative;
+			display: block;
+			padding: 3% 3% 4%;
+			background: $main-color--w;
+			border: 1px solid $main-color--b;
+			border-radius: 5px;
+			transition: all .5s;
+			@include min(768){
+				padding: 2% 3% 3%;
+			}
+			&:hover{
+				background: $main-color--gray;
+				box-shadow: 1px 1px 2px $main-color--Dgray,
+			}
+		}
+
+		// 左寄せ
+		&.-right{
+			margin: auto 0 auto auto;
+		}
+	}
 }
 
 /*    Link
