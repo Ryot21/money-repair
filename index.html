@@ -21,13 +21,13 @@
     <meta property="og:site_name"    content="マネーリペア"/><!-- ページが属する大元のサイト名 -->
     <meta property="og:title"        content="マネーリペア"><!-- SNS表示用のタイトル -->
     <meta property="og:description"  content="月額たったの500円で給料を上げずに社員の所得を年間15万円増やした画期的システム！"><!-- 通常のdescriptionと同じ内容 -->
-    <meta property="og:image"        content="images/sns/share.jpg"><!-- SNS表示用のサムネイル 1200px × 630px -->
+    <!-- <meta property="og:image"        content="images/sns/share.jpg">SNS表示用のサムネイル 1200px × 630px -->
     <!-- //SNS関係 -->
     <!--// デプロイ前に確認・サンプル -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/swiper.min.js"></script>
-    <script src="js/luminous.min.js"></script>
-    <script src="js/returnPopup.js" ></script>
+    <!-- <script src="js/swiper.min.js"></script> -->
+    <!-- <script src="js/luminous.min.js"></script> -->
+    <!-- <script src="js/returnPopup.js" ></script> -->
 
 
     <!-- Google Analytics（GA4） -->
@@ -35,7 +35,11 @@
     <!-- Google Tag Manager -->
 
     <!-- Optimize Next（ABテスト） -->
+    
+    <!-- reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Leqz2IqAAAAADezbj_H78Vgd0Xe7cn9NejrLqIN" defer></script>
 
+    <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6Leqz2IqAAAAADezbj_H78Vgd0Xe7cn9NejrLqIN"></script> -->
 
 </head>
 <body class="p-top">
@@ -538,7 +542,8 @@
                     </div>
                 </li>
                 <li id="contact-area" class="flexItem pdt2 pdb2 pdt2s pdb2s">
-                    <form method="post" action="https://money-repair.form.newt.so/v1/zLaPN84V3">
+
+                    <form id="contact-form" method="post" action="https://money-repair.form.newt.so/v1/zLaPN84V3">
                         <dl class="mgb3 mgb5s">
                             <dd class="mgb1 mgb2s"><label class="required s-ML -white -left -ws-n -ls-2" for="name">担当者名</label></dd>
                             <dt>
@@ -563,14 +568,26 @@
                                 <input id="email" class="-ls-2" name="email" type="email" placeholder="xxx@gmail.com" required>
                             </dt>
                         </dl>
-                        <dl class="mgb5 mgb5s">
+                        <dl class="mgb2 mgb2s">
                             <dd class="mgb1 mgb2s"><label class="required s-ML -white -left -ws-n -ls-2" for="message">ご相談内容</label></dd>
                             <dt>
                                 <textarea id="message" class="-ls-2" name="message" placeholder="相談内容を入力してください。" required></textarea>
                             </dt>
                         </dl>
+
+                        <!-- reCAPTCHAのトークンを保持するためのhiddenフィールド -->
+                        <input type="hidden" id="g-recaptcha-token" name="googleReCaptchaToken">
+
+                        <!-- ステータス表示 -->
+                        <p id="form-status" class="s-ML -center -white -b mgb3 mgb3s"></p>
+
                         <div class="c-btn -pageLink mgb10s">
-                            <button type="submit" class="s-M -center -ls-2">送信</button>
+                            <button class="g-recaptcha s-M -center -ls-2"
+                                data-sitekey="6Leqz2IqAAAAADezbj_H78Vgd0Xe7cn9NejrLqIN"
+                                data-callback='onSubmit'
+                                data-action='submit'>
+                                送信する
+                            </button>
                         </div>
                     </form>
                 </li>
@@ -586,54 +603,9 @@
     </footer><!-- //footer -->
     <img class="sp" src="images/bg/footer-btm-sp.png" alt="黒背景">
 
-
-    <script>
-
-        const popupSwiper = new Swiper(".swiper-Popup", {
-            effect: 'slide',
-            mousewheel: {
-                invert: false,
-            },
-            centeredSlides: true,
-            slidesPerView: 1.5,
-            fadeEffect: {crossFade: true,},
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-                waitForTransition: true,
-            },
-            grabCursor: true,
-            followFinger: false,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: '.swiper-Popup .swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                768: {slidesPerView: 3,},
-                980: {slidesPerView: 3,},
-            }
-        });
-
-        // ポップアップ
-        var luminousTrigger = document.querySelectorAll('.luminous');
-        var options = {
-            caption: function (trigger) {
-                return trigger.querySelector('img').getAttribute('alt');
-            },
-        }
-        if( luminousTrigger !== null ) {
-            new LuminousGallery(luminousTrigger,{},options);
-        }
-    
-
-    </script>
     <!-- Google Tag Manager (noscript) -->
 
+    <script src="js/newt.js" defer></script>
 
 </body>
 </html>
