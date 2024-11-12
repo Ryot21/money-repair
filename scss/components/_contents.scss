@@ -1,0 +1,185 @@
+// コンテンツ
+.c-container{
+	width: 100%;
+	height: auto;
+}
+
+.c-contents{
+	&-inner_sp{
+		width: 100% !important;
+		margin: auto;
+		@include min(500){width: 65% !important;}
+		@include min(1000){width: 37.5% !important;}
+		@include min(1600){max-width: 880px;}
+		&.-header{
+			@include max(768){width: 100vw;}
+		}
+		&.-modal{
+			width: 85% !important;
+			margin: auto;
+			@include min(500){width: 65% !important;}
+			@include min(1000){width: 47.5% !important;}
+			@include min(1600){max-width: 580px;}
+		}
+		&.-b-side{
+			@include min(768){
+				background: $main-color--w;
+				border-right: 3px solid $site-color02;
+				border-left : 3px solid $site-color02;
+				box-shadow: 0px 0px 10px 0px #0000004f;
+			}
+		}
+	}
+	&-inner{
+		width: 95%;
+		margin: auto;
+		@include min(500){width: 75%;}
+		@include min(768){width: 72.5%;}
+		@include min(1600){max-width: 1120px;}
+	}
+
+	&.-bg-lightBlue01{background: $site-color01;}
+	&.-bg-lightBlue02{background: $site-color05;}
+	&.-bg-white{background: $main-color--w;}
+	&.-bg-blue{background: $site-color02;}
+	&.-bg-green{background: $site-color03;}
+	&.-bg-orange{background: $site-color04;}
+
+	&.-f-view{//ファーストビュー
+		position: relative;
+		overflow: hidden;
+		.fvBg{
+			position: relative;
+			width: 100lvw;
+		}
+	}
+
+	&.-imgBg{//背景画像
+		position: relative;
+		&.-bg{//背景画像が大きくなると、コンテンツが間延びしてしまう場合
+
+		}
+		.c-contentsBox{
+			position: absolute;
+			// 要素の真ん中
+			&.-center{
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+			}
+			// ヘッダーロゴ
+			&.-logo{
+				top: 50%;
+				left: 15%;
+				transform: translate(-50%, -50%);
+				width: 25%;
+				@include min(768){width: 24%;}
+			}
+			&.-timer{
+				top: 50%;
+				right: 0;
+				transform: translate(-50%, -50%);
+				@include min(500){
+					top: 45%;
+					right: -3%;
+				}
+				@include min(600){
+					right: -1%;
+				}
+				@include min(700){
+					top: 50%;
+					right: 3%;
+				}
+				@include min(800){
+					top: 54%;
+					right: 4%;
+				}
+				@include min(900){
+					top: 54.5%;
+					right: 5%;
+				}
+				@include min(1000){
+					top: 50%;
+					right: -4%;
+				}
+				@include min(1400){
+					right: -2%;
+				}
+				@include min(1600){
+					right: 0%;
+				}
+			}
+			// コンテンツ関係
+			&.-contents-body{//.c-contents-innerと併用
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 100%;
+			}
+			&.-q03{
+				&-item01{//女性
+					top: 92%;
+					left: 86%;
+					transform: translate(-50%, -50%);
+					width: 31%;
+					z-index: 2;
+				}
+				&-item02{//男性
+					top: 90%;
+					left: 19%;
+					transform: translate(-50%, -50%);
+					width: 31%;
+				}
+				&-item03{//Aさん
+					top: 35%;
+					left: 24%;
+					transform: translate(-50%, -50%);
+					width: 45%;
+				}
+				&-serif01{
+					top: 34%;
+					left: 80%;
+					transform: translate(-50%, -50%);
+					width: 37%;
+				}
+			}
+
+			&.-cv{
+				&-btn{
+					top: 85%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 90%;
+					z-index: 2;
+					&:hover {
+						img,
+						input{
+							transform: scale(1.025);
+						}
+					}
+					img,
+					input{
+						width: 100%;
+						transition: all .25s;
+					}
+				}
+			}
+		}
+	}
+
+	&.-returnBtn{// 戻るボタン
+		a{
+			display: block;
+			width: 20%;
+			border-radius: 5px;
+			overflow: hidden;
+			margin: auto;
+			text-align: center;
+			box-shadow: 1px 1px gray;
+			@include min(768){width: 6%;}
+			@include min(1400){width: 7%;}
+		}
+	}
+}

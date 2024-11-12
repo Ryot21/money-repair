@@ -1,0 +1,46 @@
+// 2. THANKSページ
+
+.p-thanks{
+	position: relative;
+	width: 100%;
+	height: 100dvb;
+	background-size: 15px 15px;
+	background-image: linear-gradient(
+		-45deg,
+		$site-color01, $site-color01 48.5%,
+		white 49.5%, white 50.5%,
+		$site-color01 51.5%, $site-color01
+	) ;
+
+	animation: fadeAnime 3s forwards;
+	@include min(768){
+		background-size: 30px 30px;
+		animation: fadeAnime 2s forwards;
+	}
+	&__left,
+	&__right{
+		position: fixed;
+		top: 0;
+		display: block;
+		height: 100dvb;
+		width: 45px;
+		background: $site-color02;
+		.logo{
+			background: url(../images/logo/impreme-logo-w-border.png);
+			background-repeat: repeat-y;
+			background-position: 35%;
+			background-size: 35px;
+			height: 100%;
+		}
+	}
+
+	.c-container{
+		height: 92vh;
+	}
+
+	footer{
+		position: fixed;
+		bottom: 0;
+	}
+
+}

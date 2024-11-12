@@ -1,0 +1,120 @@
+
+.c-form{
+    &-radioBtn{
+        position: relative;
+        width: 100%;
+        padding: 2rem;
+        input{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            transform: scale(1);
+
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            transition: all .5s;
+            opacity: 0;
+            z-index: 1;
+
+        }
+        label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            font-size: 1.6rem;
+            padding: 1rem;
+
+            background: #ebebeb;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // pointer-events: none;
+            opacity: .9;
+            // z-index: -1;
+            transition: all .25s;
+        }
+        &:hover{
+            label{
+                transform: scale(1.05);
+                opacity: 1;
+                &.y{ background: $main-color--yes;}
+                &.n{ background: $main-color--no;}
+
+            }
+        }
+    }
+    .-cv-btn{
+        width: 100%;
+        &:hover {
+            img,
+            input{
+                transform: scale(1.025);
+            }
+        }
+        img,
+        input{
+            width: 100%;
+            transition: all .25s;
+        }
+        #popup01-btn{
+            &.disabled{
+                pointer-events: none;
+                background: #00000052;
+                border-radius: 5px;
+                img{
+                    transform: scale(1);
+                    opacity: .5;
+                }
+            }
+            &:hover {
+                img,
+                input{
+                    transform: scale(1.025);
+                }
+            }
+            img,
+            input{
+                width: 100%;
+                transition: all .25s;
+            }
+        }
+    }
+    label{align-items: center;}
+    .selectImg{
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        .imgBox{display: none;}
+        &.show {
+            height: auto;
+            background: $site-color01;
+            border-radius: 10px;
+            border: 5px solid $site-color02;
+            box-shadow: 0px 0px 10px 3px #00000033;
+            padding: 0 3%;
+            margin-top: 10%;
+            opacity: 1;
+            .imgBox{display: block;}
+        }
+    }
+
+
+    // Q1, Q3
+    input[name="q01"]:checked ~,
+    input[name="q03"]:checked ~ {
+        .y{ background: $main-color--yes;}
+        .n{ background: $main-color--no;}
+    }
+    // Q2, Q4
+    input[name="q02"],
+    input[name="q04"] { margin: 0 1% 0 0; }
+
+}
+
+#form1{
+
+}

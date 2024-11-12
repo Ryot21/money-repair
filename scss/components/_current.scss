@@ -1,0 +1,25 @@
+.c-current{
+    .flexItem{
+        .imgBox{
+            position: relative;
+            background: $main-color--gray;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background: $main-color--w;
+            }
+            &::before{top: 0;}
+            &::after {bottom: 0;}
+        }
+        .imgBox img{
+            background: $main-color--gray;
+        }
+        &.-current.selected{
+            .imgBox img{background: $site-color02;}
+        }
+    }
+}
