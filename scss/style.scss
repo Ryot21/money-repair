@@ -55,22 +55,3 @@
 @import "./animation/img";
 @import "./animation/underline";
 @import "./animation/original";
-
-
-.km-container {
-    &.shop_detail {
-        &.-maeda{
-            .jk-detail_recommendInner{
-                .Ranking-none{
-                    display: none;
-                }
-                .jk-list3Line_ttl{
-                    height: 37px !important;
-                    @include min(768){
-                        height: 24px !important;
-                    }
-                }
-            }
-        }
-    }
-}
