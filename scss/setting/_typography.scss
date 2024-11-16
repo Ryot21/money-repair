@@ -21,9 +21,8 @@
 }
 @font-face {// ゴシックフォント
     font-family: "gothic-font01";
-    // src: url("../fonts/gothic/ZenKakuGothicNew-Regular.ttf") format("truetype");
-    // src: url("../fonts/gothic/FOT-RodinNTLGPro-M.otf")       format("opentype");
-    src: url("../fonts/gothic/LINESeedJP_OTF_Rg")       format("opentype");
+    src: url("../fonts/gothic/Outfit-Regular.ttf") format("truetype");
+    // src: url("../fonts/gothic/LINESeedJP_OTF_Rg")       format("opentype");
 }
 // @font-face {// デザインフォント(WEBでは使用できない)
 //     font-family: "d-font01";
@@ -47,13 +46,9 @@ $f-b: bold;
 // 基本テキスト
 h1,h2,h3,h4,h5,h6,p,a,span,label,select,button{
 	color: $main-color--b;
-	// font-family: $f-mincho;
-    font-family: sans-serif;
-    // font-family: $f-e03;
+    font-family: $f-gothic;
     font-weight: $f-n;
     font-style: normal;
-    // text-wrap: balance;
-    // word-break: auto-phrase;
 	line-height: 1.3;
 
     // ボーダー
