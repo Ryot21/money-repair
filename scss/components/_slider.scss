@@ -9,6 +9,7 @@
         //     padding-bottom: 30px;
         // }
         .swiper-slide{
+            width: auto ;
             text-align: end;
             opacity: .5;
             overflow: hidden;
@@ -47,6 +48,19 @@
                         opacity: 1;
                     }
                 }
+            }
+        }
+    }
+    // ロゴ関係
+    &.swiper-Logo{
+        .swiper-wrapper {
+            transition-timing-function: linear;
+        }
+        .swiper-slide{
+            padding: 0 5%;
+
+            @include min(500){
+                padding: 0 1%;
             }
         }
     }
@@ -507,4 +521,3 @@
 .thumbnail .swiper-slide-thumb-active{
   opacity: 1;
 }
-

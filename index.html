@@ -24,11 +24,10 @@
     <!--// デプロイ前に確認 -->
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/luminous.min.js"></script>
-    <script src="js/countTimer.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/selectImg.js"></script>
-    <script src="js/submit.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <!-- <script src="js/luminous.min.js"></script> -->
+    <!-- <script src="js/form.js"></script> -->
+
 
     <!-- Google Tag Manager -->
     <script>
@@ -53,7 +52,7 @@
                 </li>
                 <li class="flexItem -navArea">
                     <ul class="c-flex -nav-contact -jc-sb -h-cen">
-                        <li class="flexItem -pageLink tb-pc">
+                        <li class="flexItem -pc-pageLink tb-pc">
                             <nav class="c-hnav">
                                 <ul class="c-flex -h-cen">
                                     <li class="navItem  "><a class="c-hnav--link s-M -b -ls-3 -ws-n" href="">特徴</a></li>
@@ -82,6 +81,48 @@
                 <img class="tb-pc" src="images/fv/fv-pc.png" alt="社員の声に応える、新しい時代の福利厚生">
             </div>
         </div>
+        <div id="logoSection" class="c-contents pdt5 pdt5s">
+            <div class="c-contents--inner">
+                <h2 class="s-L -center -b pdb5 pdb5s">多くのお客様にご好評いただいております</h2>
+            </div>
+            <!-- Slider -->
+            <div class="swiper swiper-Logo -right mgb1 mgb5s">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業1"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業2"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業3"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業4"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
+                </div>
+            </div>
+            <div class="swiper swiper-Logo -left">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業1"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業2"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業3"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業4"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
+                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
+                </div>
+            </div>
+        </div>
     </main>
     <div style="height: 100vh;"></div>
     <!-- footer -->
@@ -91,6 +132,29 @@
         </div>
     </footer><!-- //footer -->
 
+    <script>
+        // トップページ > ロゴ
+        const swiperLogoRight = new Swiper(".swiper-Logo.-right", {
+            loop: true, // ループ有効
+            slidesPerView: 'auto', // 一度に表示する枚数
+            speed: 6000, // ループの時間
+            allowTouchMove: false, // スワイプ無効
+            autoplay: {
+                delay: 0, // 途切れなくループ
+            },
+        });
+        const swiperLogoLeft = new Swiper(".swiper-Logo.-left", {
+            loop: true, 
+            slidesPerView: 'auto', 
+            speed: 6000,
+            allowTouchMove: false, // スワイプ無効
+            autoplay: {
+                delay: 0, // 途切れなくループ
+                reverseDirection: true,  // 逆方向のスライダーにする
+            },
+        });
+
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <!-- <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M48ZKPBW" height="0" width="0" style="display:none;visibility:hidden"></iframe> -->
