@@ -116,7 +116,7 @@
                 border: 1px solid $site-color03;
                 border-radius: 30px;
                 overflow: hidden;
-                @include min(500){
+                @include min(600){
                     width: 75%;
                     background: $main-color--w;
                     border: 1px solid $site-color03;
@@ -156,7 +156,7 @@
             &.-sp-hnav{
                 @include max(500){
                     width: 30px;
-                    
+
                 }
             }
         }

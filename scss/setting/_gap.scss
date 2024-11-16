@@ -88,6 +88,7 @@
 ------------------------ */
 
 // 768px以下
+.mgl0s {@include max(768){margin-left:0% !important;}}
 .mgl1s {@include max(768){margin-left:1% !important;}}
 .mgl2s {@include max(768){margin-left:2% !important;}}
 .mgl3s {@include max(768){margin-left:3% !important;}}
@@ -101,6 +102,7 @@
 
 
 // 768px以上
+.mgl0 {@include min(768){margin-left:0% !important;}}
 .mgl1 {@include min(768){margin-left:1% !important;}}
 .mgl2 {@include min(768){margin-left:2% !important;}}
 .mgl3 {@include min(768){margin-left:3% !important;}}
@@ -119,6 +121,7 @@
 ------------------------ */
 
 // 768px以下
+.mgr0s {@include max(768){margin-right:0% !important;}}
 .mgr1s {@include max(768){margin-right:1% !important;}}
 .mgr2s {@include max(768){margin-right:2% !important;}}
 .mgr3s {@include max(768){margin-right:3% !important;}}
@@ -131,6 +134,7 @@
 .mgr10s {@include max(768){margin-right:10% !important;}}
 
 // 768px以上
+.mgr0 {@include min(768){margin-right:0% !important;}}
 .mgr1 {@include min(768){margin-right:1% !important;}}
 .mgr2 {@include min(768){margin-right:2% !important;}}
 .mgr3 {@include min(768){margin-right:3% !important;}}

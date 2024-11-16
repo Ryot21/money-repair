@@ -24,10 +24,10 @@
     src: url("../fonts/gothic/Outfit-Regular.ttf") format("truetype");
     // src: url("../fonts/gothic/LINESeedJP_OTF_Rg")       format("opentype");
 }
-// @font-face {// デザインフォント(WEBでは使用できない)
-//     font-family: "d-font01";
-//     src: url("../fonts/design/DS-ayumin.ttf")                format("truetype");
-// }
+@font-face {// デザインフォント(WEBでは使用できない)
+    // font-family: "d-font01";
+    // src: url("../fonts/design/YDWbananaslipplus.otf") format("opentype");
+}
 
 
 $f-mincho:    mincho-font01; // 明朝体01
@@ -139,6 +139,7 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button{
     &.-f-En02{font-family: e-font02;}         // impact
     &.-f-En03{font-family: e-font03;}         // garamond
     &.-f-En04{font-family: e-font04;}         // Roboto
+    // &.-f-d01{font-family:  f-d01;}            // バナナ
 
     // 色
     &.-white{color: $main-color--w !important;}

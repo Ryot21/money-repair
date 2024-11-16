@@ -7,7 +7,7 @@
 .c-contents{
 
 	&--inner{
-		width: 95%;
+		width: 90%;
 		margin: auto;
 		@include min(500){width: 75%;}
 		@include min(768){width: 72.5%;}
