@@ -1,28 +1,29 @@
 // ヘッダー
 .c-header{
-	width: 95%;
+	width: 50%;
 	height: auto;
 	box-sizing: border-box;
 	transition: padding .3s;
-	@include min(768){
+	@include min(500){
 		width: 90%;
 		max-width: 1100px;
 	}
 	@include min(1600){width: 70.4%;}
 	&.-fixed{//固定
 		position: fixed;
-		top: 3.5%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 9999;
+		top: 1.5%;
+		left: 5%;
+		z-index: 999;
 		@include min(500){
 			top: 5%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 	&-wrapper{
-		padding: 8px 0px 10px;
 		margin: auto;
 		align-items: center;
+		@include min(500){padding: 8px 0px 10px;}
 	}
 
 }
