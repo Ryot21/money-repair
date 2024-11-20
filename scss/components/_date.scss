@@ -1,0 +1,14 @@
+// 日付関係
+.c-date{
+    &__lists{// ul
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__item{ // li
+        width: auto;
+        &:nth-child(1){
+            margin-right: 5px;
+        }
+    }
+}

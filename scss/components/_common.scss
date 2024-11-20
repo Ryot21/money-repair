@@ -10,7 +10,7 @@
         margin-left: auto;
         margin-right: 0;
         &_s{
-            @include max(768){
+            @include max(500){
                 margin-left: auto;
                 margin-right: 0;
             }
@@ -20,7 +20,7 @@
         margin-left: 0;
         margin-right: auto;
         &_s{
-            @include max(768){
+            @include max(500){
                 margin-left: auto;
                 margin-right: 0;
             }
@@ -32,7 +32,7 @@
 .w1280{
     width: 90% !important;
     margin: auto;
-    @include min(768) {
+    @include min(500) {
         width: 90%;
     }
     @include min(1100){
@@ -43,7 +43,7 @@
 .w1100{
     width: 90% !important;
     margin: auto;
-    @include min(768) {
+    @include min(500) {
         width: 90%;
     }
     @include min(1100){
@@ -80,43 +80,43 @@
     margin: auto;
 }
 .w100s{
-    @include max(768){
+    @include max(500){
         width: 100% !important;
         margin: auto;
     }
 }
 .w95s{
-    @include max(768){
+    @include max(500){
         width: 95% !important;
         margin: auto;
     }
 }
 .w90s{
-    @include max(768){
+    @include max(500){
         width: 90% !important;
         margin: auto;
     }
 }
 .w85s{
-    @include max(768){
+    @include max(500){
         width: 85% !important;
         margin: auto;
     }
 }
 .w80s{
-    @include max(768){
+    @include max(500){
         width: 80% !important;
         margin: auto;
     }
 }
 .w50s{
-    @include max(768){
+    @include max(500){
         width: 50% !important;
         margin: auto;
     }
 }
 .w30s{
-    @include max(768){
+    @include max(500){
         width: 30% !important;
         margin: auto;
     }
@@ -125,7 +125,7 @@
 
 .c-borderBox{
     padding: 3%;
-    @include min(768){
+    @include min(500){
         // width: 95%;
         width: 100%;
         padding: 1% 1% 2%;
@@ -137,13 +137,13 @@
     }
     &.-double{
         border: 4px double $site-color01;
-        @include min(768){
+        @include min(500){
             border: 7px double $site-color01;
         }
     }
     &.-solid{
         border: 1px solid $site-color01;
-        @include min(768){
+        @include min(500){
             border: 1px solid $site-color01;
         }
     }
@@ -152,7 +152,7 @@
 .c-borderBtm{
     &.-solid{
         border-bottom: 1px solid $main-color--gray;
-        @include min(768){
+        @include min(500){
             border-bottom: 1px solid $main-color--gray;
         }
     }
@@ -168,7 +168,7 @@
             left: 40%;
             transform: translate(-50%, -45%);
             width: 35%;
-            @include min(768){
+            @include min(500){
                 left: 67%;
                 transform: translate(-50%, -40%);
                 width: 53%;
@@ -178,7 +178,7 @@
             left: 47.5%;
             transform: translate(-48%, -50%);
             width: 44%;
-            @include min(768){
+            @include min(500){
                 top: 33%;
                 left: 71%;
                 transform: translate(-50%, -50%);
@@ -190,7 +190,7 @@
             top: 40%;
             transform: translate(-55%, -50%);
             width: 28%;
-            @include min(768){
+            @include min(500){
                 top: 34%;
                 left: 25%;
                 transform: translate(-50%, -50%);
@@ -204,7 +204,7 @@
     background: $main-color--w;
     padding: 3% 0 0;
     border-radius: 5px;
-    @include min(768){
+    @include min(500){
         padding: 3% 0 0;
     }
 }

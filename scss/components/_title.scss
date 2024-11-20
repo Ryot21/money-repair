@@ -1,25 +1,28 @@
 
 // コンテンツ_メインタイトル
-.c-contents_title{// s-L相当
+.c-contents--title{// s-L相当
     position: relative;
-    font-size: 1.6rem;
+    font-size: clamp(2.2rem, 2vw, 2.5rem);
     font-weight: bold;
+    text-align: center;
     padding: 0 1px;
-    @include min(768){
-        font-size: clamp(1.6rem, 2vw, 2.5rem);
-    }
+
 
     // コンテンツタイトル > 英語表記
     &::before{
         content: "";
         position: absolute;
-        bottom: -70%;
+        top: -40%;
         left: 50%;
         transform: translateX(-50%);
         width: auto;
         font-size: 10px;
+        font-weight: bold;
+        letter-spacing: .1rem;
         @include min(768) {
-            bottom: -50%;
+            top: -35%;
+            font-size: 14px;
+            letter-spacing: .2rem;
         }
     }
     &.-row2  {&::before{@include min(768){ bottom: -30%; }}}
@@ -57,31 +60,18 @@
     &.-en-color04{&::before{color: $site-color04;}}
 
     // コンテンツタイトル > 英語表記
-    &.-gaikou{&::before{content: "EXTERIOR";}}                                      // 外構・外観
-    &.-naikan{&::before{content: "NTROSPECTION";}}                                  // 内観
-    &.-naikanDesign{&::before{content: "INNER DESIGN";}}                            // 内観デザイン
+    &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}                                      // 外構・外観
+    
 
-    &.-layout{&::before{content: "LAYOUT PLAN / PLOT PLAN"; white-space: nowrap;}}  // レイアウト
-    &.-house-layout{&::before{content: "HOUSE LAYOUT"; white-space: nowrap;}}       // ハウスレイアウト
-    &.-plan{&::before{content: "PLAN"; white-space: nowrap;}}                       // プラン
-
-    &.-basinArea{&::before{content: "THE BASIN AREA"; white-space: nowrap;}}        // 水回り
-    &.-kitchen{&::before{content: "KITCHEN";}}                                      // キッチン
-    &.-bathroom{&::before{content: "BATHROOM";}}                                    // お風呂
-    &.-window{&::before{content: "WINDOW";}}                                        // 窓
-    &.-entrance{&::before{content: "ENTRANCE";}}                                    // 玄関
-    &.-ex{&::before{content: "EXTERIOR & COMFORTABLE"; white-space: nowrap;}}       // 設備仕様
-    &.-skyBalcony{&::before{content: "SKY BALCONY"; white-space: nowrap;}}          // スカイバルコニー
-
-    &.-deilyUse{&::before{content: "DAILY USE";}}                                   // 周辺環境
-    &.-access{&::before{content: "ACCESS";}}                                        // アクセス
-    &.-location{&::before{content: "SURROUNDING ENVIRONMENT"; white-space: nowrap;}}// 交通
-    &.-spot{&::before{content: "RECOMMENDED SPOTS"; white-space: nowrap;}}          // スポット
-    &.-portfolio{&::before{content: "CONSTRUCTION PORTFOLIO"; white-space: nowrap;}}// 施工例
-    &.-owner{&::before{content: "OWNER VOICE"; white-space: nowrap;}}               // オーナー
-
-    &.-sample{&::before{content: "CONTENT TITLE"; white-space: nowrap;}}            // サンプル
 }
+
+.c-post--title{
+    font-size: clamp(2.2rem, 2vw, 2.5rem);
+    font-weight: bold;
+    text-align: center;
+    padding: 0 1px;
+}
+
 
 // コンテンツ_メインタイトル
 .c-contents_MainTitle{// .s-L相当

@@ -16,16 +16,17 @@
 			border-radius: 5px;
 
 			position: absolute;
-			bottom: -4px;
+			bottom: -3px;
 			left: 50%;
 			transform: translateX(-50%);
 			opacity: 0;
+			will-change: transform;
 			transition: all .5s;
 		}
 		&:hover{
 			color: $site-color03;
 			&::before{
-				width: 100%;
+				width: 90%;
 				background: $site-color03;
 				opacity: 1;
 			}
@@ -41,6 +42,7 @@
 				transform: translateY(-50%);
 				background: $main-color--b;
 				clip-path: polygon(0 0, 50% 100%, 100% 0);
+				will-change: transform;
 				transition: all .5s;
 			}
 			&:hover{
@@ -53,9 +55,16 @@
 	&--contact{
 		display: block;
 		width: auto;
+		color: $main-color--w;
+		background: $main-color--red;
 		padding:5px 18px 5px 20px;
+		will-change: transform;
+		transition: all .5s;
 		@include min(500){
-			padding: 7% 0;
+			padding: 6% 0;
+		}
+		&:hover{
+			background: $main-color--orange;
 		}
 	}
 }

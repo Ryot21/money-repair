@@ -28,7 +28,7 @@ textarea{
 	padding: 1.5% 2%;
 	border: 1px solid $main-color--Dgray;
 	border-radius: 5px;
-	@include min(768){
+	@include min(500){
         padding: 1.5% 1.5%;
 	}
 

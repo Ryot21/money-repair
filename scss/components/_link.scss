@@ -39,17 +39,23 @@
 		}
 	}
 	&.-btn{
-		display: inline-block;
-		width: auto !important;
+		width: auto;
+		text-align: center;
 		background: $site-color02;
-		padding: 10px 15px;
+		padding: 8px 17px;
 		border-radius: 30px;
 		overflow: hidden;
+		will-change: transform;
 		transition: all .5s;
-
+		@include min(500){
+			padding: 10px 20px;
+		}
 		&:hover{
 			background: $site-color03;
 			transform: scale(1.025);
+		}
+		&.-center{
+			margin: 0 auto;
 		}
 	}
 	&.-header{

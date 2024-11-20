@@ -1,5 +1,6 @@
 // Sass Document
 @charset "UTF-8";
+
 // 基本設定
 @import "./setting/reset";      // リセットCSS
 @import "./setting/color";      // カラー変数
@@ -12,39 +13,44 @@
 @import "./introduction/luminous-basic.min"; // ポップアップ+スライダー機能付き
 
 // サイト内（基本パーツ）
-@import "./components/common";  // 共通
-@import "./components/header";  // ヘッダー
-@import "./components/footer";  // フッター
-@import "./components/nav";     // ナビゲーション
-@import "./components/contents";// コンテンツ
-@import "./components/title";   // コンテンツ > タイトル
-@import "./components/contact"; // お問い合わせ
-@import "./components/flex";    // 横並び要素
-@import "./components/banner";  // バナー
-@import "./components/tab";     // タブ
-@import "./components/modal";   // モーダル
-@import "./components/btn";     // ボタン
-@import "./components/link";    // リンク
-@import "./components/slider";  // カルーセル
-@import "./components/popup";   // ポップアップ
-@import "./components/video";   // 動画
-@import "./components/tab";     // タブコンテンツ
-@import "./components/dropmenu";// ドロップメニュー
-@import "./components/iframe";  // 読み込み表示
+@import "./components/common";    // 共通
+@import "./components/header";    // ヘッダー
+@import "./components/footer";    // フッター
+@import "./components/nav";       // ナビゲーション
+@import "./components/contents";  // コンテンツ
+@import "./components/title";     // コンテンツ > タイトル
+@import "./components/contact";   // お問い合わせ
+@import "./components/flex";      // 横並び要素
+@import "./components/banner";    // バナー
+@import "./components/tab";       // タブ
+@import "./components/modal";     // モーダル
+@import "./components/btn";       // ボタン
+@import "./components/link";      // リンク
+@import "./components/slider";    // カルーセル
+@import "./components/popup";     // ポップアップ
+@import "./components/video";     // 動画
+@import "./components/tab";       // タブコンテンツ
+@import "./components/dropmenu";  // ドロップメニュー
+@import "./components/iframe";    // 読み込み表示
 @import "./components/accordion"; // アコーディオン
-@import "./components/current"; // 現在地
-@import "./components/input";   // フォーム
-@import "./components/img";     // 画像関係
+@import "./components/current";   // 現在地
+@import "./components/input";     // フォーム
+@import "./components/img";       // 画像関係
+@import "./components/thumbnail"; // サムネイル
+@import "./components/category";  // カテゴリー
+@import "./components/date";      // 日付関係
+@import "./components/post";      // 投稿関係
 
 // 各ページ
 @import "./page/top";
 @import "./page/thanks";
 
 /*
-    アニメーション
+    【アニメーション】
     細かな調整は下記サイトを参考に
     https://cubic-bezier.com/
 */
+
 @import "./animation/common";
 @import "./animation/flip";
 @import "./animation/slide";

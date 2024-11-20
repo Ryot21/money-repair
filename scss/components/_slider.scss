@@ -57,10 +57,47 @@
             transition-timing-function: linear;
         }
         .swiper-slide{
-            padding: 0 5%;
-
+            @include max(768){
+                width: 150px;
+                padding: 0 1.5%;
+            }
             @include min(500){
                 padding: 0 1%;
+            }
+        }
+    }
+    // インタビュー関係
+    &.swiper-Interview{
+        .swiper-slide{
+            @include max(768){margin: 0 1.5%;}
+            @include min(768){margin: 0 1%;}
+        }
+        .swiper-pagination{
+            // bottom: var(--swiper-pagination-bottom, -20px);
+            bottom: 0;
+            left: 51%;
+            transform: translateX(-50%);
+            @include min(500){
+                bottom: 0px;
+            }
+            &-bullet{
+                border-radius: 4px;
+                transform: scaleX(1);
+                transition: .5s all;
+                @include min(500){
+                    border-radius:1px;
+                }
+                span{
+                    display: inline-block;
+                }
+                &-active{
+                    width: 50px;
+                    background: $main-color--gray !important;
+                    border: 1px solid $main-color--b !important;
+                    @include min(500){
+                        background: $main-color--b !important;
+                    }
+                }
             }
         }
     }
@@ -412,7 +449,7 @@
                         border-color: transparent #fff transparent transparent;
                         right: 25%;
                     }
-                  }
+                }
                 .swiper-button-next {
                     @include max(400){
                         right: -10px;

@@ -18,12 +18,12 @@ button{
 		color: $site-color02;
 		cursor: pointer;
 		z-index: 99;
-		@include max(768){
+		@include max(500){
 			border: 1px solid $site-color02;
 			box-shadow: 0 2px 4px $main-color--b;
 			transform: translateX(-50%);
 		}
-		@include min(768){
+		@include min(500){
 			top: 25%;
 			left: auto;
 			bottom: auto;
@@ -35,14 +35,14 @@ button{
 			display: flex;
 			flex-wrap: nowrap;
 			width: auto;
-			@include min(768){
+			@include min(500){
 				flex-wrap: wrap;
 				flex-direction: column;
 			}
 			li{
 				position: relative;
 				width: 50vw;
-				@include max(768){
+				@include max(500){
 					&:first-child a{
 						color: $main-color--w;
 						background: $site-color01;
@@ -52,19 +52,19 @@ button{
 						background: $site-color02;
 					}
 				}
-				@include min(768){
+				@include min(500){
 					width: auto;
 					writing-mode: vertical-rl;
 				}
 				&:first-child{
-					@include max(768){border-right: 1px solid $site-color01;}
-					@include min(768){border-bottom: 1px solid $site-color01;}
+					@include max(500){border-right: 1px solid $site-color01;}
+					@include min(500){border-bottom: 1px solid $site-color01;}
 				}
 				a{
 					width: 100%;
 					padding: 6% 0;
 					background: $main-color--w;
-					@include min(768){
+					@include min(500){
 						width: auto;
 						padding: 30px 10%;
 					}
@@ -89,7 +89,7 @@ button{
 		cursor: pointer;
 		transition: all .5s;
 		z-index: 99;
-		@include min(768){
+		@include min(500){
 			bottom: 55px;
 			right: 55px;
 		}
@@ -110,7 +110,7 @@ button{
 		cursor: pointer;
 		transition: all .5s;
 		z-index: 99;
-		@include min(768){
+		@include min(500){
 			top: 50%;
 			left: auto;
 			right: 3%;

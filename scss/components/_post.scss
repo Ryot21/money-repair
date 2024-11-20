@@ -1,0 +1,30 @@
+// 投稿関係
+
+.c-post{
+    &--link{
+        transition: all .5s;
+        .imgBox,
+        .c-thumbnail--picter,
+        .c-thumbnail--title,
+        .c-thumbnail--subTitle,
+        .c-thumbnail--cover{
+            will-change: transform;
+            transition: all .5s;
+        }
+        &:hover{
+            .imgBox               {transform: scale(1.005);}
+            .c-thumbnail--picter  {transform: translate(-50%, -50%) scale(.98);}
+            // .c-thumbnail--title   {transform: translate(-50%, -50%) scale(.98);}
+            // .c-thumbnail--subTitle{transform: translate(-50%, -50%) scale(.98);}
+            .c-thumbnail--cover{
+                opacity: 1;
+            }
+        }
+    }
+    &--title{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+}

@@ -9,9 +9,13 @@
 	&--inner{
 		width: 90%;
 		margin: auto;
-		@include min(500){width: 75%;}
-		@include min(768){width: 72.5%;}
+		@include min(500){width: 85%;}
+		@include min(768){width: 82.5%;}
 		@include min(1600){max-width: 1120px;}
+	}
+	&--btnArea{
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	&.-bg-lightBlue01{background: $site-color01;}

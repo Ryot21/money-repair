@@ -50,7 +50,7 @@
 }
 
 .a-scroll-on{
-    @include min(768){
+    @include min(500){
         opacity: 0;
         animation: scroll-onNav;
         animation-timeline: scroll();

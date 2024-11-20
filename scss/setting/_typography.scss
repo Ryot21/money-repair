@@ -24,10 +24,10 @@
     src: url("../fonts/gothic/Outfit-Regular.ttf") format("truetype");
     // src: url("../fonts/gothic/LINESeedJP_OTF_Rg")       format("opentype");
 }
-@font-face {// デザインフォント(WEBでは使用できない)
-    // font-family: "d-font01";
-    // src: url("../fonts/design/YDWbananaslipplus.otf") format("opentype");
-}
+// @font-face {// デザインフォント(WEBでは使用できない)
+//     font-family: "d-font01";
+//     src: url("../fonts/design/YDWbananaslipplus.otf") format("opentype");
+// }
 
 
 $f-mincho:    mincho-font01; // 明朝体01
@@ -177,11 +177,11 @@ html {
 }
 h1,h2,h3,h4,h5,h6,p,a,span,label,select,button{
         &.s-SS{
-            font-size: 1rem;
-            @include min(768){font-size: clamp(1rem, 2vw, 1.2rem);}
+            font-size: .7rem;
+            @include min(768){font-size: clamp(.7rem, 2vw, 1.2rem);}
         }
         &.s-S{
-            font-size: 1.1rem;
+            font-size: 1rem;
             @include min(768){font-size: clamp(1rem, 1.2vw, 1.5rem);}
         }
         &.s-M{
