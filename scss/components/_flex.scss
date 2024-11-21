@@ -118,7 +118,7 @@
                 @include min(500){
                     width: 69%;
                     background: $main-color--w;
-                    border: 1px solid $site-color03;
+                    border: 2px solid $site-color03;
                     border-radius: 30px;
                 }
                 @include min(768){

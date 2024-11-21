@@ -4150,6 +4150,10 @@ button.swiper-pagination-bullet {
   content: "User Interview";
   white-space: nowrap;
 }
+.c-contents--title.-news::before {
+  content: "Information";
+  white-space: nowrap;
+}
 
 .c-post--title {
   font-size: clamp(2.2rem, 2vw, 2.5rem);
@@ -4742,7 +4746,7 @@ dd {
   .c-flex.-header .flexItem.-navArea {
     width: 69%;
     background: #ffffff;
-    border: 1px solid #6D84A5;
+    border: 2px solid #6D84A5;
     border-radius: 30px;
   }
 }
@@ -5140,6 +5144,7 @@ a {
   display: block;
   transform: scale(1);
   transition-duration: 0.5s;
+  will-change: transform;
   transition: all 0.5s ease-in-out;
   overflow: hidden;
 }
@@ -6510,7 +6515,14 @@ a {
   width: 100%;
   height: auto;
 }
-.c-thumbnail.-interview .c-thumbnail--picter {
+.c-thumbnail--mark {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 50%;
+  z-index: 1;
+}
+.c-thumbnail--picter {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6519,7 +6531,7 @@ a {
   height: 95%;
   z-index: -1;
 }
-.c-thumbnail.-interview .c-thumbnail--cover {
+.c-thumbnail--cover {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6527,10 +6539,10 @@ a {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
 }
-.c-thumbnail.-interview .c-thumbnail--cover__text {
+.c-thumbnail--cover__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6570,6 +6582,31 @@ a {
   .c-thumbnail.-interview .c-thumbnail--subTitle {
     top: 25%;
   }
+}
+.c-thumbnail.-news .c-thumbnail--title {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+}
+@media (width >= 500px) {
+  .c-thumbnail.-news .c-thumbnail--title {
+    width: 100%;
+  }
+}
+.c-thumbnail.-news .c-thumbnail--title span {
+  padding: 1% 3%;
+  line-height: 1.75;
+  background: #ffffff;
+}
+.c-thumbnail.-news .c-thumbnail--subTitle {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .c-category__lists {
