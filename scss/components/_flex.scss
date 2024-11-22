@@ -176,20 +176,19 @@
     &.-sns{
         width: 100%;
         @include min(768){
-            width: 70%;
+            width: 50%;
             margin-right: 0;
             margin-left: auto;
         }
         .flexItem{
             &.-snsLogoArea{
-                width: 30%;
-                height: 20px;
-                background: black;
+                width: 22%;
+                @include min(768){width: 25%;}
             }
         }
         &.snsBox{
             @include max(768){
-                width: 75%;
+                width: 55%;
                 margin: 0 auto;
             }
         }

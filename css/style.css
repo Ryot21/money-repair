@@ -4306,19 +4306,22 @@ dd {
 }
 @media (width >= 768px) {
   .c-flex.-sns {
-    width: 70%;
+    width: 50%;
     margin-right: 0;
     margin-left: auto;
   }
 }
 .c-flex.-sns .flexItem.-snsLogoArea {
-  width: 30%;
-  height: 20px;
-  background: black;
+  width: 22%;
+}
+@media (width >= 768px) {
+  .c-flex.-sns .flexItem.-snsLogoArea {
+    width: 25%;
+  }
 }
 @media (768px >= width) {
   .c-flex.-sns.snsBox {
-    width: 75%;
+    width: 55%;
     margin: 0 auto;
   }
 }
