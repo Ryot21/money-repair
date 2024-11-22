@@ -43,6 +43,7 @@
 </head>
 <body class="p-top">
 
+
     <!-- ハンバーガーメニュー -->
     <nav class="c-hb-nav sp">
         <input id="c-hb-nav__checkbox" class="c-hb-nav__cheakbox" type="checkbox"/>
@@ -91,7 +92,7 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </header><!-- //Header -->
 
     <main>
         <div class="contents -imgBg -fv">
@@ -148,14 +149,17 @@
             <div class="c-contents--inner">
                 <ul class="c-flex -col1_2 -jc-sb -h-cen">
                     <li class="flexItem mgb10s">
-                        <h2 class="w50 mgl0 mgl0s mgb3 mgb3s"><img src="images/SVG/money-repair-toha.svg" alt="マネーリペアとは"></h2>
+                        <h2 class="w50 mgl0 mgl0s mgb2 mgb3s"><img src="images/SVG/money-repair-toha.svg" alt="マネーリペアとは"></h2>
                         <p class="s-ML -s18 -b -left -ls-2 -lh-1_5 mgb3 mgb3s">
                             企業の従業員様向けに金融・投資・税務の教育を実施する福利厚生プログラム
                         </p>
-                        <p class="s-S -s14 -left -ls-2 -lh-1_5 mgb5 mgb5s">
+                        <p class="s-S -s14 -left -ls-2 -lh-1_5 mgb5 mgb10s">
                             金融は分野によって知識が偏りがちなので、金融知識という知的財産を身につけ、自分たちで適切な判断ができるようにすることが必要だと感じます。金融リテラシーを上げることにより「将来に向けたお金の不安を解決する」サービスです。
                         </p>
-                        <a class="c-link -btn s-M -s16 -b -white -ls-2" href="">マネーリペアについて</a>
+                        <div class="c-contents--btnArea -left">
+                            <a class="c-link -btn -center s-M -s16 -b -white -ls-2" href="">マネーリペアについて</a>
+                        </div>
+
                     </li>
                     <li class="flexItem">
                         <div class="imgBox c-img -borderBox -solid">
@@ -168,10 +172,10 @@
         <!-- ご利用者の声 -->
         <div id="sc02" class="c-contents pdt10 pdt20s mgb5s">
             <div class="c-contents--inner">
-                <h2 class="c-contents--title -interview -en-color03 pdb3 pdb3s">ご利用者インタビュー</h2>
-                <div class="c-post mgb3 mgb5s">
+                <h2 class="c-contents--title -interview -ls-1 -en-color03 pdb3 pdb5s">ご利用者インタビュー</h2>
+                <div class="c-post mgb3 mgb15s">
                     <ul class="c-flex -col2M1_3 -jc-sb -h-top">
-                        <li class="flexItem_M mgb5s">
+                        <li class="flexItem_M mgb10s">
                             <a class="c-post--link" href="">
                                 <!-- バナー風画像 -->
                                 <div class="c-thumbnail -interview mgb3 mgb3s">
@@ -263,12 +267,12 @@
             </div>
         </div>
         <!-- お役立ち情報 -->
-        <div id="sc03" class="c-contents pdt10 pdt20s mgb5s">
+        <div id="sc03" class="c-contents pdt10 pdt20s mgb10 mgb20s">
             <div class="c-contents--inner">
-                <h2 class="c-contents--title -news -en-color03 pdb3 pdb3s">お役立ち情報</h2>
-                <div class="c-post mgb3 mgb5s">
+                <h2 class="c-contents--title -news -en-color03 -ls-1 pdb3 pdb5s">お役立ち情報</h2>
+                <div class="c-post mgb3 mgb15s">
                     <ul class="c-flex -col2M1_3 -jc-sb -h-top">
-                        <li class="flexItem_M mgb5s">
+                        <li class="flexItem_M mgb10s">
                             <a class="c-post--link" href="">
                                 <!-- バナー風画像 -->
                                 <div class="c-thumbnail -news mgb3 mgb3s">
@@ -359,14 +363,65 @@
                 </div>
             </div>
         </div>
+        <!-- お問い合わせ -->
+        <div id="sc-contact" class="c-contents -bg-gray pdt5 pdt10s pdb5 pdb10s">
+            <div class="c-contents--inner -bg-white -card">
+                <h2 class="c-contents--title -contact -ls-1 -en-color03 pdb3 pdb5s">資料請求<span class="s-ML -b">&</span>お問い合わせ</h2>
+                <p  class="c-contents--description s-S pdb3 pdb5s">
+                    貴社の<span class="-b">福利厚生</span>に新たな価値を加え、<br>
+                    <span class="-b">従業員のご家族を含めた資産形成と経済力</span>を<br class="sp">トータルサポートいたします。<br>
+                    <span class="-b">『マネーリペア』をぜひご利用ください。</span>
+                </p>
+                <!-- パンフレット・2024年版 -->
+                <div class="imgBox w80 w100s pdb5 pdb10s">
+                    <img src="images/item/pf-2024.png" alt="マネーリペア2024">
+                </div>
+                <div class="c-contents--btnArea">
+                    <a class="c-link -btn -c-red -center s-M -s16 -b -white -ls-2" href="">資料請求する</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer id="footer" class="c-footer">
-        <div class="c-footer__shopArea">
-            <img src="images/logo/impreme/impreme-logo-footer.png" alt="株式会社インプレーム">
+    <footer id="footer" class="c-footer -bg-color03 pdt5 pdt10s pdb5 pdb5s">
+        <div class="c-footer-wrapper">
+            <ul class="c-flex -footer -jc-sb">
+                <li class="flexItem -logoArea">
+                    <!-- ロゴ -->
+                    <div class="logo mgb5 mgb10s">
+                        <a class="c-link -img" href="https://money-repair.jp"><img src="images/logo/mp/money-repair-logo_black.svg" alt="マネーリペア"></a>
+                    </div>
+                    <!-- サイトマップ -->
+                    <nav class="siteMap c-fnav mgb10s">
+                        <ul class="c-flex -jc-st -h-cen">
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">個人情報の取り扱いについて</a></li>
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">利用条件</a></li>
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">個人情報保護方針</a></li>
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">情報セキュリティ基本方針</a></li>
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">クラウドサービス運用プライバシーポリシー</a></li>
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">クラウドサービス情報セキュリティ方針</a></li>
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">導入・保守サービス運用プライバシーポリシー</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="flexItem -snsArea">
+                    <ul class="snsBox c-flex -sns -jc-sb mgb5 mgb10s">
+                        <li class="flexItem -snsLogoArea">
+                            <a class="c-link -img" href=""><img src="" alt="公式X"></a>
+                        </li>
+                        <li class="flexItem -snsLogoArea">
+                            <a class="c-link -img" href=""><img src="" alt="公式Facebook"></a>
+                        </li>
+                        <li class="flexItem -snsLogoArea">
+                            <a class="c-link -img" href=""><img src="" alt="公式Instagram"></a>
+                        </li>
+                    </ul>
+                    <p class="copyright s-SS -s12 -white -center_s -right">© 2016-2024 株式会社 インプレーム All rights reserved.</p>
+                </li>  
+            </ul>
         </div>
-    </footer><!-- //footer -->
+    </footer><!-- //Footer -->
 
     <script>
         // トップページ > ロゴ
@@ -379,7 +434,7 @@
                 delay: 0, // 途切れなくループ
             },
         });
-        const swiperLogoLeft = new Swiper(".swiper-Logo.-left", {
+        const swiperLogoLeft  = new Swiper(".swiper-Logo.-left" , {
             loop: true, 
             slidesPerView: 'auto', 
             speed: 6000,

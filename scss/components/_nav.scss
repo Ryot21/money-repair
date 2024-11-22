@@ -1,6 +1,8 @@
 // ナビゲーション（nav）
+
+// ヘッダーナビゲーション
 .c-hnav{
-	padding: 0 0 0 5%;
+	padding: 0 0 0 8%;
 	// ナビゲーション関係
 	.navItem{
 		width: auto;
@@ -35,7 +37,7 @@
 			padding-right: 15px;
 			&::after{
 				content: "";
-				width: 10px;
+				width: 12px;
 				height: 10px;
 				position: absolute;
 				top: 50%;
@@ -61,7 +63,7 @@
 		will-change: transform;
 		transition: all .5s;
 		@include min(500){
-			padding: 6% 0;
+			padding: 5% 0;
 		}
 		&:hover{
 			background: $main-color--orange;
@@ -69,6 +71,7 @@
 	}
 }
 
+// ハンバーガーメニュー
 .c-hb-nav{
 	position: sticky;
 	top: 1.5%;
@@ -295,5 +298,43 @@
 		bottom: 0;
 		right: 0;
 		width: 11%;
+	}
+}
+
+// フッターナビゲーション
+.c-fnav{
+	// ナビゲーション関係
+	.navItem{
+		width: auto;
+		margin: 0 15px 2px 0;
+		@include min(768){margin: 0 5px 1px 0;}
+		
+	}
+	&--link{
+		position: relative;
+		&::before{
+			content: "";
+			width: 0;
+			height: 1px;
+			background: $main-color--w;
+			border-radius: 5px;
+
+			position: absolute;
+			bottom: -3px;
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			will-change: transform;
+			transition: all .5s;
+		}
+		&:hover{
+			color: $main-color--yellow !important;
+			&::before{
+				width: 90%;
+				background: $main-color--yellow;
+				opacity: 1;
+			}
+		}
+
 	}
 }

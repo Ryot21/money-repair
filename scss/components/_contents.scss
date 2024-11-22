@@ -5,6 +5,11 @@
 }
 
 .c-contents{
+	&.-bg-color01{background: $site-color01;}
+	&.-bg-color02{background: $site-color02;}
+	&.-bg-color03{background: $site-color03;}
+	&.-bg-white  {background: $main-color--w;}
+	&.-bg-gray   {background: $main-color--gray;}
 
 	&--inner{
 		width: 90%;
@@ -12,18 +17,30 @@
 		@include min(500){width: 85%;}
 		@include min(768){width: 82.5%;}
 		@include min(1600){max-width: 1120px;}
+
+		&.-bg-color01{background: $site-color01;}
+		&.-bg-color02{background: $site-color02;}
+		&.-bg-color03{background: $site-color03;}
+		&.-bg-white  {background: $main-color--w;}
+		&.-bg-gray   {background: $main-color--gray;}
+
+		
+		&.-card{
+			padding: 10% 2.5%;
+			border-radius: 5px;
+			@include min(768){
+				padding: 5% 2.5%;
+			}
+		}
+	
 	}
 	&--btnArea{
 		margin: 0 auto;
 		text-align: center;
-	}
 
-	&.-bg-lightBlue01{background: $site-color01;}
-	&.-bg-lightBlue02{background: $site-color05;}
-	&.-bg-white{background: $main-color--w;}
-	&.-bg-blue{background: $site-color02;}
-	&.-bg-green{background: $site-color03;}
-	&.-bg-orange{background: $site-color04;}
+		&.-left {text-align: start !important;}
+		&.-right{text-align: end   !important;}
+	}
 
 	&.-fv{//ファーストビュー
 		position: relative;

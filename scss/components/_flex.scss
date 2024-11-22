@@ -111,7 +111,6 @@
                     width: 20%;
                     max-width: 180px;
                 }
-
             }
             &.-navArea{
                 overflow: hidden;
@@ -130,13 +129,68 @@
             }
         }
     }
+    // header > ナビ＋コンタクト
     &.-nav-contact{
         .flexItem{
             &.-pageLink{
                 @include min(500){width: 68%;}
             }
             &.-contact{
-                @include min(500){width: 30%;}
+                @include min(500){width: 27%;}
+            }
+        }
+    }
+    // footer関係
+    &.-footer{
+        .flexItem{
+            &.-logoArea,
+            &.-snsArea{
+                @include max(500){display: contents;}
+                @include max(500){
+                    .logo      {order: 1;}
+                    .siteMap   {order: 3;}
+                    .snsBox    {order: 2;}
+                    .copyright {order: 4;}
+                }
+            }
+
+            &.-logoArea{
+                width: 100%;
+                @include min(500){width: 65%;}
+                @include min(768){width: 55%;}
+                .logo{
+                    width: 50%;
+                    max-width: 250px;
+                    @include max(500){margin: 0 auto;}
+                }
+            }
+            &.-snsArea{
+                width: 100%;
+                @include min(500){width: 35%;}
+                @include min(768){width: 45%;}
+                p{width: 100%;}
+            }
+        }
+    }
+    // Logo関係
+    &.-sns{
+        width: 100%;
+        @include min(768){
+            width: 70%;
+            margin-right: 0;
+            margin-left: auto;
+        }
+        .flexItem{
+            &.-snsLogoArea{
+                width: 30%;
+                height: 20px;
+                background: black;
+            }
+        }
+        &.snsBox{
+            @include max(768){
+                width: 75%;
+                margin: 0 auto;
             }
         }
     }
