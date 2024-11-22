@@ -6205,6 +6205,10 @@ a {
 }
 
 .c-post--link {
+  position: relative;
+  top: 0;
+  display: block;
+  will-change: transform;
   transition: all 0.5s;
 }
 .c-post--link .imgBox,
@@ -6214,6 +6218,9 @@ a {
 .c-post--link .c-thumbnail--cover {
   will-change: transform;
   transition: all 0.5s;
+}
+.c-post--link:hover {
+  top: 0.5rem;
 }
 .c-post--link:hover .imgBox {
   transform: scale(1.005);
