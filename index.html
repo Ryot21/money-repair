@@ -65,7 +65,7 @@
     </nav>
 
     <!-- Header -->
-    <header id="header" class="c-header -fixed">
+    <header id="js-header" class="c-header -fixed">
         <div class="c-header-wrapper">
             <ul class="c-flex -header -jc-sb -h-cen">
                 <li class="flexItem -logoArea">
@@ -74,21 +74,22 @@
                     </div>
                 </li>
                 <li class="flexItem -navArea tb-pc">
-                    <ul class="c-flex -nav-contact -jc-sb -h-cen">
-                        <li class="flexItem -pageLink">
-                            <nav class="c-hnav">
-                                <ul class="c-flex -jc-sb -h-cen">
-                                    <li class="navItem  "><a class="c-hnav--link s-M -b -ls-3 -ws-n" href="">特徴</a></li>
-                                    <li class="navItem  "><a class="c-hnav--link -arcive s-M -b -ls-3 -ws-n" href="">ご利用者の声</a></li>
-                                    <li class="navItem  "><a class="c-hnav--link -arcive s-M -b -ls-3 -ws-n" href="">お役立ち情報</a></li>
-                                </ul>
-                            </nav>
-                        </li>
-                        <li class="flexItem -contact">
-                            <a class="c-hnav--contact s-M -s14 -b -center -ls-3 -ws-n" href="">資料請求</a>
-                        </li>
-                    </ul>
-
+                    <div class="c-navAreaBox">
+                        <ul class="c-flex -nav-contact -jc-sb -h-cen">
+                            <li class="flexItem -pageLink">
+                                <nav class="c-hnav">
+                                    <ul class="c-flex -jc-sb -h-cen">
+                                        <li class="navItem  "><a class="c-hnav--link s-M -b -ls-3 -ws-n" href="">特徴</a></li>
+                                        <li class="navItem  "><a class="c-hnav--link -arcive s-M -b -ls-3 -ws-n" href="">ご利用者の声</a></li>
+                                        <li class="navItem  "><a class="c-hnav--link -arcive s-M -b -ls-3 -ws-n" href="">お役立ち情報</a></li>
+                                    </ul>
+                                </nav>
+                            </li>
+                            <li class="flexItem -contact">
+                                <a class="c-hnav--contact s-M -s14 -b -center -ls-3 -ws-n" href="">資料請求</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -149,7 +150,7 @@
             <div class="c-contents--inner">
                 <ul class="c-flex -col1_2 -jc-sb -h-cen">
                     <li class="flexItem mgb10s">
-                        <h2 class="w50 mgl0 mgl0s mgb2 mgb3s"><img src="images/SVG/money-repair-toha.svg" alt="マネーリペアとは"></h2>
+                        <h2 class="w50 mgl0 mgl0s mgb3 mgb3s"><img src="images/SVG/money-repair-toha.svg" alt="マネーリペアとは"></h2>
                         <p class="s-ML -s18 -b -left -ls-2 -lh-1_5 mgb3 mgb3s">
                             企業の従業員様向けに金融・投資・税務の教育を実施する福利厚生プログラム
                         </p>
@@ -399,9 +400,7 @@
                             <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">利用条件</a></li>
                             <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">個人情報保護方針</a></li>
                             <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">情報セキュリティ基本方針</a></li>
-                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">クラウドサービス運用プライバシーポリシー</a></li>
-                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">クラウドサービス情報セキュリティ方針</a></li>
-                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">導入・保守サービス運用プライバシーポリシー</a></li>
+                            <li class="navItem"><a class="c-fnav--link s-SS -s12 -white -ls-1 -lh-1_5" href="">プライバシーポリシー</a></li>
                         </ul>
                     </nav>
                 </li>
@@ -414,7 +413,7 @@
                             <a class="c-link -img" href=""><img src="images/logo/sns/facebook.svg" alt="公式Facebook"></a>
                         </li>
                         <li class="flexItem -snsLogoArea">
-                            <a class="c-link -img" href=""><img src="" alt="公式Instagram"></a>
+                            <a class="c-link -img" href=""><img src="images/logo/sns/Instagram.svg" alt="公式Instagram"></a>
                         </li>
                     </ul>
                     <p class="copyright s-SS -s12 -white -center_s -right">© 2016-2024 株式会社インプレーム All rights reserved.</p>
@@ -444,12 +443,8 @@
                 reverseDirection: true,  // 逆方向のスライダーにする
             },
         });
-
     </script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <!-- <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M48ZKPBW" height="0" width="0" style="display:none;visibility:hidden"></iframe> -->
-    </noscript><!-- //Google Tag Manager (noscript) -->
+    <!-- <script src="js/scrollHeader.js" defer></script> -->
 
 </body>
 </html>
