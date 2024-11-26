@@ -113,16 +113,12 @@
                 }
             }
             &.-navArea{
-                overflow: hidden;
-                @include min(500){
-                    width: 69%;
-                    background: $main-color--w;
-                    border: 2px solid $site-color03;
-                    border-radius: 30px;
-                }
-                @include min(768){
-                    max-width: 550px;
-                }
+                // background: $main-color--w;
+                // border: 2px solid $site-color03;
+                // border-radius: 30px;
+                // overflow: hidden;
+                @include min(500){width: 69%;}
+                @include min(768){max-width: 550px;}
             }
             &.-contact{
 
@@ -183,7 +179,7 @@
         .flexItem{
             &.-snsLogoArea{
                 width: 22%;
-                @include min(768){width: 25%;}
+                @include min(768){width: 20%;}
             }
         }
         &.snsBox{

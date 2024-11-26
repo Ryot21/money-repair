@@ -156,6 +156,12 @@
             border-bottom: 1px solid $main-color--gray;
         }
     }
+    &.-dotted{
+        border-bottom: 1px dotted $main-color--gray;
+        @include min(500){
+            border-bottom: 1px dotted $main-color--gray;
+        }
+    }
 }
 
 .setubi-title{
