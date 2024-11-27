@@ -85,7 +85,7 @@
     left: 85%;
 	width:  50px;
 	height: 50px;
-	background: $site-color02;
+	background: $site-color03;
 	border-radius: 50%;
 	z-index: 9999;
 	&__cheakbox{
@@ -98,7 +98,27 @@
 		}
 		&:checked ~ .c-hb-nav__content{
 			transform: translateX(0%);
-			box-shadow: -5px 0px 11px rgba(0, 0, 0, 0.15);		}
+			box-shadow: -5px 0px 11px rgba(0, 0, 0, 0.15);
+		}
+		&:checked ~ .c-hb-nav__button{
+			span {
+				padding-top: 5px;
+				&::before {
+					top: 2.5px;
+					left: 42%;
+					width: 25px;
+					height: 3px;
+					transform: rotate(43deg) translate(-50%, -50%);
+				}
+				&::after  {
+					top: -15px;
+					left: 43%;
+					width: 25px;
+					height: 3px;
+					transform: rotate(-43deg) translate(-50%, -50%);
+				}
+			}
+		}
 	}
 	&__button{
 		position: relative;
@@ -108,14 +128,16 @@
 		vertical-align: middle;
 		cursor:pointer;
 		z-index: 9999;
-
 		@include min(768){width: 100%;}
 
 		span{
+			position: relative;
+			top: 59%;
 			display: block;
 			width: 100%;
-			position: absolute;
-			top: 60%;
+			padding-top: 1px;
+			transition: all .1s;
+
 			&::before,
 			&::after{
 				content: "";
@@ -126,26 +148,23 @@
 				border-radius: 3px;
 				background: $main-color--w;
 				cursor: pointer;
-				@include min(768){
-					width: 100%;
-				}
+				will-change: transform;
+				transition: all .1s;
+				@include min(768){width: 100%;}
 			}
 			&::before{
-				top: -17px;
+				top: -15px;
 				left: 50%;
 				transform: translateX(-50%);
 				width: 30px;
-
 			}
 			&::after {
-				top: -8px;
+				top: -6px;
 				left: 50%;
 				transform: translateX(-50%);
-				width: 20px;
-
+				width: 30px;
 			}
 		}
-
 		p{
 			position: absolute;
 			bottom: -72%;
@@ -157,6 +176,26 @@
 				filter: drop-shadow(0px 0px 2px $main-color--w);
 			}
 		}
+
+		// &.is-active {
+			// span {
+			// 	padding-top: 5px;
+			// 	&::before {
+			// 		top: 2.5px;
+			// 		left: 42%;
+			// 		width: 25px;
+			// 		height: 3px;
+			// 		transform: rotate(43deg) translate(-50%, -50%);
+			// 	}
+			// 	&::after  {
+			// 		top: -15px;
+			// 		left: 43%;
+			// 		width: 25px;
+			// 		height: 3px;
+			// 		transform: rotate(-43deg) translate(-50%, -50%);
+			// 	}
+			// }
+		// }
 	}
 	&__close {
 		display: block;
@@ -181,7 +220,7 @@
 		right: 0;
 
 		/* ハンバーガーメニュー内の幅 */
-		width: 85%;
+		width: 90%;
 		height: 100%;
 		padding: 10% 10% 0 10%;
 		background: $site-color03;
@@ -194,7 +233,7 @@
 			content: "© 2016-2024 株式会社インプレーム All rights reserved.";
 			position: absolute;
 			bottom: 20%;
-			right: -33%;
+			right: -40%;
 			color: $main-color--w;
 			font-size: 1.2rem;
 			font-weight: bold;
