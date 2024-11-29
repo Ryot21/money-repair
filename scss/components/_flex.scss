@@ -138,6 +138,7 @@
                     width: 27%;
                     height: 100%;
                     background: $main-color--red;
+                    border-radius: 0 15px 15px 0;
                     will-change: transform;
                     transition: all .5s;
                     &:hover{

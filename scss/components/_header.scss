@@ -6,7 +6,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	transition: padding .3s;
-	// @include min(500){padding: 40px 0px 10px;}
+
 	&::after{
 		content: "";
 		position: absolute;
@@ -26,9 +26,7 @@
 		width: 50%;
 		align-items: center;
 		z-index: 1;
-		@include max(768){
-			padding-top: 3%;
-		}
+		@include max(768){padding-top: 3%;}
 		@include min(500){
 			width: 85%;
 			margin: auto;

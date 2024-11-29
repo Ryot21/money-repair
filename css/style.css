@@ -3351,6 +3351,70 @@ button.swiper-pagination-bullet {
   width: auto;
   margin: 0 5px;
 }
+.c-hnav .navItem.arciveItem {
+  position: relative;
+}
+.c-hnav .navItem.arciveItem:hover .c-hnav--dropdown {
+  opacity: 1;
+  z-index: 1;
+}
+.c-hnav .navItem .c-hnav--dropdown {
+  position: absolute;
+  bottom: -170px;
+  padding: 10% 12% 5% 10%;
+  background: #ffffff;
+  border: 1px solid #3b3b3b;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: -1;
+}
+.c-hnav .navItem .c-hnav--dropdown .arcive-lists {
+  position: relative;
+}
+.c-hnav .navItem .c-hnav--dropdown .arcive-lists::after {
+  content: "";
+  width: 30px;
+  height: 10px;
+  position: absolute;
+  top: -16%;
+  left: 31%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.229), rgba(0, 0, 0, 0));
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
+          clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  will-change: transform;
+  transition: all 0.5s;
+}
+.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list {
+  margin-bottom: 7px;
+}
+.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a {
+  position: relative;
+  display: block;
+}
+.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  will-change: transform;
+  transition: all 0.5s;
+}
+.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a:hover {
+  color: #6D84A5;
+}
+.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a:hover::before {
+  width: 90%;
+  background: #6D84A5;
+  opacity: 1;
+}
 .c-hnav--link {
   position: relative;
 }
@@ -3415,7 +3479,6 @@ button.swiper-pagination-bullet {
   background: #fefefe;
   border: 1px solid #636363;
   border-radius: 15px;
-  overflow: hidden;
 }
 
 .c-hb-nav {
@@ -4304,6 +4367,7 @@ dd {
     width: 27%;
     height: 100%;
     background: #df2323;
+    border-radius: 0 15px 15px 0;
     will-change: transform;
     transition: all 0.5s;
   }
