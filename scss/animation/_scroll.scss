@@ -1,69 +1,62 @@
 
-@keyframes scroll-onLogo {
-    0% {
-        pointer-events: none;
+@keyframes sc-header-gap {// headerの縦位置
+    0%   {padding: 40px 0px 10px;}
+    100% {padding: 20px 0px 10px;}
+}
+@keyframes sc-headerLogo-gap {// ロゴの大きさ
+    0%   {padding-right: 0;}
+    100% {padding-right: 20px;}
+}
+@keyframes sc-headerBg-gap {// ページ上部の影
+    0%   {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.453), #00000000);
         opacity: 0;
-    }
-    49%{
-        pointer-events: all;
-        opacity: 0;
-    }
-    50% {
-        opacity: .5;
     }
     100% {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.229), #00000000);
         opacity: 1;
     }
 }
-
-@keyframes scroll-onNav {
-    0% {
-        pointer-events: none;
-        opacity: 0;
-    }
-    29%{
-        pointer-events: all;
-        opacity: .9;
-    }
-    30% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
+@keyframes sc-headerNav-gap {// header > ナビゲーション
+    to {
+        height: 40px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        border-radius: 30px;
     }
 }
 
-@keyframes scroll-onBtn {
-    0% {
-        pointer-events: none;
-        opacity: 0;
-    }
-    10%{
-        pointer-events: all;
-    }
-    50% {
-        opacity: .5;
-    }
-    100% {
-       opacity: 1;
-    }
-}
 
-.a-scroll-on{
-    @include min(500){
-        opacity: 0;
-        animation: scroll-onNav;
-        animation-timeline: scroll();
-        animation-range: cover 0% cover 100%;
+.is-scroll{// bodyタグ
+    .c-header{
+        &::after{
+            animation: sc-headerBg-gap linear both;
+            animation-range: contain 30% contain 60%;
+            animation-timeline: scroll();
+            will-change: transform;
+
+        }
+        &-wrapper{
+            animation: sc-headerLogo-gap linear both;
+            animation-range: contain 30% contain 60%;
+            animation-timeline: scroll();
+            will-change: transform;
+
+            @include min(768){
+                animation: sc-header-gap linear both;
+                animation-range: contain 30% contain 60%;
+                animation-timeline: scroll();
+                will-change: transform;
+
+            }
+
+            .c-navAreaBox{
+                // animation: sc-contact-gap 1s linear both;
+                animation: sc-headerNav-gap linear both;
+                animation-range: contain 50% contain 60%;
+                animation-timeline: view();
+                will-change: transform;
+
+            }
+        }
     }
-      // &_btn{
-      // 	  position: sticky;
-      // 	  width: 10%;
-      // }
-
-      // &_logo{
-      // 	  position: sticky;
-      // 	  width: 10%;
-      // }
-
 }

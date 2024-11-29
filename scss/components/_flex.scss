@@ -105,6 +105,7 @@
         .flexItem{
             &.-logoArea{
                 width: 100%;
+                @include max(500){margin-left: 10%;}
                 @include min(400){width: 90%;}
                 @include min(500){width: 30%;}
                 @include min(768){
@@ -127,12 +128,22 @@
     }
     // header > ナビ＋コンタクト
     &.-nav-contact{
+        height: 100%;
         .flexItem{
             &.-pageLink{
                 @include min(500){width: 68%;}
             }
             &.-contact{
-                @include min(500){width: 27%;}
+                @include min(500){
+                    width: 27%;
+                    height: 100%;
+                    background: $main-color--red;
+                    will-change: transform;
+                    transition: all .5s;
+                    &:hover{
+                        background: $main-color--orange;
+                    }
+                }
             }
         }
     }

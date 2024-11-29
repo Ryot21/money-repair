@@ -1,4 +1,8 @@
 // 1. TOPページ
+main{
+	margin-top: -10%;
+}
+
 
 .p-top{
 	position: relative;
@@ -15,38 +19,5 @@
 	@include min(768){
 		background-size: 30px 30px;
 		animation: fadeAnime 2s forwards;
-	}
-	&__left,
-	&__right{
-		position: fixed;
-		top: 0;
-		display: block;
-		height: 100dvb;
-		width: 45px;
-		background: $site-color02;
-		// z-index: -1;
-		.logo{
-			background: url(../images/logo/impreme-logo-w-border.png);
-			background-repeat: repeat-y;
-			background-position: 35%;
-			background-size: 35px;
-			height: 100%;
-			// opacity: .5;
-		}
-	}
-	&__left{
-		left: 0;
-	}
-	&__right{
-		right: 0;
-	}
-
-
-
-	&::before{
-		left: 0;
-	}
-	&::after{
-		right: 0;
 	}
 }
