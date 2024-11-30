@@ -11,40 +11,37 @@
 			position: relative;
 			&:hover{
 				.c-hnav--dropdown{
+					transform: translateY(0);
+					pointer-events: auto;
 					opacity: 1;
-					z-index: 1;
+
 				}
 			}
 		}
 		.c-hnav--dropdown{
 			position: absolute;
-			bottom: -170px;
-			padding: 10% 12% 5% 10%;
+			top: 105%;
+
+			width: auto;
+			height: auto;
 			background: $main-color--w;
 			border: 1px solid $main-color--b;
+
+			padding: 15px 20px 10px 19px;
 			border-radius: 5px;
 			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
-			transition: all .5s;
+			pointer-events: none;
+			will-change: transform;
 			opacity: 0;
-			z-index: -1;
+			transform: translateY(-10px);
+			transition: opacity 0.3s ease, transform 0.3s ease;
+
 
 			.arcive-lists{ // ul
-				position: relative;
-				&::after{
-					content: "";
-					width: 30px;
-					height: 10px;
-					position: absolute;
-					top: -16%;
-					left: 31%;
-					background: linear-gradient(to bottom, rgba(0, 0, 0, 0.229), #00000000);
-					clip-path: polygon(50% 0, 100% 100%, 0 100%);
-					will-change: transform;
-					transition: all .5s;
-				}
+
 				.arcive-list{ // li
-					margin-bottom: 7px;
+					margin-bottom: 10px;
 					a{
 						position: relative;
 						display: block;
@@ -104,6 +101,7 @@
 		}
 		&.-arcive{
 			padding-right: 15px;
+			&::before{display: none;}
 			&::after{
 				content: "";
 				width: 10px;
@@ -143,6 +141,9 @@
 	background: #fefefe;
 	border: 1px solid $main-color--Dgray;
 	border-radius: 15px;
+	will-change: transform;
+	transition: all .5s;
+	overflow: visible;
 }
 
 // ハンバーガーメニュー

@@ -3355,39 +3355,28 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 .c-hnav .navItem.arciveItem:hover .c-hnav--dropdown {
+  transform: translateY(0);
+  pointer-events: auto;
   opacity: 1;
-  z-index: 1;
 }
 .c-hnav .navItem .c-hnav--dropdown {
   position: absolute;
-  bottom: -170px;
-  padding: 10% 12% 5% 10%;
+  top: 105%;
+  width: auto;
+  height: auto;
   background: #ffffff;
   border: 1px solid #3b3b3b;
+  padding: 15px 20px 10px 19px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s;
-  opacity: 0;
-  z-index: -1;
-}
-.c-hnav .navItem .c-hnav--dropdown .arcive-lists {
-  position: relative;
-}
-.c-hnav .navItem .c-hnav--dropdown .arcive-lists::after {
-  content: "";
-  width: 30px;
-  height: 10px;
-  position: absolute;
-  top: -16%;
-  left: 31%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.229), rgba(0, 0, 0, 0));
-  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
-          clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  pointer-events: none;
   will-change: transform;
-  transition: all 0.5s;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list {
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 .c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a {
   position: relative;
@@ -3443,6 +3432,9 @@ button.swiper-pagination-bullet {
 .c-hnav--link.-arcive {
   padding-right: 15px;
 }
+.c-hnav--link.-arcive::before {
+  display: none;
+}
 .c-hnav--link.-arcive::after {
   content: "";
   width: 10px;
@@ -3479,6 +3471,9 @@ button.swiper-pagination-bullet {
   background: #fefefe;
   border: 1px solid #636363;
   border-radius: 15px;
+  will-change: transform;
+  transition: all 0.5s;
+  overflow: visible;
 }
 
 .c-hb-nav {
