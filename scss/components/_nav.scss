@@ -91,7 +91,8 @@
 			will-change: transform;
 			transition: all .5s;
 		}
-		&:hover{
+		&:hover,
+		&.-active{
 			color: $site-color03;
 			&::before{
 				width: 90%;
@@ -326,9 +327,6 @@
 			font-size: 1.2rem;
 			font-weight: bold;
 			transform:rotate(270deg);
-			// will-change: transform;
-			// transition: .5s all;
-			// opacity: 0;
 		}
 		.navItem{
 			margin-bottom: 16.5px;
@@ -342,44 +340,12 @@
 				transition: .5s all;
 				span{transition: .5s all;}
 				&.-active{
-					position: relative;
-					color: $site-color02;
-					font-weight: bold;
-					pointer-events: none;
-					span{color: $site-color02;}
-					filter: drop-shadow(1px 1px 0px hsla(0, 0%, 0%, 0.322));
-					pointer-events: none;
-					&::after{
-						content: "";
-						position: absolute;
-						top: 50%;
-						left: -14px;
-						transform: translateY(-50%);
-						width: 12px;
-						height: 12px;
-						background-image: url(../images/logo/page-title-icon.png);
-						background-size: contain;
-						background-repeat: no-repeat;
-						@include min(768){
-							left: -12px;
-							width: 10px;
-							height: 10px;
-						}
-						@include min(1200){
-							top: 47%;
-							left: -17px;
-							width: 15px;
-							height: 15px;
-						}
-						@include min(1400){
-							width: 13px;
-							height: 13px;
-						}
+					span{
+						color: $main-color--yellow !important;
+						font-weight: bold;
 					}
 				}
 			}
-			label{color: $main-color--b;}
-			&:hover{a, label,span{color: $site-color01;}}
 		}
 	}
 	&__contactArea{

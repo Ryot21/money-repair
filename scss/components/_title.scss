@@ -72,6 +72,29 @@
     line-height: 1.5;
 }
 
+// ページ内のタイトル
+.c-page-title{
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include max(500){top: 52%;}
+    &::before{
+        
+        position: absolute;
+        bottom: -75%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        color: $main-color--b;
+        font-size: clamp(1rem, 1.2vw, 1.5rem);
+
+    }
+    &.-service{&::before{content: "Feature";}}
+}
+
+// 投稿アイテム内のタイトル
 .c-post--title{
     font-size: clamp(2.2rem, 2vw, 2.5rem);
     font-weight: bold;

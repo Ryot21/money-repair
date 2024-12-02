@@ -45,6 +45,17 @@
 	&.-fv{//ファーストビュー
 		position: relative;
 		overflow: hidden;
+		&.-single{
+			position: relative;
+			.imgBox{
+				width: 100lvw;
+				height: 50vh;
+				max-height: 550px !important;
+				background: $main-color--w;
+				background-position: 50% 50%;
+				@include max(500){height: 25vh;}
+			}
+		}
 	}
 
 	&.-imgBg{//背景画像
