@@ -40,9 +40,11 @@
 @import "./components/category";  // カテゴリー
 @import "./components/date";      // 日付関係
 @import "./components/post";      // 投稿関係
+@import "./components/table";     // テーブル関係
 
 // 各ページ
 @import "./page/top";
+@import "./page/service";
 @import "./page/thanks";
 
 /*
@@ -61,4 +63,5 @@
 @import "./animation/move";
 @import "./animation/img";
 @import "./animation/underline";
+@import "./animation/loading";
 @import "./animation/original";

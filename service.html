@@ -24,10 +24,11 @@
     <!--// デプロイ前に確認 -->
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/swiper.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- <script src="js/luminous.min.js"></script> -->
     <!-- <script src="js/form.js"></script> -->
 
+    <!-- <script src="js/lottie-player.js"></script> -->
 
     <!-- Google Tag Manager -->
     <script>
@@ -42,7 +43,6 @@
 
 </head>
 <body class="p-top is-scroll">
-
 
     <!-- Header -->
     <header id="js-header" class="c-header -fixed">
@@ -141,7 +141,69 @@
 
         <div class="c-contents -imgBg -fv -single">
             <div class="imgBox"></div>
-            <h2 class="c-page-title -service s-L -s20 -center -b -ls-2">マネーリペアの特徴</h2>
+            <h2 class="c-page-title -service s-LL -s20 -center -b -ls-2">マネーリペアの特徴</h2>
+        </div>
+
+        <!-- 導入部分 -->
+        <div class="c-contents pdt5 pdt10s pdb5 pdb10s">
+            <div class="c-contents--inner">
+                <!-- マネーリペアとは -->
+                <div class="c-contents--introduction pdt5 pdt10s mgb5s">
+                    <lottie-player
+                        id="mr-logo"
+                        mode="normal"
+                        autoplay
+                        speed=".3"
+                        loop
+                        src="json/mr-logo.json"
+                    >
+                    </lottie-player><!-- ロゴ -->
+                    <h2 class="c-contents--title -b-btm mgb5 mgb10s">
+                        <div class="w30">
+                            <img src="images/SVG/money-repair-toha.svg" alt="マネーリペアとは">
+                        </div>
+                    </h2>
+                    <p class="s-ML -s12 -center -ls-2 -lh-2">
+                        金融のプロが貴社の従業員に対して<span class="s-ML -s14 -b">金融リテラシーの向上</span>金融リテラシーの向上を支援し、<br class="tb-pc">
+                        将来に向けた<span class="s-ML -s14 -b">お金の不安を解決するサービス</span>です！！
+                    </p>
+                </div>
+                <!-- POINT -->
+                <div class="c-contents pdt20 pdt20s mgb5s">
+                    <h2 class="c-contents--title -point -en-color03 -b-btm mgb5 mgb5s">
+                        金融リテラシー<span class="s-L -b">を</span>習得<span class="s-L -b">して</span><br>
+                        純資産<span class="s-L -b">を</span>増やすこと<span class="s-L -b">が</span>可能<span class="s-L -b">に</span>
+                    </h2>
+                    <p class="s-ML -s12 -center -ls-2 -lh-2">
+                        金融リテラシーという知的財産を付けることにより、<br class="tb-pc">
+                        <span class="s-ML -s14 -b">可処分所得を増やすことが出来る</span>と同時に、<br class="tb-pc">
+                        有価証券などで運用し<span class="s-ML -s14 -b">純資産を伸ばすことが期待できます。</span>
+                    </p>
+
+                    
+                </div>
+                <!-- テーブル -->
+                <div class="c-contents pdt10 pdt10s mgb5s">
+                    <table class="c-table">
+                        <tr class="head">
+                            <th></th>
+                            <th><img class="w75 w100s" src="images/logo/mp/money-repair-logo_white.svg" alt="マネーリペア"></th>
+                            <th class="s-ML -s12 -b -ls-1 -lh-1_5">他社類似サービス</th>
+                        </tr>
+                        <tr>
+                            <td class="s-ML -s12 -b -ls-1">節税に関する相談</td>
+                            <td class="s-M -s10 -ls-1 -lh-1_5">税理士法人を使った<br class="tb-pc"><span class="-b">即効性のある手取りUP</span></td>
+                            <td class="s-M -s10 -ls-1 -lh-1_5">4つ全てをカバーしている<br class="tb-pc">サービスはなく、<br class="tb-pc">問題解決手段が乏しい</td>
+                        </tr>
+                        <tr>
+                            <td class="s-ML -s12 -b -ls-1">トータルサポート</td>
+                            <td class="s-M -s10 -ls-1 -lh-1_5">有資格者による<br class="tb-pc">税金・不動産・保険・有価証券の<br class="tb-pc"><span class="-b">ワンストップ相談</span>が可能！</td>
+                            <td class="s-M -s10 -ls-1 -lh-1_5">税理士法人がいないため<br class="tb-pc">税金相談ができない</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
         </div>
 
         <!-- お問い合わせ -->
@@ -201,6 +263,7 @@
             </ul>
         </div>
     </footer><!-- //Footer -->
+    <!-- <script src="js/lottie-player.js"></script> -->
 
 </body>
 </html>

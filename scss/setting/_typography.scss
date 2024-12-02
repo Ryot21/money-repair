@@ -44,7 +44,7 @@ $f-b: bold;
 
 
 // 基本テキスト
-h1,h2,h3,h4,h5,h6,p,a,span,label,select,button{
+h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
 	color: $main-color--b;
     font-family: $f-gothic;
     font-weight: $f-n;
@@ -180,7 +180,7 @@ html {
     // 基本（10px相当）
     font-size: 62.5%;
 }
-h1,h2,h3,h4,h5,h6,p,a,span,label,select,button{
+h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
         &.s-SS{
             font-size: .7rem;
             @include min(768){font-size: clamp(.7rem, 2vw, 1.2rem);}

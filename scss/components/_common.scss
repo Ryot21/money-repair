@@ -4,6 +4,7 @@
 .w90,.w90s,
 .w85,.w85s,
 .w80,.w80s,
+.w75,.w75s,
 .w50,.w50s,
 .w30,.w30s{
     &.-right{
@@ -71,6 +72,10 @@
     width: 80%;
     margin: auto;
 }
+.w75{
+    width: 75%;
+    margin: auto;
+}
 .w50{
     width: 50%;
     margin: auto;
@@ -106,6 +111,12 @@
 .w80s{
     @include max(500){
         width: 80% !important;
+        margin: auto;
+    }
+}
+.w75s{
+    @include max(500){
+        width: 75% !important;
         margin: auto;
     }
 }

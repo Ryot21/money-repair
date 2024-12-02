@@ -7,7 +7,7 @@ main{
 }
 
 
-.p-top{
+body{
 	position: relative;
 	width: 100%;
 	background-size: 15px 15px;
@@ -21,6 +21,12 @@ main{
 	@include min(768){
 		background-size: 30px 30px;
 		animation: fadeAnime 2s forwards;
+	}
+
+	#mr-logo{
+		width: 30%;
+		max-width: 50px;
+		margin: 0 auto 10px;
 	}
 
 }

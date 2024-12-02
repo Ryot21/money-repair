@@ -1,0 +1,27 @@
+//ローディングアニメーション
+
+@keyframes loading-bar {
+    0% {background-position: 100% 0;}
+    50% {background-position: 0% 0;}
+    100% {background-position: -100% 0;}
+}
+
+
+.a-loadingBar{
+    width: 300px;
+    height: 10px;
+    background-image: linear-gradient(
+      90deg,
+      #f3f3f3,
+      #f3f3f3 50%,
+      #8750d6 50%,
+      #8750d6
+    );
+    background-size: 200%, 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 15%);
+    animation-name: loading-bar;
+    animation-duration: 1.4s;
+    animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1); /* easeInOutQuintのイージング */
+    animation-iteration-count: infinite;
+}
