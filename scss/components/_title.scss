@@ -88,9 +88,10 @@
         color: $site-color03;
         font-size: clamp(1.2rem, 2vw, 1.6rem);
         letter-spacing: .3rem;
-
+        white-space: nowrap;
     }
-    &.-service{&::before{content: "FEATURE";}}
+    &.-service  {&::before{content: "FEATURE";}}
+    &.-interview{&::before{content: "USER INTERVIEW";}}
 }
 
 // サービスページ > サービス内容内のタイトル

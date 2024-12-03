@@ -120,7 +120,7 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
     &.-shadow{filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.637)) !important;}
 
     // 折り返し禁止
-    &.-ws-n{white-space: nowrap}
+    &.-ws-n{white-space: nowrap;}
 
     // 縦組み
     &.-tate{

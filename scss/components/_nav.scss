@@ -116,7 +116,8 @@
 				will-change: transform;
 				transition: all .5s;
 			}
-			&:hover{
+			&:hover,
+			&.-active{
 				&::after{
 					background: $site-color03;
 				}
