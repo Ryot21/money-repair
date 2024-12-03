@@ -365,16 +365,16 @@ h1.-color04, h2.-color04, h3.-color04, h4.-color04, h5.-color04, h6.-color04, p.
   color: #E77C31 !important;
 }
 h1.-house_c01, h2.-house_c01, h3.-house_c01, h4.-house_c01, h5.-house_c01, h6.-house_c01, p.-house_c01, a.-house_c01, span.-house_c01, label.-house_c01, select.-house_c01, button.-house_c01, th.-house_c01, td.-house_c01 {
-  color: #b6b343;
+  color: #EBE4DB;
 }
 h1.-house_c02, h2.-house_c02, h3.-house_c02, h4.-house_c02, h5.-house_c02, h6.-house_c02, p.-house_c02, a.-house_c02, span.-house_c02, label.-house_c02, select.-house_c02, button.-house_c02, th.-house_c02, td.-house_c02 {
-  color: #6d5847;
+  color: #D5E6E1;
 }
 h1.-house_c03, h2.-house_c03, h3.-house_c03, h4.-house_c03, h5.-house_c03, h6.-house_c03, p.-house_c03, a.-house_c03, span.-house_c03, label.-house_c03, select.-house_c03, button.-house_c03, th.-house_c03, td.-house_c03 {
-  color: #599465;
+  color: #DCECF0;
 }
 h1.-house_c04, h2.-house_c04, h3.-house_c04, h4.-house_c04, h5.-house_c04, h6.-house_c04, p.-house_c04, a.-house_c04, span.-house_c04, label.-house_c04, select.-house_c04, button.-house_c04, th.-house_c04, td.-house_c04 {
-  color: #00c5d5;
+  color: #b6b343;
 }
 h1.-grayOut, h2.-grayOut, h3.-grayOut, h4.-grayOut, h5.-grayOut, h6.-grayOut, p.-grayOut, a.-grayOut, span.-grayOut, label.-grayOut, select.-grayOut, button.-grayOut, th.-grayOut, td.-grayOut {
   pointer-events: none;
@@ -625,7 +625,7 @@ p.Top::after, span.Top::after, a.Top::after {
 }
 @media (width >= 768px) {
   p.concept::before, span.concept::before, a.concept::before {
-    background: #b6b343;
+    background: #EBE4DB;
     width: 60%;
   }
 }
@@ -650,7 +650,7 @@ p.concept::after, span.concept::after, a.concept::after {
 @media (width >= 768px) {
   p.plan::before, span.plan::before, a.plan::before {
     left: 0;
-    background: #6d5847;
+    background: #D5E6E1;
     width: 50%;
   }
 }
@@ -675,7 +675,7 @@ p.plan::after, span.plan::after, a.plan::after {
 @media (width >= 768px) {
   p.Grallery::before, span.Grallery::before, a.Grallery::before {
     left: 0;
-    background: #599465;
+    background: #DCECF0;
     width: 61%;
   }
 }
@@ -700,7 +700,7 @@ p.Grallery::after, span.Grallery::after, a.Grallery::after {
 @media (width >= 768px) {
   p.Location::before, span.Location::before, a.Location::before {
     left: 0;
-    background: #00c5d5;
+    background: #b6b343;
     width: 66%;
   }
 }
@@ -838,6 +838,18 @@ span.-block {
 @media (768px >= width) {
   .mgt13s {
     margin-top: 13% !important;
+  }
+}
+
+@media (768px >= width) {
+  .mgt15s {
+    margin-top: 15% !important;
+  }
+}
+
+@media (768px >= width) {
+  .mgt20s {
+    margin-top: 20% !important;
   }
 }
 
@@ -1673,6 +1685,18 @@ span.-block {
   }
 }
 
+@media (768px >= width) {
+  .pdb15s {
+    padding-bottom: 15% !important;
+  }
+}
+
+@media (768px >= width) {
+  .pdb20s {
+    padding-bottom: 20% !important;
+  }
+}
+
 @media (width >= 768px) {
   .pdb0 {
     padding-bottom: 0 !important;
@@ -1736,6 +1760,18 @@ span.-block {
 @media (width >= 768px) {
   .pdb10 {
     padding-bottom: 10% !important;
+  }
+}
+
+@media (width >= 768px) {
+  .pdb15 {
+    padding-bottom: 15% !important;
+  }
+}
+
+@media (width >= 768px) {
+  .pdb20 {
+    padding-bottom: 20% !important;
   }
 }
 
@@ -3886,12 +3922,78 @@ button.swiper-pagination-bullet {
   width: 100lvw;
   height: 50vh;
   max-height: 550px !important;
-  background: #ffffff;
+  background: #E4EBF4;
   background-position: 50% 50%;
 }
 @media (500px >= width) {
   .c-contents.-fv.-single .imgBox {
     height: 25vh;
+  }
+}
+.c-contents.-serviceBox {
+  position: relative;
+  padding: 12% 5% 25% 5%;
+  border-radius: 10px;
+}
+@media (width >= 768px) {
+  .c-contents.-serviceBox {
+    padding: 6% 30% 3% 3%;
+  }
+}
+.c-contents.-serviceBox.-item01 {
+  background: #EBE4DB;
+}
+.c-contents.-serviceBox.-item02 {
+  background: #D5E6E1;
+}
+.c-contents.-serviceBox.-item03 {
+  background: #DCECF0;
+}
+.c-contents.-serviceBox .titleArea {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0.5% 2.5% 0.5% 3.5%;
+  box-shadow: 5px 3px 2px 0px rgba(99, 99, 99, 0.0784313725);
+}
+@media (width >= 768px) {
+  .c-contents.-serviceBox .titleArea {
+    left: 3%;
+    transform: translateY(-50%);
+    padding: 0.5% 2.5% 0.5% 1%;
+  }
+}
+.c-contents.-serviceBox .textArea {
+  width: 100%;
+  height: auto;
+  padding: 10% 10% 30% 5%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 3px 2px 0px rgba(99, 99, 99, 0.0784313725);
+}
+@media (width >= 768px) {
+  .c-contents.-serviceBox .textArea {
+    padding: 5% 20% 5% 5%;
+  }
+}
+.c-contents.-serviceBox .picArea {
+  position: absolute;
+  top: 62%;
+  left: 45%;
+  width: 45%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 5px 3px 2px 0px rgba(99, 99, 99, 0.0784313725);
+}
+@media (width >= 768px) {
+  .c-contents.-serviceBox .picArea {
+    top: 47%;
+    left: 60%;
+    transform: translateY(-50%);
+    width: 35%;
   }
 }
 .c-contents.-imgBg {
@@ -4001,6 +4103,17 @@ button.swiper-pagination-bullet {
   content: "POINT";
   white-space: nowrap;
 }
+.c-contents--title .imgBox {
+  width: 40%;
+  margin: 0 auto;
+}
+@media (width >= 500px) {
+  .c-contents--title .imgBox {
+    width: 20%;
+    min-width: 160px;
+    max-width: 220px;
+  }
+}
 
 .c-contents--description {
   text-align: center;
@@ -4031,6 +4144,24 @@ button.swiper-pagination-bullet {
 }
 .c-page-title.-service::before {
   content: "FEATURE";
+}
+
+.c-service--title {
+  position: relative;
+}
+.c-service--title::before {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 15px;
+  height: 2px;
+  border-bottom: 2px dotted #6D84A5;
+}
+@media (width >= 768px) {
+  .c-service--title::before {
+    width: 30px;
+  }
 }
 
 .c-post--title {
@@ -6483,29 +6614,15 @@ main {
   }
 }
 
-main {
-  margin-top: -14%;
-}
-@media (width >= 500px) {
-  main {
-    margin-top: -10%;
-  }
-}
-
-body {
-  position: relative;
-  width: 100%;
-  background-size: 15px 15px;
-  background-image: linear-gradient(-45deg, #EBF9FF, #EBF9FF 48.5%, white 49.5%, white 50.5%, #EBF9FF 51.5%, #EBF9FF);
+.p-service {
   animation: fadeAnime 3s forwards;
 }
 @media (width >= 768px) {
-  body {
-    background-size: 30px 30px;
+  .p-service {
     animation: fadeAnime 2s forwards;
   }
 }
-body #mr-logo {
+.p-service #mr-logo {
   width: 30%;
   max-width: 50px;
   margin: 0 auto 10px;

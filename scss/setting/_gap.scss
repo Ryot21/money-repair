@@ -19,6 +19,8 @@
 .mgt9s  {@include max(768){margin-top: 9% !important;}}
 .mgt10s  {@include max(768){margin-top: 10% !important;}}
 .mgt13s  {@include max(768){margin-top: 13% !important;}}
+.mgt15s  {@include max(768){margin-top: 15% !important;}}
+.mgt20s  {@include max(768){margin-top: 20% !important;}}
 
 .mgt0  {@include min(768){margin-top: 0 !important;}}
 .mgt1  {@include min(768){margin-top: 1% !important;}}
@@ -212,6 +214,8 @@
 .pdb8s  {@include max(768){padding-bottom: 8% !important;}}
 .pdb9s  {@include max(768){padding-bottom: 9% !important;}}
 .pdb10s {@include max(768){padding-bottom:10% !important;}}
+.pdb15s {@include max(768){padding-bottom:15% !important;}}
+.pdb20s {@include max(768){padding-bottom:20% !important;}}
 
 // 768px以上
 .pdb0  {@include min(768){padding-bottom: 0  !important;}}
@@ -225,7 +229,8 @@
 .pdb8  {@include min(768){padding-bottom: 8% !important;}}
 .pdb9  {@include min(768){padding-bottom: 9% !important;}}
 .pdb10 {@include min(768){padding-bottom:10% !important;}}
-
+.pdb15 {@include min(768){padding-bottom:15% !important;}}
+.pdb20 {@include min(768){padding-bottom:20% !important;}}
 
 
 /* ------------------------

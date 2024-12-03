@@ -54,18 +54,71 @@
 				width: 100lvw;
 				height: 50vh;
 				max-height: 550px !important;
-				background: $main-color--w;
+				background: $main-color--gray;
 				background-position: 50% 50%;
 				@include max(500){height: 25vh;}
 			}
 		}
 	}
+	&.-serviceBox{
+		position: relative;
+		padding: 12% 5% 25% 5%;
+		border-radius: 10px;
+		@include min(768){
+			padding: 6% 30% 3% 3%;
+		}
+		&.-item01{background: $house-color01;}
+		&.-item02{background: $house-color02;}
+		&.-item03{background: $house-color03;}
+
+		// タイトル
+		.titleArea{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			background: $main-color--w;
+			border-radius: 10px;
+			padding: .5% 2.5% .5% 3.5%;
+			box-shadow: 5px 3px 2px 0px #63636314;
+			@include min(768){
+				left: 3%;
+				transform: translateY(-50%);
+				padding: .5% 2.5% .5% 1%;
+			}
+		}
+		// テキスト
+		.textArea{
+			width: 100%;
+			height: auto;
+			padding: 10% 10% 30% 5%;
+			background: $main-color--w;
+			border-radius: 10px;
+			box-shadow: 5px 3px 2px 0px #63636314;
+			@include min(768){padding: 5% 20% 5% 5%;}
+		}
+		// 画像
+		.picArea{
+			position: absolute;
+			top: 62%;
+			left: 45%;
+			width: 45%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 5px 3px 2px 0px #63636314;
+			@include min(768){
+				top: 47%;
+				left: 60%;
+				transform: translateY(-50%);
+				width: 35%;
+			}
+			.imgBox{}
+		}
+	}
 
 	&.-imgBg{//背景画像
 		position: relative;
-		&.-bg{//背景画像が大きくなると、コンテンツが間延びしてしまう場合
-
-		}
 		.c-contentsBox{
 			position: absolute;
 			// 要素の真ん中

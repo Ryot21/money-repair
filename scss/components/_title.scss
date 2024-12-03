@@ -50,9 +50,18 @@
     &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
     &.-news     {&::before{content: "Information"; white-space: nowrap;}}   //お役立ち情報
     &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}       //お役立ち情報
+    &.-point    {&::before{content: "POINT"; white-space: nowrap;}}         //お役立ち情報
 
-    &.-point    {&::before{content: "POINT"; white-space: nowrap;}}       //お役立ち情報
-
+    // 画像
+    .imgBox{
+        width: 40%;
+        margin: 0 auto;
+        @include min(500){
+            width: 20%;
+            min-width: 160px;
+            max-width: 220px;
+        }
+    }
 }
 
 .c-contents--description{
@@ -82,6 +91,21 @@
 
     }
     &.-service{&::before{content: "FEATURE";}}
+}
+
+// サービスページ > サービス内容内のタイトル
+.c-service--title{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 15px;
+        height: 2px;
+        border-bottom: 2px dotted $site-color03;
+        @include min(768){width: 30px;}
+    }
 }
 
 // 投稿アイテム内のタイトル
