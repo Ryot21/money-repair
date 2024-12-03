@@ -32,4 +32,26 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
     }
+    // 記事 > カテゴリー
+    &--category{
+        &__lists{// ul
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        &__item{ // li
+            width: auto;
+            padding: .75% 2% .7%;
+            margin-right: 5px;
+            background: $main-color--w;
+            border: 1px solid $site-color03;
+            border-radius: 3px;
+            p{
+                color: $site-color03;
+                font-size: clamp(.8rem, 1.2vw, 1rem);
+                font-weight: bold;
+                white-space: nowrap;
+            }
+        }
+    }
 }
