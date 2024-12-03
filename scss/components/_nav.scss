@@ -7,7 +7,7 @@
 	.navItem{
 		width: auto;
 		margin: 0 5px;
-		&.arciveItem{
+		&.archiveItem{
 			position: relative;
 			&:hover{
 				.c-hnav--dropdown{
@@ -38,9 +38,9 @@
 			transition: opacity 0.3s ease, transform 0.3s ease;
 
 
-			.arcive-lists{ // ul
+			.archive-lists{ // ul
 
-				.arcive-list{ // li
+				.archive-list{ // li
 					margin-bottom: 10px;
 					a{
 						position: relative;
@@ -100,7 +100,7 @@
 				opacity: 1;
 			}
 		}
-		&.-arcive{
+		&.-archive{
 			padding-right: 15px;
 			&::before{display: none;}
 			&::after{

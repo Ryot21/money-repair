@@ -3427,10 +3427,10 @@ button.swiper-pagination-bullet {
   width: auto;
   margin: 0 5px;
 }
-.c-hnav .navItem.arciveItem {
+.c-hnav .navItem.archiveItem {
   position: relative;
 }
-.c-hnav .navItem.arciveItem:hover .c-hnav--dropdown {
+.c-hnav .navItem.archiveItem:hover .c-hnav--dropdown {
   transform: translateY(0);
   pointer-events: auto;
   opacity: 1;
@@ -3451,14 +3451,14 @@ button.swiper-pagination-bullet {
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list {
+.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list {
   margin-bottom: 10px;
 }
-.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a {
+.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a {
   position: relative;
   display: block;
 }
-.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a::before {
+.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a::before {
   content: "";
   width: 0;
   height: 1px;
@@ -3472,10 +3472,10 @@ button.swiper-pagination-bullet {
   will-change: transform;
   transition: all 0.5s;
 }
-.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a:hover {
+.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a:hover {
   color: #6D84A5;
 }
-.c-hnav .navItem .c-hnav--dropdown .arcive-lists .arcive-list a:hover::before {
+.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a:hover::before {
   width: 90%;
   background: #6D84A5;
   opacity: 1;
@@ -3505,13 +3505,13 @@ button.swiper-pagination-bullet {
   background: #6D84A5;
   opacity: 1;
 }
-.c-hnav--link.-arcive {
+.c-hnav--link.-archive {
   padding-right: 15px;
 }
-.c-hnav--link.-arcive::before {
+.c-hnav--link.-archive::before {
   display: none;
 }
-.c-hnav--link.-arcive::after {
+.c-hnav--link.-archive::after {
   content: "";
   width: 10px;
   height: 7px;
@@ -3525,7 +3525,7 @@ button.swiper-pagination-bullet {
   will-change: transform;
   transition: all 0.5s;
 }
-.c-hnav--link.-arcive:hover::after {
+.c-hnav--link.-archive:hover::after {
   background: #6D84A5;
 }
 .c-hnav--contact {
