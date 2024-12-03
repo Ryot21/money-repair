@@ -6,26 +6,25 @@ table{
 }
 
 .c-table{
-
-    @include max(500){
-    }
-    th,td{
-
-    }
     th{
         text-align: center;
         color:white;
         background: linear-gradient(#829ebc,#225588);
-        border-left: 1px solid #3c6690;
-        border-top: 1px solid #3c6690;
-        border-bottom: 1px solid #3c6690;
+        border-left: 1px solid $main-color--gray;
+        border-top: 1px solid $main-color--gray;
+        border-bottom: 1px solid $main-color--gray;
         box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
         width: 25%;
         padding: 20px 10px;
 
         background: $site-color03;
         color: $main-color--w;
-        &:first-child{border-radius: 10px 0 0 0;}
+        &:first-child{
+            width: 15%;
+            border-radius: 10px 0 0 0;
+            @include min(500) {width: 18%;}
+            @include min(1000){width: 15%;}
+        }
         &:last-child {
             border-radius: 0 10px 0 0;
             border-right: 1px solid #3c6690;
@@ -37,18 +36,18 @@ table{
         padding: 20px 10px;
 
         text-align: center;
-        border-left: 1px solid #a8b7c5;
-        border-bottom: 1px solid #a8b7c5;
+        border-left: 1px solid $main-color--Dgray;
+        border-bottom: 1px solid $main-color--Dgray;
         border-top:none;
         box-shadow: 0px 0px 0px 5px #E4EBF4 inset;
+        &:first-child{
+            width: 15%;
+            @include min(500) {width: 18%;}
+            @include min(1000){width: 15%;}
+        }
         &:last-child {border-right: 1px solid #a8b7c5;}
     }
     tr{
-        @include max(500){
-            th:first-child,td:first-child{
-                width: 15%;
-            }
-        }
         td{&:first-child{background: #E4EBF4;}}
         &:last-child {
             td{

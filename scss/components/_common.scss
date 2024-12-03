@@ -76,6 +76,10 @@
     width: 75%;
     margin: auto;
 }
+.w70{
+    width: 70%;
+    margin: auto;
+}
 .w50{
     width: 50%;
     margin: auto;
@@ -117,6 +121,12 @@
 .w75s{
     @include max(500){
         width: 75% !important;
+        margin: auto;
+    }
+}
+.w70s{
+    @include max(500){
+        width: 70% !important;
         margin: auto;
     }
 }
