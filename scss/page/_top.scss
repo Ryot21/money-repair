@@ -1,12 +1,17 @@
-// 1. TOPページ
-main{
-	margin-top: -14%;
-	@include min(500){
-		margin-top: -10%;
+
+// 全ページ
+body{
+	position: relative;
+	animation: fadeAnime 3s forwards;
+	@include min(768){animation: fadeAnime 2s forwards;}
+
+	main{
+		position: absolute;
+		top: 0;
 	}
 }
 
-
+// 1. TOPページ
 .p-top{
 	position: relative;
 	width: 100%;
@@ -22,5 +27,4 @@ main{
 		background-size: 30px 30px;
 		animation: fadeAnime 2s forwards;
 	}
-
 }

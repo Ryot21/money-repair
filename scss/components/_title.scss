@@ -84,11 +84,14 @@
         bottom: -55%;
         left: 50%;
         transform: translateX(-50%);
-
         color: $site-color03;
-        font-size: clamp(1.2rem, 2vw, 1.6rem);
+        font-size: clamp(1rem, 1.5vw, 1.6rem);
         letter-spacing: .3rem;
         white-space: nowrap;
+        @include min(500){
+            bottom: -55%;
+        }
+
     }
     &.-service  {&::before{content: "FEATURE";}}
     &.-interview{&::before{content: "USER INTERVIEW";}}

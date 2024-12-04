@@ -1,8 +1,6 @@
 // 2. 一覧ページ
 
 .p-archive{
-	animation: fadeAnime 3s forwards;
-	@include min(768){animation: fadeAnime 2s forwards;}
 
 	#mr-logo{
 		width: 30%;

@@ -1,9 +1,6 @@
 // 2. サービスページ
 
 .p-service{
-	animation: fadeAnime 3s forwards;
-	@include min(768){animation: fadeAnime 2s forwards;}
-
 	#mr-logo{
 		width: 30%;
 		max-width: 50px;

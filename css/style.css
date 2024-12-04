@@ -4139,9 +4139,14 @@ button.swiper-pagination-bullet {
   left: 50%;
   transform: translateX(-50%);
   color: #6D84A5;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
   letter-spacing: 0.3rem;
   white-space: nowrap;
+}
+@media (width >= 500px) {
+  .c-page-title::before {
+    bottom: -55%;
+  }
 }
 .c-page-title.-service::before {
   content: "FEATURE";
@@ -6793,13 +6798,18 @@ table {
   color: #E4EBF4;
 }
 
-main {
-  margin-top: -14%;
+body {
+  position: relative;
+  animation: fadeAnime 3s forwards;
 }
-@media (width >= 500px) {
-  main {
-    margin-top: -10%;
+@media (width >= 768px) {
+  body {
+    animation: fadeAnime 2s forwards;
   }
+}
+body main {
+  position: absolute;
+  top: 0;
 }
 
 .p-top {
@@ -6816,14 +6826,6 @@ main {
   }
 }
 
-.p-service {
-  animation: fadeAnime 3s forwards;
-}
-@media (width >= 768px) {
-  .p-service {
-    animation: fadeAnime 2s forwards;
-  }
-}
 .p-service #mr-logo {
   width: 30%;
   max-width: 50px;
