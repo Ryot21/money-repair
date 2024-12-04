@@ -74,7 +74,7 @@
 .c-page-title{
     display: inline-block;
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     @include max(500){top: 52%;}
@@ -96,6 +96,7 @@
     &.-service    {&::before{content: "FEATURE";}}
     &.-interview  {&::before{content: "USER INTERVIEW";}}
     &.-information{&::before{content: "INFORMATION";}}
+    &.-contact    {&::before{content: "CONTACT";}}
 }
 
 // サービスページ > サービス内容内のタイトル

@@ -4124,7 +4124,7 @@ button.swiper-pagination-bullet {
 .c-page-title {
   display: inline-block;
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -4157,6 +4157,9 @@ button.swiper-pagination-bullet {
 .c-page-title.-information::before {
   content: "INFORMATION";
 }
+.c-page-title.-contact::before {
+  content: "CONTACT";
+}
 
 .c-service--title {
   position: relative;
@@ -4181,144 +4184,6 @@ button.swiper-pagination-bullet {
   font-weight: bold;
   text-align: center;
   padding: 0 1px;
-}
-
-label.required {
-  position: relative;
-}
-label.required::after {
-  content: "必須";
-  font-size: 1rem;
-  position: absolute;
-  top: 55%;
-  right: -45px;
-  transform: translateY(-50%);
-  color: #ffffff;
-  background: #df2323;
-  padding: 1px 5px 2px;
-  border-radius: 3px;
-}
-@media (width >= 768px) {
-  label.required::after {
-    font-size: 1.1rem;
-  }
-}
-
-input,
-select,
-textarea {
-  padding: 1.5% 2%;
-  border: 1px solid #636363;
-  border-radius: 5px;
-}
-@media (width >= 500px) {
-  input,
-  select,
-  textarea {
-    padding: 1.5% 1.5%;
-  }
-}
-input#meeting,
-select#meeting,
-textarea#meeting {
-  width: 25%;
-  min-width: 115px;
-  max-width: 120px;
-}
-input#prefectures,
-select#prefectures,
-textarea#prefectures {
-  width: 25%;
-  min-width: 95px;
-  max-width: 100px;
-}
-input#gender,
-select#gender,
-textarea#gender {
-  width: 15%;
-  min-width: 70px;
-  max-width: 75px;
-}
-input#yy,
-select#yy,
-textarea#yy {
-  width: 35%;
-  min-width: 150px;
-  max-width: 155px;
-}
-input#mm, input#dd,
-select#mm,
-select#dd,
-textarea#mm,
-textarea#dd {
-  width: 15%;
-  min-width: 65px;
-  max-width: 70px;
-}
-input#name,
-select#name,
-textarea#name {
-  width: 45%;
-  max-width: 180px;
-}
-input#email,
-select#email,
-textarea#email {
-  width: 70%;
-  max-width: 300px;
-}
-input#tel,
-select#tel,
-textarea#tel {
-  width: 35%;
-  max-width: 120px;
-}
-input#message,
-select#message,
-textarea#message {
-  resize: none;
-  width: 100%;
-  height: 300px;
-}
-input#submit,
-select#submit,
-textarea#submit {
-  width: 100%;
-  padding: 0;
-  border: none;
-}
-
-.c-select {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-.c-select::after {
-  content: "";
-  position: absolute;
-  right: 15px;
-  width: 10px;
-  height: 7px;
-  background: #535353;
-  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
-          clip-path: polygon(0 0, 100% 0, 50% 100%);
-  pointer-events: none;
-}
-.c-select select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  min-width: 138px;
-  height: 2.8rem;
-  padding: 0.4rem 0.8rem;
-  border: 1px solid #636363;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-dd {
-  margin-left: 0;
 }
 
 .c-flex {
@@ -6842,41 +6707,199 @@ body main {
   margin: 0 auto 10px;
 }
 
-.p-thanks {
+.p-contact {
   position: relative;
   width: 100%;
   height: 100dvb;
-  background-size: 15px 15px;
-  background-image: linear-gradient(-45deg, #EBF9FF, #EBF9FF 48.5%, white 49.5%, white 50.5%, #EBF9FF 51.5%, #EBF9FF);
+  background: #E4EBF4;
   animation: fadeAnime 3s forwards;
 }
 @media (width >= 768px) {
-  .p-thanks {
-    background-size: 30px 30px;
+  .p-contact {
     animation: fadeAnime 2s forwards;
   }
 }
-.p-thanks__left, .p-thanks__right {
-  position: fixed;
-  top: 0;
-  display: block;
-  height: 100dvb;
-  width: 45px;
-  background: #194299;
+.p-contact .c-contact--step {
+  position: relative;
+  width: 75%;
+  max-width: 400px;
+  margin: 0 auto;
 }
-.p-thanks__left .logo, .p-thanks__right .logo {
-  background: url(../images/logo/impreme-logo-w-border.png);
-  background-repeat: repeat-y;
-  background-position: 35%;
-  background-size: 35px;
-  height: 100%;
+.p-contact .c-contact--step::before, .p-contact .c-contact--step::after {
+  content: "";
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: #3b3b3b;
 }
-.p-thanks .c-container {
-  height: 92vh;
+.p-contact .c-contact--step .step-ttl .flexItem {
+  position: relative;
 }
-.p-thanks footer {
-  position: fixed;
-  bottom: 0;
+.p-contact .c-contact--step .step-ttl .flexItem::before {
+  content: "";
+  position: absolute;
+  bottom: -55%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: #3b3b3b;
+  border-radius: 50%;
+  z-index: 1;
+}
+@media (500px >= width) {
+  .p-contact .c-contact--step .step-ttl .flexItem::before {
+    bottom: -67%;
+  }
+}
+.p-contact .c-contact--step .step-ttl .flexItem.-active p {
+  color: #6D84A5;
+}
+.p-contact .c-contact--step .step-ttl .flexItem.-active::before {
+  background: #6D84A5;
+}
+.p-contact .c-contact--step .step-des .flexItem {
+  position: relative;
+}
+.p-contact .c-contact--step .step-des .flexItem.-active p {
+  color: #6D84A5;
+}
+.p-contact label.required {
+  position: relative;
+}
+.p-contact label.required::after {
+  content: "必須";
+  font-size: 1rem;
+  position: absolute;
+  top: 55%;
+  right: -45px;
+  transform: translateY(-50%);
+  color: #ffffff;
+  background: #df2323;
+  padding: 1px 5px 2px;
+  border-radius: 3px;
+}
+@media (width >= 768px) {
+  .p-contact label.required::after {
+    font-size: 1.1rem;
+  }
+}
+.p-contact input,
+.p-contact select,
+.p-contact textarea {
+  padding: 1.5% 2%;
+  border: 1px solid #636363;
+  border-radius: 5px;
+}
+@media (width >= 500px) {
+  .p-contact input,
+  .p-contact select,
+  .p-contact textarea {
+    padding: 1.5% 1.5%;
+  }
+}
+.p-contact input#meeting,
+.p-contact select#meeting,
+.p-contact textarea#meeting {
+  width: 25%;
+  min-width: 115px;
+  max-width: 120px;
+}
+.p-contact input#prefectures,
+.p-contact select#prefectures,
+.p-contact textarea#prefectures {
+  width: 25%;
+  min-width: 95px;
+  max-width: 100px;
+}
+.p-contact input#gender,
+.p-contact select#gender,
+.p-contact textarea#gender {
+  width: 15%;
+  min-width: 70px;
+  max-width: 75px;
+}
+.p-contact input#yy,
+.p-contact select#yy,
+.p-contact textarea#yy {
+  width: 35%;
+  min-width: 150px;
+  max-width: 155px;
+}
+.p-contact input#mm, .p-contact input#dd,
+.p-contact select#mm,
+.p-contact select#dd,
+.p-contact textarea#mm,
+.p-contact textarea#dd {
+  width: 15%;
+  min-width: 65px;
+  max-width: 70px;
+}
+.p-contact input#name,
+.p-contact select#name,
+.p-contact textarea#name {
+  width: 45%;
+  max-width: 180px;
+}
+.p-contact input#email,
+.p-contact select#email,
+.p-contact textarea#email {
+  width: 70%;
+  max-width: 300px;
+}
+.p-contact input#tel,
+.p-contact select#tel,
+.p-contact textarea#tel {
+  width: 35%;
+  max-width: 120px;
+}
+.p-contact input#message,
+.p-contact select#message,
+.p-contact textarea#message {
+  resize: none;
+  width: 100%;
+  height: 300px;
+}
+.p-contact input#submit,
+.p-contact select#submit,
+.p-contact textarea#submit {
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+.p-contact .c-select {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.p-contact .c-select::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  width: 10px;
+  height: 7px;
+  background: #535353;
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
+  pointer-events: none;
+}
+.p-contact .c-select select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  min-width: 138px;
+  height: 2.8rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #636363;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.p-contact dd {
+  margin-left: 0;
 }
 
 /*
