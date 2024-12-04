@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マネーリペア - キャッチコピー -</title>
+    <title>お役立ち情報 | 一覧ページ</title>
     <link rel="icon" href="images/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" type="image/png" href="images/sns/apple-touch-icon-impreme.jpg"><!-- 120px x 120px -->
 
     <!-- デプロイ前に確認・サンプル -->
     <meta name="keywords"         content="マネーリペア,moneyrepair,福利厚生,保険,ファイナンシャルプランナー,FP,インプレーム,Impreme">
     <meta name="description"      content="">
-    <link rel="canonical"         href="https://money-repair.jp/">
+    <link rel="canonical"         href="https://money-repair.jp/archive-interview">
     <meta name="format-detection" content="telephone=no" />
     <!-- SNS関係 -->
     <meta property="og:locale"       content="ja_JP"/>
-    <meta property="og:url"          content="https://money-repair.jp/">
-    <meta property="og:type"         content="website"><!-- Top：website、下層ページ：article -->
+    <meta property="og:url"          content="https://money-repair.jp/archive-information">
+    <meta property="og:type"         content="article"><!-- Top：website、下層ページ：article -->
     <meta property="og:site_name"    content="マネーリペア"/><!-- ページが属する大元のサイト名 -->
-    <meta property="og:title"        content="マネーリペア - キャッチコピー -"><!-- SNS表示用のタイトル -->
+    <meta property="og:title"        content="お役立ち情報 | 一覧ページ"><!-- SNS表示用のタイトル -->
     <meta property="og:description"  content=""><!-- 通常のdescriptionと同じ内容 -->
     <meta property="og:image"        content="images/sns/share.jpg"><!-- SNS表示用のサムネイル 1200px × 630px -->
     <!--// デプロイ前に確認 -->
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/swiper.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <script src="js/luminous.min.js"></script> -->
+    <!-- <script src="js/form.js"></script> -->
+
+    <!-- <script src="js/lottie-player.js"></script> -->
 
     <!-- Google Tag Manager -->
     <script>
-
+        // if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+        //     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        //     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        //     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        //     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        //     })(window,document,'script','dataLayer','GTM-M48ZKPBW');
+        // }
     </script><!-- //Google Tag Manager -->
 
 </head>
-<body class="p-top is-scroll">
-
+<body class="p-archive is-scroll">
 
     <!-- Header -->
     <header id="js-header" class="c-header -fixed">
@@ -41,7 +50,7 @@
             <ul class="c-flex -header -jc-sb -h-cen">
                 <li class="flexItem -logoArea">
                     <div class="logo">
-                        <a class="c-link -img" href="https://money-repair.jp"><img src="images/logo/mp/money-repair-logo_black.svg" alt="マネーリペア"></a>
+                        <a class="c-link -img" href="/"><img src="images/logo/mp/money-repair-logo_black.svg" alt="マネーリペア"></a>
                     </div>
                 </li>
                 <li class="flexItem -navArea tb-pc">
@@ -65,7 +74,7 @@
                                             </div>
                                         </li>
                                         <li class="navItem archiveItem">
-                                            <a class="c-hnav--link -archive s-M -b -ls-3 -ws-n" href="archive-information.html">お役立ち情報</a>
+                                            <a class="c-hnav--link -archive -active s-M -b -ls-3 -ws-n" href="archive-information.html">お役立ち情報</a>
                                             <div class="c-hnav--dropdown">
                                                 <ul class="archive-lists">
                                                     <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
@@ -99,9 +108,9 @@
         <label class="c-hb-nav__cheakbox c-hb-nav__close" for="c-hb-nav__checkbox"></label>
         <div class="c-hb-nav__content">
             <ul class="">
-                <li class="navItem "><a class="-active" href="/"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">TOP</span></a></li>
+                <li class="navItem "><a class="" href="/"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">TOP</span></a></li>
                 <li class="navItem "><a class="" href="service.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">マネーリペアの特徴</span></a></li>
-                <li class="navItem c-borderBtm -dotted ">
+                <li class="navItem c-borderBtm -dotted">
                     <a class="mgb5 mgb5s" href="archive-interview.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">ご利用者の声</span></a>
                     <ul class="c-flex -col2 -jc-end">
                         <li class="flexItem mgb5 mgb5s"><a class="s-M -s14 -b -white -center" href="">カテゴリー01</a></li>
@@ -113,7 +122,7 @@
                     </ul>
                 </li>
                 <li class="navItem c-borderBtm -dotted ">
-                    <a class="mgb5 mgb5s" href="archive-information.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">お役立ち情報</span></a>
+                    <a class="-active mgb5 mgb5s" href="archive-information.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">お役立ち情報</span></a>
                     <ul class="c-flex -col2 -jc-end">
                         <li class="flexItem mgb5 mgb5s"><a class="s-M -s14 -b -white -center" href="">カテゴリー01</a></li>
                         <li class="flexItem mgb5 mgb5s"><a class="s-M -s14 -b -white -center" href="">カテゴリー01</a></li>
@@ -131,123 +140,64 @@
 
     <main>
         <!-- Fv -->
-        <div class="contents -imgBg -fv">
-            <div class="imgBox">
-                <!-- <img class="sp"    src="images/fv/fv-sp.png" alt="社員の声に応える、新しい時代の福利厚生"> -->
-                <img class="tb-pc" src="images/fv/fv-pc.png" alt="社員の声に応える、新しい時代の福利厚生">
-            </div>
-        </div>
-        <!-- ロゴ -->
-        <div id="logoSection" class="c-contents pdt5 pdt10s mgb5s">
+        <div class="c-contents -imgBg -fv -single">
+            <div class="imgBox"></div>
             <div class="c-contents--inner">
-                <h2 class="s-L -center -b pdb3 pdb3s">多くのお客様にご好評いただいております</h2>
-            </div>
-            <!-- Slider -->
-            <div class="swiper swiper-Logo -right mgb1 mgb3s">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業1"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業2"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業3"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業4"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
+                <!-- ページタイトル -->
+                <h2 class="c-page-title -information s-LL -s20 -center -b -ls-2">お役立ち情報</h2>
+                <!-- パンくず -->
+                <div class="c-breadcrumb">
+                    <nav>
+                        <ul class="c-breadcrumb__lists">
+                            <li class="c-breadcrumb__list"><a class="c-breadcrumb__link" href="/">TOP</a></li>
+                            <li class="c-breadcrumb__list"><span>お役立ち情報</span></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="swiper swiper-Logo -left">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業1"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業2"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業3"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業4"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業5"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業6"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業7"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業8"></div>
-                    <div class="swiper-slide"><img src="images/slider/logo/sample.png" alt="企業9"></div>
-                </div>
-            </div>
-        </div>
-        <!-- マネーリペアとは -->
-        <div id="sc01" class="c-contents pdt10 pdt10s mgb5s">
-            <div class="c-contents--inner">
-                <ul class="c-flex -col1_2 -jc-sb -h-cen">
-                    <li class="flexItem mgb10s">
-                        <h2 class="w50 mgl0 mgl0s mgb3 mgb3s"><img src="images/SVG/money-repair-toha.svg" alt="マネーリペアとは"></h2>
-                        <p class="s-ML -s18 -b -left -ls-2 -lh-1_5 mgb3 mgb3s">
-                            企業の従業員様向けに金融・投資・税務の教育を実施する福利厚生プログラム
-                        </p>
-                        <p class="s-S -s14 -left -ls-2 -lh-1_5 mgb5 mgb10s">
-                            金融は分野によって知識が偏りがちなので、金融知識という知的財産を身につけ、自分たちで適切な判断ができるようにすることが必要だと感じます。金融リテラシーを上げることにより「将来に向けたお金の不安を解決する」サービスです。
-                        </p>
-                        <div class="c-contents--btnArea -left">
-                            <a class="c-link -btn -center s-M -s16 -b -white -ls-2" href="">マネーリペアについて</a>
-                        </div>
 
-                    </li>
-                    <li class="flexItem">
-                        <div class="imgBox c-img -borderBox -solid">
-                            <img src="images/item/service/top-service.png" alt="実際の導入説明会の写真">
-                        </div>
-                    </li>
-                </ul>
+        </div>
+
+        <!-- 導入部分 -->
+        <div class="c-contents pdt5 pdt10s pdb5 pdb10s">
+            <div class="c-contents--inner">
+                <p class="s-ML -s14 -center -ls-2 -lh-2">
+                    マネーリペアに関連する<span class="s-ML -s14 -b -ls-2">資産形成</span>に役立つ記事を発信しています。<br class="tb-pc">
+                    従業員の<span class="s-ML -s14 -b -ls-2">経済力向上や福利厚生強化</span>に向けた知識を<br class="tb-pc">
+                    様々な情報を活用して、より豊かな未来を目指しましょう。
+                </p>
             </div>
         </div>
-        <!-- ご利用者の声 -->
-        <div id="sc02" class="c-contents pdt10 pdt20s mgb5s">
+
+        <!-- カテゴリー -->
+        <div class="c-category">
+            <ul class="c-category__box">
+                <li class="titleArea"><span>カテゴリー</span></li>
+                <li class="itemArea">
+                    <ul class="c-category__lists">
+                        <li class="c-category__item"><a class="" href="">#金融</a></li>
+                        <li class="c-category__item"><a class="" href="">#保険</a></li>
+                        <li class="c-category__item"><a class="" href="">#不動産</a></li>
+                        <li class="c-category__item"><a class="" href="">#福利厚生</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 記事一覧 -->
+        <div class="c-contents pdt5 pdt10s pdb5 pdb10s">
             <div class="c-contents--inner">
-                <h2 class="c-contents--title -interview -ls-1 -en-color03 pdb3 pdb5s">ご利用者インタビュー</h2>
                 <div class="c-post mgb3 mgb15s">
                     <ul class="c-flex -col2M1_3 -jc-sb -h-top">
-                        <li class="flexItem_M mgb10s">
+                        <li class="flexItem mgb3 mgb10s">
                             <a class="c-post--link" href="">
                                 <!-- バナー風画像 -->
-                                <div class="c-thumbnail -interview mgb3 mgb3s">
-                                    <div class="imgBox"><img src="images/item/interview/interview-thumbnail.png" alt="企業1"></div>
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
                                     <div class="c-thumbnail--cover">
                                         <span class="c-thumbnail--cover__text">詳細を見る</span>
                                     </div>
-                                    <div class="c-thumbnail--mark"><img src="images/item/interview/interview-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
-                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
-                                    <h3  class="c-thumbnail--title"><span class="s-M -s20 -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
-                                    <p   class="c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1">サブタイトルサブタイトル</p>
-                                </div>
-                                <!-- テキストエリア -->
-                                <div class="c-date mgb2 mgb1s">
-                                    <ul class="c-date__lists c-flex -col2">
-                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
-                                        <li class="c-date__item">
-                                            <ul class="c-post--category__lists c-flex -h-cen">
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p class="c-post--title s-M -s16 -left -b -ls-1">こんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかった</p>
-                            </a>
-                        </li>
-                        <li class="flexItem">
-                            <a class="c-post--link" href="">
-                                <!-- バナー風画像 -->
-                                <div class="c-thumbnail -interview mgb3 mgb3s">
-                                    <div class="imgBox"><img src="images/item/interview/interview-thumbnail.png" alt="企業1"></div>
-                                    <div class="c-thumbnail--cover">
-                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
-                                    </div>
-                                    <div class="c-thumbnail--mark"><img src="images/item/interview/interview-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
                                     <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
                                     <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
                                     <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
@@ -267,15 +217,15 @@
                                 <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
                             </a>
                         </li>
-                        <li class="flexItem">
+                        <li class="flexItem mgb3 mgb10s">
                             <a class="c-post--link" href="">
                                 <!-- バナー風画像 -->
-                                <div class="c-thumbnail -interview mgb3 mgb3s">
-                                    <div class="imgBox"><img src="images/item/interview/interview-thumbnail.png" alt="企業1"></div>
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
                                     <div class="c-thumbnail--cover">
                                         <span class="c-thumbnail--cover__text">詳細を見る</span>
                                     </div>
-                                    <div class="c-thumbnail--mark"><img src="images/item/interview/interview-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
                                     <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
                                     <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
                                     <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
@@ -295,110 +245,230 @@
                                 <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
                             </a>
                         </li>
+                        <li class="flexItem mgb3 mgb10s">
+                            <a class="c-post--link" href="">
+                                <!-- バナー風画像 -->
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
+                                    <div class="c-thumbnail--cover">
+                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
+                                    </div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
+                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
+                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
+                                </div>
+                                <!-- テキストエリア -->
+                                <div class="c-date mgb2 mgb1s">
+                                    <ul class="c-date__lists c-flex -col2">
+                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
+                                        <li class="c-date__item">
+                                            <ul class="c-post--category__lists c-flex -h-cen">
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
+                            </a>
+                        </li>
+                        <li class="flexItem mgb3 mgb10s">
+                            <a class="c-post--link" href="">
+                                <!-- バナー風画像 -->
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
+                                    <div class="c-thumbnail--cover">
+                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
+                                    </div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
+                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
+                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
+                                </div>
+                                <!-- テキストエリア -->
+                                <div class="c-date mgb2 mgb1s">
+                                    <ul class="c-date__lists c-flex -col2">
+                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
+                                        <li class="c-date__item">
+                                            <ul class="c-post--category__lists c-flex -h-cen">
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
+                            </a>
+                        </li>
+                        <li class="flexItem mgb3 mgb10s">
+                            <a class="c-post--link" href="">
+                                <!-- バナー風画像 -->
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
+                                    <div class="c-thumbnail--cover">
+                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
+                                    </div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
+                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
+                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
+                                </div>
+                                <!-- テキストエリア -->
+                                <div class="c-date mgb2 mgb1s">
+                                    <ul class="c-date__lists c-flex -col2">
+                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
+                                        <li class="c-date__item">
+                                            <ul class="c-post--category__lists c-flex -h-cen">
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
+                            </a>
+                        </li>
+                        <li class="flexItem mgb3 mgb10s">
+                            <a class="c-post--link" href="">
+                                <!-- バナー風画像 -->
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
+                                    <div class="c-thumbnail--cover">
+                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
+                                    </div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
+                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
+                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
+                                </div>
+                                <!-- テキストエリア -->
+                                <div class="c-date mgb2 mgb1s">
+                                    <ul class="c-date__lists c-flex -col2">
+                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
+                                        <li class="c-date__item">
+                                            <ul class="c-post--category__lists c-flex -h-cen">
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
+                            </a>
+                        </li>
+                        <li class="tb-pc flexItem mgb3 mgb10s">
+                            <a class="c-post--link" href="">
+                                <!-- バナー風画像 -->
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
+                                    <div class="c-thumbnail--cover">
+                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
+                                    </div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
+                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
+                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
+                                </div>
+                                <!-- テキストエリア -->
+                                <div class="c-date mgb2 mgb1s">
+                                    <ul class="c-date__lists c-flex -col2">
+                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
+                                        <li class="c-date__item">
+                                            <ul class="c-post--category__lists c-flex -h-cen">
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
+                            </a>
+                        </li>
+                        <li class="tb-pc flexItem mgb3 mgb10s">
+                            <a class="c-post--link" href="">
+                                <!-- バナー風画像 -->
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
+                                    <div class="c-thumbnail--cover">
+                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
+                                    </div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
+                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
+                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
+                                </div>
+                                <!-- テキストエリア -->
+                                <div class="c-date mgb2 mgb1s">
+                                    <ul class="c-date__lists c-flex -col2">
+                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
+                                        <li class="c-date__item">
+                                            <ul class="c-post--category__lists c-flex -h-cen">
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
+                            </a>
+                        </li>
+                        <li class="tb-pc flexItem mgb3 mgb10s">
+                            <a class="c-post--link" href="">
+                                <!-- バナー風画像 -->
+                                <div class="c-thumbnail -news mgb3 mgb3s">
+                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
+                                    <div class="c-thumbnail--cover">
+                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
+                                    </div>
+                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
+                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
+                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
+                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
+                                </div>
+                                <!-- テキストエリア -->
+                                <div class="c-date mgb2 mgb1s">
+                                    <ul class="c-date__lists c-flex -col2">
+                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
+                                        <li class="c-date__item">
+                                            <ul class="c-post--category__lists c-flex -h-cen">
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
+                            </a>
+                        </li>
+
+
                     </ul>
-                </div>
-                <div class="c-contents--btnArea">
-                    <a class="c-link -btn -center s-M -s16 -b -white -ls-2" href="">すべて見る</a>
+                    <!-- ページネーション -->
+                    <div class="c-pagination a-fade -tm1 -sp1">
+                        <ul class="c-pagination__lists">
+                            <li class="active c-pagination__item">
+                                <a href="/product/page/1" class="c-pagination__link s-M -center">1</a>
+                            </li>
+                            <li class="c-pagination__item">
+                                <a href="/product/page/2" class="c-pagination__link s-M -center">2</a>
+                            </li>
+                            <li class="c-pagination__item">
+                                <a href="/product/page/3" class="c-pagination__link s-M -center">3</a>
+                            </li>
+                            <li>…</li>
+                            <li class="c-pagination__item">
+                                <a href="/product/page/9" class="c-pagination__link s-M -center">9</a>
+                            </li>
+                            <li>
+                                <a href="/product/page/2" class="c-pagination__right s-M -center">Next »</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- お役立ち情報 -->
-        <div id="sc03" class="c-contents pdt10 pdt20s mgb10 mgb20s">
-            <div class="c-contents--inner">
-                <h2 class="c-contents--title -news -en-color03 -ls-1 pdb3 pdb5s">お役立ち情報</h2>
-                <div class="c-post mgb3 mgb15s">
-                    <ul class="c-flex -col2M1_3 -jc-sb -h-top">
-                        <li class="flexItem_M mgb10s">
-                            <a class="c-post--link" href="">
-                                <!-- バナー風画像 -->
-                                <div class="c-thumbnail -news mgb3 mgb3s">
-                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
-                                    <div class="c-thumbnail--cover">
-                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
-                                    </div>
-                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
-                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
-                                    <h3  class="c-thumbnail--title"><span class="s-M -s20 -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
-                                    <p   class="c-thumbnail--subTitle s-SS -s16 -b -color03 -ls-1">サブタイトルサブタイトル</p>
-                                </div>
-                                <!-- テキストエリア -->
-                                <div class="c-date mgb2 mgb1s">
-                                    <ul class="c-date__lists c-flex -col2">
-                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
-                                        <li class="c-date__item">
-                                            <ul class="c-post--category__lists c-flex -h-cen">
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p class="c-post--title s-M -s16 -left -b -ls-1">こんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかったこんな福利厚生今までなかった</p>
-                            </a>
-                        </li>
-                        <li class="flexItem">
-                            <a class="c-post--link" href="">
-                                <!-- バナー風画像 -->
-                                <div class="c-thumbnail -news mgb3 mgb3s">
-                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
-                                    <div class="c-thumbnail--cover">
-                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
-                                    </div>
-                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
-                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
-                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
-                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
-                                </div>
-                                <!-- テキストエリア -->
-                                <div class="c-date mgb2 mgb1s">
-                                    <ul class="c-date__lists c-flex -col2">
-                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
-                                        <li class="c-date__item">
-                                            <ul class="c-post--category__lists c-flex -h-cen">
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
-                            </a>
-                        </li>
-                        <li class="flexItem">
-                            <a class="c-post--link" href="">
-                                <!-- バナー風画像 -->
-                                <div class="c-thumbnail -news mgb3 mgb3s">
-                                    <div class="imgBox"><img src="images/item/news/news-thumbnail.png" alt="企業1"></div>
-                                    <div class="c-thumbnail--cover">
-                                        <span class="c-thumbnail--cover__text">詳細を見る</span>
-                                    </div>
-                                    <div class="c-thumbnail--mark"><img src="images/item/news/news-mark.svg" alt="マネーリペア | ご利用者インタビュー"></div>
-                                    <div class="c-thumbnail--picter"><img src="images/item/480-320.png" alt="お客様との写真"></div>
-                                    <h3  class="c-thumbnail--title"><span class="s-M -b -color03 -ls-1">タイトルタイトルタイトルタイトル</span></h3>
-                                    <p   class="c-thumbnail--subTitle s-SS -b -color03 -ls-1">サブタイトルサブタイトル</p>
-                                </div>
-                                <!-- テキストエリア -->
-                                <div class="c-date mgb2 mgb1s">
-                                    <ul class="c-date__lists c-flex -col2">
-                                        <li class="c-date__item"><p class="s-M -s16 -left -b -ls-2">2024.11.18</p></li>
-                                        <li class="c-date__item">
-                                            <ul class="c-post--category__lists c-flex -h-cen">
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                                <li class="c-post--category__item"><p>#カテゴリー01</p></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <p class="c-post--title s-M -s14 -left -b -ls-1">こんな福利厚生今までなかった...</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="c-contents--btnArea">
-                    <a class="c-link -btn -center s-M -s16 -b -white -ls-2" href="">すべて見る</a>
-                </div>
-            </div>
-        </div>
+
         <!-- お問い合わせ -->
         <div id="sc-contact" class="c-contents -bg-gray pdt5 pdt10s pdb5 pdb10s">
             <div class="c-contents--inner -bg-white -card">
@@ -457,30 +527,7 @@
         </footer><!-- //Footer -->
     </main>
 
-
-    <script>
-        // トップページ > ロゴ
-        const swiperLogoRight = new Swiper(".swiper-Logo.-right", {
-            loop: true, // ループ有効
-            slidesPerView: 'auto', // 一度に表示する枚数
-            speed: 6000, // ループの時間
-            allowTouchMove: false, // スワイプ無効
-            autoplay: {
-                delay: 0, // 途切れなくループ
-            },
-        });
-        const swiperLogoLeft  = new Swiper(".swiper-Logo.-left" , {
-            loop: true, 
-            slidesPerView: 'auto', 
-            speed: 6000,
-            allowTouchMove: false, // スワイプ無効
-            autoplay: {
-                delay: 0, // 途切れなくループ
-                reverseDirection: true,  // 逆方向のスライダーにする
-            },
-        });
-    </script>
+    <!-- <script src="js/lottie-player.js"></script> -->
 
 </body>
-
 </html>

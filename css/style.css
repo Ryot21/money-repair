@@ -3498,11 +3498,11 @@ button.swiper-pagination-bullet {
   transition: all 0.5s;
 }
 .c-hnav--link:hover, .c-hnav--link.-active {
-  color: #6D84A5;
+  color: #FFDA2A;
 }
 .c-hnav--link:hover::before, .c-hnav--link.-active::before {
   width: 90%;
-  background: #6D84A5;
+  background: #FFDA2A;
   opacity: 1;
 }
 .c-hnav--link.-archive {
@@ -3526,7 +3526,7 @@ button.swiper-pagination-bullet {
   transition: all 0.5s;
 }
 .c-hnav--link.-archive:hover::after, .c-hnav--link.-archive.-active::after {
-  background: #6D84A5;
+  background: #FFDA2A;
 }
 .c-hnav--contact {
   position: relative;
@@ -4153,6 +4153,9 @@ button.swiper-pagination-bullet {
 }
 .c-page-title.-interview::before {
   content: "USER INTERVIEW";
+}
+.c-page-title.-information::before {
+  content: "INFORMATION";
 }
 
 .c-service--title {
@@ -6488,23 +6491,29 @@ a {
 @media (768px >= width) {
   .c-category__box .titleArea {
     width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 5px 5px 0 0;
     margin: 0;
   }
 }
 .c-category__box .titleArea span {
   display: block;
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.2rem;
   white-space: nowrap;
   padding: 11px 20px;
 }
+@media (width >= 768px) {
+  .c-category__box .titleArea span {
+    font-size: 1.2rem;
+    padding: 11px 15px 11px 20px;
+  }
+}
 .c-category__box .itemArea {
   width: auto;
-  padding: 8px 15px 8px 5px;
+  padding: 8px 20px 8px 10px;
   border: 2px solid #6D84A5;
   border-radius: 0 30px 30px 0;
 }
@@ -6512,7 +6521,7 @@ a {
   .c-category__box .itemArea {
     width: 100%;
     padding: 8px 10px 0;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
   }
 }
 .c-category__lists {
@@ -6810,6 +6819,7 @@ body {
 body main {
   position: absolute;
   top: 0;
+  width: 100%;
 }
 
 .p-top {

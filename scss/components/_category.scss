@@ -20,29 +20,33 @@
             margin-right: 5px;
             @include max(768){
                 width: 100%;
-                border-radius: 10px 10px 0 0;
+                border-radius: 5px 5px 0 0;
                 margin: 0;
             }
             span{
                 display: block;
                 color: $main-color--w;
-                font-size: 1.4rem;
+                font-size: 1.6rem;
                 font-weight: bold;
                 text-align: center;
                 letter-spacing: 0.2rem;
                 white-space: nowrap;
                 padding: 11px 20px;
+                @include min(768){
+                    font-size: 1.2rem;
+                    padding: 11px 15px 11px 20px;
+                }
             }
         }
         .itemArea{
             width: auto;
-            padding: 8px 15px 8px 5px;
+            padding: 8px 20px 8px 10px;
             border: 2px solid $site-color03;
             border-radius: 0 30px 30px 0;
             @include max(768){
                 width: 100%;
                 padding: 8px 10px 0;
-                border-radius: 0 0 10px 10px;
+                border-radius: 0 0 5px 5px;
             }
         }
     }

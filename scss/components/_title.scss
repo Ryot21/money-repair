@@ -93,8 +93,9 @@
         }
 
     }
-    &.-service  {&::before{content: "FEATURE";}}
-    &.-interview{&::before{content: "USER INTERVIEW";}}
+    &.-service    {&::before{content: "FEATURE";}}
+    &.-interview  {&::before{content: "USER INTERVIEW";}}
+    &.-information{&::before{content: "INFORMATION";}}
 }
 
 // サービスページ > サービス内容内のタイトル

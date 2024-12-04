@@ -93,10 +93,10 @@
 		}
 		&:hover,
 		&.-active{
-			color: $site-color03;
+			color: $main-color--yellow;
 			&::before{
 				width: 90%;
-				background: $site-color03;
+				background: $main-color--yellow;
 				opacity: 1;
 			}
 		}
@@ -119,7 +119,7 @@
 			&:hover,
 			&.-active{
 				&::after{
-					background: $site-color03;
+					background: $main-color--yellow;
 				}
 			}
 		}
