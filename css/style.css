@@ -6672,6 +6672,319 @@ table {
   color: #E4EBF4;
 }
 
+.c-form {
+  width: 100%;
+  border-collapse: collapse;
+}
+.c-form .required {
+  position: relative;
+}
+.c-form .required::after {
+  content: "必須";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: #df2323;
+  padding: 3px 5px 3px;
+  border-radius: 3px;
+}
+@media (width >= 500px) {
+  .c-form .required::after {
+    right: 15px;
+    padding: 4px 6px 3px;
+  }
+}
+.c-form table th, .c-form table td {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 20px;
+}
+@media (500px >= width) {
+  .c-form table th, .c-form table td {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+}
+.c-form table th {
+  width: 250px;
+  position: relative;
+  text-align: left;
+  padding: 20px 15px;
+}
+@media (width >= 500px) {
+  .c-form table th {
+    padding: 15px;
+  }
+}
+@media (500px >= width) {
+  .c-form table th {
+    width: 100%;
+    background-image: linear-gradient(45deg, rgba(228, 235, 244, 0.2705882353), rgba(228, 235, 244, 0.5019607843));
+  }
+}
+.c-form table td {
+  padding: 20px 5px;
+}
+@media (width >= 500px) {
+  .c-form table td {
+    padding: 15px;
+  }
+}
+.c-form table td input[type=submit],
+.c-form table td input[type=text],
+.c-form table td select, .c-form table td textarea, .c-form table td button {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+.c-form table td input[type=text],
+.c-form table td textarea {
+  display: block;
+  width: 480px;
+  background: #f8f8f8;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  padding: 12px 15px;
+  border: 1px solid #f8f8f8;
+  border-radius: 5px !important;
+  transition: all 0.5s;
+  border-radius: 0;
+}
+.c-form table td input[type=text]:focus,
+.c-form table td textarea:focus {
+  background: #e9f5fb;
+  border: 1px solid #E4EBF4;
+}
+.c-form table td input[type=text]::-moz-placeholder, .c-form table td textarea::-moz-placeholder {
+  color: #ccc;
+}
+.c-form table td input[type=text]::placeholder,
+.c-form table td textarea::placeholder {
+  color: #ccc;
+}
+@media (500px >= width) {
+  .c-form table td input[type=text]#company, .c-form table td input[type=text]#name, .c-form table td input[type=text]#email, .c-form table td input[type=text]#tel, .c-form table td input[type=text]#message,
+  .c-form table td textarea#company,
+  .c-form table td textarea#name,
+  .c-form table td textarea#email,
+  .c-form table td textarea#tel,
+  .c-form table td textarea#message {
+    width: 100% !important;
+  }
+}
+@media (width >= 500px) {
+  .c-form table td input[type=text]#company,
+  .c-form table td textarea#company {
+    width: 75%;
+    max-width: 300px;
+  }
+  .c-form table td input[type=text]#name,
+  .c-form table td textarea#name {
+    width: 55%;
+    max-width: 180px;
+  }
+  .c-form table td input[type=text]#email,
+  .c-form table td textarea#email {
+    width: 80%;
+    max-width: 300px;
+  }
+  .c-form table td input[type=text]#tel,
+  .c-form table td textarea#tel {
+    width: 45%;
+    max-width: 150px;
+  }
+  .c-form table td input[type=text]#message,
+  .c-form table td textarea#message {
+    resize: none;
+    width: 100%;
+    height: 300px;
+  }
+}
+.c-form table td input[type=text]#submit,
+.c-form table td textarea#submit {
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+.c-form--privacyPolicy {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto 24px;
+  padding: 5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+@media (width >= 500px) {
+  .c-form--privacyPolicy {
+    padding: 28px 44px 28px 31px;
+  }
+}
+.c-form--privacyPolicy h3 {
+  position: relative;
+  margin: 2px 0 24px;
+  padding: 4px 0 6px 24px;
+  border-bottom: 2px solid #df2323;
+  font-size: 18px;
+  font-weight: bold;
+}
+.c-form--privacyPolicy h3::before {
+  content: url(../images/item/form-icon.png);
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.c-form--privacyPolicy p, .c-form--privacyPolicy span {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+}
+@media (width >= 768px) {
+  .c-form--privacyPolicy p, .c-form--privacyPolicy span {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+  }
+}
+.c-form--privacyPolicy span {
+  display: block;
+}
+.c-form--privacyPolicy a {
+  color: #194299;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.c-form--privacyPolicy__detail {
+  margin-bottom: 3rem;
+}
+.c-form--privacyPolicy__detail h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+@media (width >= 768px) {
+  .c-form--privacyPolicy__detail h4 {
+    font-size: clamp(1.6rem, 1.5vw, 2rem);
+  }
+}
+.c-form--consent #error {
+  display: none;
+  font-size: 1rem;
+  color: #df2323;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+}
+@media (width >= 768px) {
+  .c-form--consent #error {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+  }
+}
+.c-form--consent .policyBox {
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(45deg, rgba(228, 235, 244, 0.2705882353), rgba(228, 235, 244, 0.5019607843));
+  padding: 16px 0;
+  margin-bottom: 25px;
+}
+.c-form--consent p {
+  font-size: 0.7rem;
+  text-align: center;
+}
+@media (width >= 768px) {
+  .c-form--consent p {
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
+  }
+}
+.c-form input {
+  vertical-align: middle;
+}
+.c-form input[type=checkbox] {
+  display: none;
+}
+.c-form input[type=checkbox] + label {
+  position: relative;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  font-weight: bold;
+  color: #3b3b3b;
+  cursor: pointer;
+}
+.c-form input[type=checkbox] + label span::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -21px;
+  display: block;
+  width: 10px;
+  height: 7px;
+  border-bottom: 3px solid #df2323;
+  border-left: 3px solid #df2323;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: all 0.1s;
+  opacity: 0;
+}
+.c-form input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 2px solid #194299;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (width >= 500px) {
+  .c-form input[type=checkbox] + label::before {
+    left: -25px;
+  }
+}
+.c-form input[type=checkbox] + label.required {
+  position: relative;
+}
+.c-form input[type=checkbox] + label.required::after {
+  content: "必須";
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: #df2323;
+  padding: 3px 5px 3px;
+  border-radius: 3px;
+}
+@media (width >= 500px) {
+  .c-form input[type=checkbox] + label.required::after {
+    right: -45px;
+    padding: 4px 6px 3px;
+  }
+}
+.c-form input[type=checkbox]:checked + label span::after {
+  opacity: 1;
+}
+.c-form--btn {
+  text-align: center;
+}
+.c-form--btn button {
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: #194299;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  opacity: 0.5;
+}
+
 body {
   position: relative;
   animation: fadeAnime 3s forwards;
@@ -6766,109 +7079,6 @@ body main {
 }
 .p-contact .c-contact--step .step-des .flexItem.-active p {
   color: #6D84A5;
-}
-.p-contact label.required {
-  position: relative;
-}
-.p-contact label.required::after {
-  content: "必須";
-  font-size: 1rem;
-  position: absolute;
-  top: 55%;
-  right: -45px;
-  transform: translateY(-50%);
-  color: #ffffff;
-  background: #df2323;
-  padding: 1px 5px 2px;
-  border-radius: 3px;
-}
-@media (width >= 768px) {
-  .p-contact label.required::after {
-    font-size: 1.1rem;
-  }
-}
-.p-contact input,
-.p-contact select,
-.p-contact textarea {
-  padding: 1.5% 2%;
-  border: 1px solid #636363;
-  border-radius: 5px;
-}
-@media (width >= 500px) {
-  .p-contact input,
-  .p-contact select,
-  .p-contact textarea {
-    padding: 1.5% 1.5%;
-  }
-}
-.p-contact input#meeting,
-.p-contact select#meeting,
-.p-contact textarea#meeting {
-  width: 25%;
-  min-width: 115px;
-  max-width: 120px;
-}
-.p-contact input#prefectures,
-.p-contact select#prefectures,
-.p-contact textarea#prefectures {
-  width: 25%;
-  min-width: 95px;
-  max-width: 100px;
-}
-.p-contact input#gender,
-.p-contact select#gender,
-.p-contact textarea#gender {
-  width: 15%;
-  min-width: 70px;
-  max-width: 75px;
-}
-.p-contact input#yy,
-.p-contact select#yy,
-.p-contact textarea#yy {
-  width: 35%;
-  min-width: 150px;
-  max-width: 155px;
-}
-.p-contact input#mm, .p-contact input#dd,
-.p-contact select#mm,
-.p-contact select#dd,
-.p-contact textarea#mm,
-.p-contact textarea#dd {
-  width: 15%;
-  min-width: 65px;
-  max-width: 70px;
-}
-.p-contact input#name,
-.p-contact select#name,
-.p-contact textarea#name {
-  width: 45%;
-  max-width: 180px;
-}
-.p-contact input#email,
-.p-contact select#email,
-.p-contact textarea#email {
-  width: 70%;
-  max-width: 300px;
-}
-.p-contact input#tel,
-.p-contact select#tel,
-.p-contact textarea#tel {
-  width: 35%;
-  max-width: 120px;
-}
-.p-contact input#message,
-.p-contact select#message,
-.p-contact textarea#message {
-  resize: none;
-  width: 100%;
-  height: 300px;
-}
-.p-contact input#submit,
-.p-contact select#submit,
-.p-contact textarea#submit {
-  width: 100%;
-  padding: 0;
-  border: none;
 }
 .p-contact .c-select {
   position: relative;
