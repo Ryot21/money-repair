@@ -83,4 +83,29 @@
 			}
 		}
 	}
+
+	&.-logo{
+		position: relative;
+		margin-right: 3rem;
+		text-decoration: underline;
+		transition: all .3s;
+		&:hover{
+			color: $main-color--orange;
+		}
+		&::after{
+			content: "";
+
+			display: inline-block;
+			width: 1.6rem;
+			height: 1.2rem;
+			margin-left: -2rem;
+			transform: translateY(-50%);
+			translate: calc(100% + 1rem) 50%;
+
+			background-image: url(/images/SVG/link.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
 }

@@ -1,0 +1,139 @@
+// 詳細ページ
+
+.p-single{
+
+	#mr-logo{
+		width: 30%;
+		max-width: 50px;
+		margin: 0 auto 10px;
+	}
+
+	&--title{
+		time,span{
+			font-size: clamp(1rem, 1.5vw, 2rem);
+			font-weight: bold;
+			letter-spacing: .2rem;
+		}
+		h3{
+			font-size: clamp(1.8rem, 2.5vw, 4.5rem);
+			font-weight: bold;
+			letter-spacing: .2rem;
+			padding-bottom: 10px;
+			margin-bottom: 4%;
+			border-bottom: 4px dotted $site-color03;
+		}
+	}
+	&--detail{
+		p{
+			font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+			letter-spacing: .2rem;
+			line-height: 2;
+			// margin-bottom: 1%;
+			@include min(500){line-height: 2;}
+		}
+		.man{
+			font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+			font-weight: bold;
+			letter-spacing: .2rem;
+			&.man01{color: $main-color--b;}
+			&.man02{color: $main-color--red;}
+		}
+		.imgBox{
+			width: 50%;
+			height: auto;
+			border-radius: 8px;
+			overflow: hidden;
+			@include min(500){
+				width: 33%;
+				min-width: 300px;
+				max-width: 320px;
+			}
+			&.-right{
+				float: right;
+				margin-left: 2.5%;
+			}
+			&.-left{
+				float: left;
+				margin-right: 2.5%;
+			}
+			&.-w100s{
+				@include max(500){
+					width: 100%;
+					margin-bottom: 5%;
+				}
+			}
+		}
+
+		.detail01,
+		.detail02,
+		.detail03,
+		.detail04{
+			margin-bottom: 10%;
+			@include min(500){margin-bottom: 5%;}
+			h4{
+				margin-bottom: 3%;
+				@include min(500){
+					margin-bottom: 1%;
+				}
+				span{
+					position: relative;
+					display: table;
+					font-size: clamp(1.6rem, 2vw, 3rem);
+					font-weight: bold;
+					letter-spacing: .2rem;
+					padding-left: 7px;
+					@include min(500){
+						padding-left: 10px;
+					}
+					&::after{
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 3px;
+						height: 100%;
+						background: $site-color02;
+						border-radius: 3px;
+					}
+				}
+			}
+		}
+	}
+	&--company{
+		padding: 5%;
+		border: 2px solid $site-color03;
+		border-radius: 5px;
+		@include min(500){
+			width: 75%;
+			max-width: 500px;
+			padding: 2%;
+			margin-right: 0;
+			margin-left: auto;
+		}
+		.imgBox{
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			overflow: hidden;
+			&.-dm{background: $main-color--gray;}
+			@include max(500){
+				margin: 0 auto;
+			}
+		}
+		h5{
+			font-size: 1.6rem;
+			font-weight: bold;
+			letter-spacing: .2rem;
+			line-height: 1.5;
+			padding-bottom: 10px;
+		}
+		p,a{
+			font-size: clamp(1rem, 1.2vw, 1.2rem);
+			letter-spacing: .2rem;
+			padding-bottom: 10px;
+		}
+		a{
+
+		}
+	}
+}

@@ -203,7 +203,7 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
         }
         &.s-LL{
             font-size: 3rem;
-            @include min(1000){font-size: clamp(1.8rem, 3vw, 5.4rem);}
+            @include min(1000){font-size: clamp(1.8rem, 3vw, 4.5rem);}
         }
         &.s-3L{
             font-size: 2.8rem;

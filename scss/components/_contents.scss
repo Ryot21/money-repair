@@ -34,8 +34,12 @@
 		}
 	
 	}
-	&--introduction{
-		
+	&--banner{
+		width: 90%;
+		margin: auto;
+		@include min(500){width: 85%;}
+		@include min(768){width: 50%;}
+		@include min(1600){max-width: 1000px;}
 	}
 	&--btnArea{
 		margin: 0 auto;

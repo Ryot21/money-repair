@@ -37,8 +37,8 @@
         &.-pc2_1{
             li{
                 @include min(768){
-                    &:nth-child(1){width: 55%;}
-                    &:nth-child(2){width: 40%;}
+                    &:nth-child(1){width: 35%;}
+                    &:nth-child(2){width: 63%;}
                 }
             }
         }
