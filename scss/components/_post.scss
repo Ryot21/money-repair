@@ -19,11 +19,7 @@
             top: .5rem;
             .imgBox               {transform: scale(1.005);}
             .c-thumbnail--picter  {transform: translate(-50%, -50%) scale(.98);}
-            // .c-thumbnail--title   {transform: translate(-50%, -50%) scale(.98);}
-            // .c-thumbnail--subTitle{transform: translate(-50%, -50%) scale(.98);}
-            .c-thumbnail--cover{
-                opacity: 1;
-            }
+            .c-thumbnail--cover   {opacity: 1;}
         }
     }
     &--title{

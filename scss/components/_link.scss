@@ -108,4 +108,25 @@
 			background-size: contain;
 		}
 	}
+
+	// 目次
+	&.-check{
+		position: relative;
+		margin-left: 20px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -20px;
+			transform: translateY(-50%);
+			inset: 1;
+			display: block;
+			width: 20px;
+			height: 20px;
+			mask-image: url("/images/SVG/mokuji-icon.svg");
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			background-color: $site-color03;
+		}
+	}
 }
