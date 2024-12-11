@@ -35,10 +35,18 @@
             @include min(768){width: 48.5%;}
         }
         &.-pc2_1{
-            li{
+            .flexItem{
                 @include min(768){
                     &:nth-child(1){width: 35%;}
                     &:nth-child(2){width: 63%;}
+                }
+            }
+            &.-single{
+                .flexItem{
+                    @include min(768){
+                        &:nth-child(1){width: 63%;}
+                        &:nth-child(2){width: 35%;}
+                    }
                 }
             }
         }
@@ -199,6 +207,22 @@
                 width: 55%;
                 margin: 0 auto;
             }
+        }
+    }
+
+    // カテゴリー関係
+    &.-category{
+        .categoryItem{
+            width: auto;
+            margin-right: 5px;
+        }
+    }
+    // 詳細ページ > 目次関係
+    &.-mokuji-lists{
+        .flexItem{
+            width: 100% !important;
+            margin-bottom: 10px;
+            &:last-child{margin-bottom: 0;}
         }
     }
 }

@@ -35,11 +35,16 @@
 	
 	}
 	&--banner{
-		width: 90%;
-		margin: auto;
-		@include min(500){width: 85%;}
-		@include min(768){width: 50%;}
-		@include min(1600){max-width: 1000px;}
+		// お客様の声
+		&.-ver01{
+			width: 90%;
+			margin: auto;
+			@include min(500){width: 85%;}
+			@include min(768){width: 50%;}
+			@include min(1600){max-width: 1000px;}
+		}
+		// お役立ち情報
+		&.-ver02{width: 100%;}
 	}
 	&--btnArea{
 		margin: 0 auto;
