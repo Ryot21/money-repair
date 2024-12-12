@@ -15,7 +15,7 @@
         justify-content: center;
         .titleArea{
             background: $site-color03;
-            border: 2px solid $site-color03;
+            border: 3px solid $site-color03;
             border-radius: 30px 0 0 30px;
             margin-right: 5px;
             @include max(768){
@@ -41,6 +41,7 @@
         .itemArea{
             width: auto;
             padding: 8px 20px 8px 10px;
+            background: $main-color--gray;
             border: 2px solid $site-color03;
             border-radius: 0 30px 30px 0;
             @include max(768){
@@ -52,8 +53,9 @@
     }
     &__lists{justify-content: start;}
     &__item{ // li
+        background: $main-color--w;
+        border: 1px solid $site-color03;
         margin-right: 5px;
-        background: $main-color--gray;
         border-radius: 3px;
         @include max(768){
             margin-bottom: 10px;
@@ -63,8 +65,14 @@
             color: $site-color03;
             font-size: 1rem;
             font-weight: bold;
+            letter-spacing: .2rem;
             white-space: nowrap;
             padding: 5px 10px;
+            transition: all .5s;
+            &:hover{
+                color: $main-color--w;
+                background: $site-color03;
+            }
         }
     }
 }

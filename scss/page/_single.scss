@@ -34,18 +34,24 @@
 		background: $main-color--w;
 		border: 1px solid $site-color03;
 		border-radius: 3px;
+		transition: all .5s;
+		&:hover{
+			color: $main-color--w;
+			background: $site-color03;
+		}
 
 	}
 	&--post{
-		width: 85%;
+		width: 75%;
 		padding: 5%;
-		margin: 0 auto;
+		margin: 0 auto 10%;
 		border: 2px solid $site-color03;
 		border-radius: 5px;
 		@include min(500){
 			width: 100%;
 			max-width: 500px;
 			padding: 3% 5%;
+			margin: 0 auto;
 			margin-right: 0;
 			margin-left: auto;
 		}
@@ -244,6 +250,7 @@
 				a{
 					position: relative;
 					color: $site-color02;
+					transition: all .3s;
 					&::after{
 						content: "";
 						position: absolute;
@@ -252,10 +259,17 @@
 						width: 100%;
 						height: 1px;
 						border-bottom: 2px dotted $site-color02;
+						transition: all .3s;
+					}
+					&:hover{
+						opacity: .6;
+						&::after{
+							opacity: .6;
+						}
 					}
 				}
 				h2{// 記事タイトル
-					font-size: clamp(1.8rem, 2vw, 3.2rem);
+					font-size: clamp(1.8rem, 2vw, 3rem);
 					padding: 2% 3%;
 					margin-bottom: 3%;
 					background: $main-color--gray;
@@ -387,7 +401,7 @@
 					left: 5%;
 					transform: translateY(-65%);
 					padding: 1.5% 3%;
-					font-size: clamp(1.6rem, 2vw, 2.4rem);
+					font-size: clamp(1.6rem, 1.6vw, 2rem);
 					color: $main-color--w;
 					font-weight: bold;
 					letter-spacing: .2rem;
@@ -395,6 +409,36 @@
 					background: $site-color03;
 					border-radius: 5px;
 					z-index: 1;
+				}
+			}
+			&--articleArea{// 関連記事
+				margin-top: 15%;
+
+				h2{// 記事タイトル
+					font-size: clamp(1.8rem, 2vw, 3rem);
+					font-weight: bold;
+					letter-spacing: .2rem;
+					line-height: 1.5;
+					padding: 2% 3%;
+					margin-bottom: 3%;
+					background: $main-color--gray;
+					span{
+						position: relative;
+						display: inline-block;
+						color: $site-color03;
+						font-weight: bold;
+						letter-spacing: .2rem;
+						padding-right: 5px;
+						&::after{
+							content: "";
+							position: absolute;
+							bottom: -2px;
+							left: 0;
+							width: 100%;
+							height: 1px;
+							border-bottom: 3px dotted $site-color03;
+						}
+					}
 				}
 			}
 		}
