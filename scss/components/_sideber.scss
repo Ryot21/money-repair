@@ -1,0 +1,87 @@
+// サイドバー関係
+
+.c-sideber{
+    @include min(500){
+        position: sticky;
+        top: 120px;
+    }
+
+    &--search{// 検索窓
+        #search{
+            display: flex;
+            justify-content: center;
+            height:45px;
+            input{
+                width:80%;
+                padding:0 15px;
+                border-radius:5px 0 0 5px;	
+                background: $main-color--gray;
+                border:none;
+                outline:0;
+            }
+            button{
+                width:20%;
+                min-width: 70px;
+                color: $main-color--w;
+                font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+                font-weight: bold;
+                background: $site-color03;
+                border-radius:0 5px 5px 0;
+                border:none;
+                letter-spacing: .2rem;
+                transition: all .3s;
+                cursor: pointer;
+    
+                &:hover {background: #92dbff;}
+            }
+        }
+    }
+
+    &--mokuji{// 目次
+        position: relative;
+        width: 100%;
+        padding: 3% 3% 3% 6%;
+        margin-top: 15%;
+        border: 2px solid $site-color03;
+        border-radius: 0 0 5px 5px;
+        @include min(500){
+            padding: 5% 2% 5% 5%;
+            border: 2px solid $site-color03;
+        }
+        &::before{
+            content: "目次";
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 100%;
+            font-size: clamp(1.6rem, 2vw, 2rem);
+            color: $main-color--w;
+            font-weight: bold;
+            border: 2px solid #6D84A5;
+            text-align: center;
+            letter-spacing: .2rem;
+            white-space: nowrap;
+            background: $site-color03;
+            border-radius: 5px 5px 0 0;
+            z-index: 1;
+            @include min(500){
+                border: 2px solid $site-color03;
+            }
+        }
+    }
+
+    &--postman{// 投稿者
+        width: 100%;
+        padding: 7% 3% 3% 6%;
+        margin-top: 15%;
+        border: 2px solid $site-color03;
+        border-radius: 5px;
+        @include min(500){
+            padding: 5% 2% 2%;
+            border: 2px solid $site-color03;
+        }
+
+    }
+}

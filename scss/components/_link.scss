@@ -112,21 +112,22 @@
 	// 目次
 	&.-check{
 		position: relative;
-		margin-left: 20px;
+		display: block;
+		margin-left: 25px;
 		&::before {
 			content: "";
 			position: absolute;
 			top: 50%;
-			left: -20px;
+			left: -25px;
 			transform: translateY(-50%);
 			inset: 1;
 			display: block;
 			width: 20px;
 			height: 20px;
-			mask-image: url("/images/SVG/mokuji-icon.svg");
+			mask-image: url("../images/SVG/target-icon.svg");
 			mask-repeat: no-repeat;
 			mask-size: contain;
-			background-color: $site-color03;
+			background: $site-color03;
 		}
 	}
 }

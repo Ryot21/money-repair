@@ -163,7 +163,7 @@
             <div class="c-contents--inner">
 
                     <!-- 詳細エリア -->
-                    <ul class="c-flex -col1_2 -pc2_1 -single">
+                    <ul class="c-flex -col1_2 -pc2_1 -jc-sb -single">
                         <li class="flexItem"><!-- 記事コンテンツ -->
                             <!-- タイトルエリア -->
                             <div class="p-single--title">
@@ -188,11 +188,11 @@
                                 <p   class="c-thumbnail--subTitle s-M -b -color03 -ls-1">サブタイトルサブタイトル</p>
                             </div>
                             <!-- 目次 -->
-                            <div class="p-single--Mokuji mgt10 mgt15s mgb5 mgb10s">
-                                <ul class="c-flex -mokuji-lists">
-                                    <li class="flexItem"><a class="c-link -check s-ML -s14 -b -ls-1 -lh-1_5" href="#detail01">目次１目次１目次１目次１目次１目次１</a></li>
-                                    <li class="flexItem"><a class="c-link -check s-ML -s14 -b -ls-1 -lh-1_5" href="#detail02">目次２目次２目次２目次２目次２目次２</a></li>
-                                    <li class="flexItem"><a class="c-link -check s-ML -s14 -b -ls-1 -lh-1_5" href="#detail03">目次３目次３目次３目次３目次３目次３</a></li>
+                            <div class="p-single--target mgt10 mgt15s mgb5 mgb10s">
+                                <ul class="c-flex -target-lists">
+                                    <li class="flexItem"><a class="c-link -check s-ML -s12 -b -ls-1 -lh-1_5" href="#detail01">目次１目次１目次１目次１目次１目次１</a></li>
+                                    <li class="flexItem"><a class="c-link -check s-ML -s12 -b -ls-1 -lh-1_5" href="#detail02">目次２目次２目次２目次２目次２目次２</a></li>
+                                    <li class="flexItem"><a class="c-link -check s-ML -s12 -b -ls-1 -lh-1_5" href="#detail03">目次３目次３目次３目次３目次３目次３</a></li>
                                 </ul>
                             </div>
                             <!-- コンテンツ -->
@@ -207,11 +207,47 @@
                                 <h3>中タイトルはh3タグでお願いします。</h3>
                                 <h4>小タイトルはh4タグでお願いします。</h4>
                                 <p>基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。<span>太文字はspanタグでお願いします。</span>基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。基本はpタグでお願いします。<a href="">リンクです。</a></p>
+                                <h2>中タイトルはh3タグでお願いします。</h2>
 
                             </div>
                         </li>
                         <li class="flexItem"><!-- サイドバー -->
-
+                            <div class="c-sideber">
+                                <!-- 検索窓 -->
+                                <div class="c-sideber--search">
+                                    <form method="get" id="search" action="">
+                                        <input id="sbox1" name="search" type="text" placeholder="キーワードを入力">
+                                        <button id="sbtn1" type="submit" value="検索">検索</button>
+                                    </form>
+                                </div>
+                                <!-- 目次 -->
+                                <div class="c-sideber--mokuji mgb10 mgb10s">
+                                    <ul class="c-flex -mokuji-lists h2-lists">
+                                        <li class="flexItem"><a class="-b -ls-1 -lh-1_5" href="#detail01">h2タグh2タグh2タグh2タグ</a></li>
+                                        <li class="flexItem">
+                                            <a class="-b -ls-1 -lh-1_5" href="#detail02">h2タグh2タグh2タグh2タグh2タグ</a>
+                                            <ul class="c-flex -mokuji-lists h3-lists">
+                                                <li class="flexItem"><a class="-b -ls-1 -lh-1_5" href="#detail02-01">h3タグh3タグh3タグh3タグ</a></li>
+                                                <li class="flexItem"><a class="-b -ls-1 -lh-1_5" href="#detail02-02">h3タグh3タグh3タグ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="flexItem"><a class="-b -ls-1 -lh-1_5" href="#detail03">h2タグh2タグh2タグ</a></li>
+                                        <li class="flexItem"><a class="-b -ls-1 -lh-1_5" href="#detail03">h2タグh2タグh2タグ</a></li>
+                                    </ul>
+                                </div>
+                                <!-- 投稿者 -->
+                                <div class="p-single--post">
+                                    <ul class="c-flex -post-lists -h-cen_pc -jc-sb">
+                                        <li class="postItem -prof mgb5s"><div class="imgBox -dm"></div></li>
+                                        <li class="postItem">
+                                            <span class="postman">この記事を書いた人</span>
+                                            <h5>江本　一郎</h5>
+                                            <p>代表取締役</p>
+                                            <a href="" class="c-link -logo">リンクリンク</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
                     </ul>
 

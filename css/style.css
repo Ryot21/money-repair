@@ -4513,12 +4513,111 @@ button.swiper-pagination-bullet {
   width: auto;
   margin-right: 5px;
 }
-.c-flex.-mokuji-lists .flexItem {
+.c-flex.-mokuji-lists.h2-lists .flexItem, .c-flex.-mokuji-lists.h3-lists .flexItem, .c-flex.-mokuji-lists.h4-lists .flexItem, .c-flex.-mokuji-lists.h5-lists .flexItem, .c-flex.-mokuji-lists.h6-lists .flexItem {
   width: 100% !important;
   margin-bottom: 10px;
 }
-.c-flex.-mokuji-lists .flexItem:last-child {
+.c-flex.-mokuji-lists.h2-lists .flexItem:last-child, .c-flex.-mokuji-lists.h3-lists .flexItem:last-child, .c-flex.-mokuji-lists.h4-lists .flexItem:last-child, .c-flex.-mokuji-lists.h5-lists .flexItem:last-child, .c-flex.-mokuji-lists.h6-lists .flexItem:last-child {
   margin-bottom: 0;
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem {
+  position: relative;
+  margin: 5px 0 5px 20px;
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem a {
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem::before {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  display: block;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  font-weight: bold;
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem:nth-child(1)::before {
+  content: "1.";
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem:nth-child(2)::before {
+  content: "2.";
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem:nth-child(3)::before {
+  content: "3.";
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem:nth-child(4)::before {
+  content: "4.";
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem:nth-child(5)::before {
+  content: "5.";
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem:nth-child(6)::before {
+  content: "6.";
+}
+.c-flex.-mokuji-lists.h2-lists .flexItem:nth-child(7)::before {
+  content: "7.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem {
+  position: relative;
+  margin: 7px 0 3px 30px;
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem a {
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem::before {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  display: block;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  font-weight: bold;
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:nth-child(1)::before {
+  content: "- 1.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:nth-child(2)::before {
+  content: "- 2.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:nth-child(3)::before {
+  content: "- 3.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:nth-child(4)::before {
+  content: "- 4.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:nth-child(5)::before {
+  content: "- 5.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:nth-child(6)::before {
+  content: "- 6.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:nth-child(7)::before {
+  content: "- 7.";
+}
+.c-flex.-mokuji-lists.h3-lists .flexItem:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -30px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dotted #6D84A5;
+}
+.c-flex.-target-lists .flexItem {
+  width: 100% !important;
+  margin: 0 0 10px 0;
+}
+.c-flex.-target-lists .flexItem:last-child {
+  margin: 0;
+}
+.c-flex.-post-lists .postItem {
+  width: 100%;
+}
+@media (width >= 768px) {
+  .c-flex.-post-lists .postItem:nth-child(1) {
+    width: 35%;
+  }
+  .c-flex.-post-lists .postItem:nth-child(2) {
+    width: 63%;
+  }
 }
 
 .c-tabArea {
@@ -4977,25 +5076,26 @@ a {
 }
 .c-link.-check {
   position: relative;
-  margin-left: 20px;
+  display: block;
+  margin-left: 25px;
 }
 .c-link.-check::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -20px;
+  left: -25px;
   transform: translateY(-50%);
   inset: 1;
   display: block;
   width: 20px;
   height: 20px;
-  -webkit-mask-image: url("/images/SVG/mokuji-icon.svg");
-          mask-image: url("/images/SVG/mokuji-icon.svg");
+  -webkit-mask-image: url("../images/SVG/target-icon.svg");
+          mask-image: url("../images/SVG/target-icon.svg");
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-size: contain;
           mask-size: contain;
-  background-color: #6D84A5;
+  background: #6D84A5;
 }
 
 .swiper {
@@ -7070,6 +7170,92 @@ table {
   opacity: 0.5;
 }
 
+@media (width >= 500px) {
+  .c-sideber {
+    position: sticky;
+    top: 120px;
+  }
+}
+.c-sideber--search #search {
+  display: flex;
+  justify-content: center;
+  height: 45px;
+}
+.c-sideber--search #search input {
+  width: 80%;
+  padding: 0 15px;
+  border-radius: 5px 0 0 5px;
+  background: #F6F6F6;
+  border: none;
+  outline: 0;
+}
+.c-sideber--search #search button {
+  width: 20%;
+  min-width: 70px;
+  color: #ffffff;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  font-weight: bold;
+  background: #6D84A5;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.c-sideber--search #search button:hover {
+  background: #92dbff;
+}
+.c-sideber--mokuji {
+  position: relative;
+  width: 100%;
+  padding: 3% 3% 3% 6%;
+  margin-top: 15%;
+  border: 2px solid #6D84A5;
+  border-radius: 0 0 5px 5px;
+}
+@media (width >= 500px) {
+  .c-sideber--mokuji {
+    padding: 5% 2% 5% 5%;
+    border: 2px solid #6D84A5;
+  }
+}
+.c-sideber--mokuji::before {
+  content: "目次";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  color: #ffffff;
+  font-weight: bold;
+  border: 2px solid #6D84A5;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  white-space: nowrap;
+  background: #6D84A5;
+  border-radius: 5px 5px 0 0;
+  z-index: 1;
+}
+@media (width >= 500px) {
+  .c-sideber--mokuji::before {
+    border: 2px solid #6D84A5;
+  }
+}
+.c-sideber--postman {
+  width: 100%;
+  padding: 7% 3% 3% 6%;
+  margin-top: 15%;
+  border: 2px solid #6D84A5;
+  border-radius: 5px;
+}
+@media (width >= 500px) {
+  .c-sideber--postman {
+    padding: 5% 2% 2%;
+    border: 2px solid #6D84A5;
+  }
+}
+
 body {
   position: relative;
   animation: fadeAnime 3s forwards;
@@ -7139,6 +7325,70 @@ body main {
   background: #ffffff;
   border: 1px solid #6D84A5;
   border-radius: 3px;
+}
+.p-single--post {
+  width: 85%;
+  padding: 5%;
+  margin: 0 auto;
+  border: 2px solid #6D84A5;
+  border-radius: 5px;
+}
+@media (width >= 500px) {
+  .p-single--post {
+    width: 100%;
+    max-width: 500px;
+    padding: 3% 5%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+.p-single--post h5 {
+  font-size: 1.6rem;
+  color: #636363;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+  padding-bottom: 5px;
+}
+.p-single--post p, .p-single--post a {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  letter-spacing: 0.2rem;
+  padding-bottom: 10px;
+}
+.p-single--post .postman {
+  display: inline-block;
+  width: auto;
+  font-weight: bold;
+  color: #ffffff;
+  background: #636363;
+  padding: 2% 3%;
+  margin-bottom: 3%;
+  border-radius: 3px;
+  letter-spacing: 0.1rem;
+}
+@media (500px >= width) {
+  .p-single--post .postman {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 3%;
+  }
+}
+.p-single--post .-prof .imgBox {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.p-single--post .-prof .imgBox.-dm {
+  background: #F6F6F6;
+}
+@media (500px >= width) {
+  .p-single--post .-prof .imgBox {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
 }
 .p-single.-interview .p-single--detail p {
   font-size: clamp(1.2rem, 1.5vw, 1.6rem);
@@ -7287,6 +7537,9 @@ body main {
   font-size: clamp(1rem, 1.2vw, 1.2rem);
   letter-spacing: 0.2rem;
   padding-bottom: 10px;
+}
+.p-single.-interview .p-single--post {
+  border: 2px solid #636363;
 }
 .p-single.-information .p-single--detail h2, .p-single.-information .p-single--detail h3, .p-single.-information .p-single--detail h4, .p-single.-information .p-single--detail h5, .p-single.-information .p-single--detail h6 {
   font-weight: bold;
@@ -7464,19 +7717,19 @@ body main {
   letter-spacing: 0.2rem;
   padding-bottom: 10px;
 }
-.p-single.-information .p-single--Mokuji {
+.p-single.-information .p-single--target {
   position: relative;
-  padding: 5% 3% 3% 5%;
+  padding: 7% 3% 3% 6%;
   border: 3px solid #6D84A5;
   border-radius: 5px;
 }
 @media (width >= 500px) {
-  .p-single.-information .p-single--Mokuji {
+  .p-single.-information .p-single--target {
     padding: 5% 2% 2%;
     border: 4px solid #6D84A5;
   }
 }
-.p-single.-information .p-single--Mokuji::before {
+.p-single.-information .p-single--target::before {
   content: "この記事で解決できるお悩みは...";
   position: absolute;
   top: 0;
