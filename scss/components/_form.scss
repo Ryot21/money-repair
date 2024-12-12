@@ -189,12 +189,14 @@
             letter-spacing: .2rem;
             background-image: linear-gradient(45deg, #e4ebf445, #e4ebf480);
             padding: 16px 0;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
+            @include min(500){
+                margin-bottom: 15px;
+            }
         }
         p{
-            font-size: .7rem;
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
             text-align: center;
-            @include min(768){font-size: clamp(.7rem, 2vw, 1.2rem);}
         }
     }
 
@@ -223,6 +225,11 @@
                         transform: rotate(-45deg) translateY(-50%);
                         transition: all .1s;
                         opacity: 0;
+                        @include max(500){
+                            left: -16px;
+                            width: 8px;
+                            height: 5px;
+                        }
                     }
                 }
                 @include min(500){
