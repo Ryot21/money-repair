@@ -5,6 +5,22 @@
         position: sticky;
         top: 120px;
     }
+    @include max(500){
+        display: grid;
+
+        .c-sideber{
+            &--search{
+                order: 3;
+            }
+            &--mokuji{
+                order: 2;
+                margin-bottom: 20%;
+            }
+            &--post{
+                order: 1;
+            }
+        }
+    }
 
     &--search{// 検索窓
         #search{

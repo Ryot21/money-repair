@@ -41,14 +41,6 @@
                     &:nth-child(2){width: 63%;}
                 }
             }
-            &.-single{
-                .flexItem{
-                    @include min(768){
-                        &:nth-child(1){width: 63%;}
-                        &:nth-child(2){width: 35%;}
-                    }
-                }
-            }
         }
     }
     // コンテンツカラム（sp:pc 2:2）
@@ -215,6 +207,21 @@
         .categoryItem{
             width: auto;
             margin-right: 5px;
+        }
+    }
+
+    // 詳細ページ
+    &.-single-lists{
+        .singleItem{
+            @include max(500){
+                &:nth-child(1){
+                    margin-bottom: 10%;
+                }
+            }
+            @include min(768){
+                &:nth-child(1){width: 63%;}
+                &:nth-child(2){width: 35%;}
+            }
         }
     }
     // 詳細ページ > サイドバー > 目次関係
