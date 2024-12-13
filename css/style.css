@@ -7360,17 +7360,6 @@ body main {
   margin: 0 auto 10px;
 }
 
-.p-archive #mr-logo {
-  width: 30%;
-  max-width: 50px;
-  margin: 0 auto 10px;
-}
-
-.p-single #mr-logo {
-  width: 30%;
-  max-width: 50px;
-  margin: 0 auto 10px;
-}
 .p-single--title time, .p-single--title span {
   font-size: clamp(1rem, 2vw, 2rem);
   font-weight: bold;
@@ -9103,4 +9092,10 @@ body main {
   100% {
     transform: scale(1, 0.9) translate(0%, 0%);
   }
+}
+
+.lottie--logo {
+  width: 50%;
+  max-width: 50px;
+  margin: 0 auto 10px;
 }/*# sourceMappingURL=style.css.map */

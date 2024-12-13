@@ -24,7 +24,10 @@
     <!--// デプロイ前に確認 -->
 
     <link rel="stylesheet" href="css/style.css">
+    <!-- ▼lottie-player用 -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- ▼lottie-interactivity用 -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <!-- <script src="js/luminous.min.js"></script> -->
     <!-- <script src="js/form.js"></script> -->
 
@@ -151,11 +154,9 @@
                 <!-- マネーリペアとは -->
                 <div class="c-contents--introduction pdt5 pdt10s mgb5s">
                     <lottie-player
-                        id="mr-logo"
-                        mode="normal"
-                        autoplay
-                        speed=".3"
-                        loop
+                        id="lottie-scroll-trigger"
+                        class="lottie--logo"
+                        speed=".5"
                         src="json/mr-logo.json"
                     >
                     </lottie-player><!-- ロゴ -->
@@ -320,8 +321,7 @@
             </div>
         </footer><!-- //Footer -->
     </main>
-
-    <!-- <script src="js/lottie-player.js"></script> -->
+    <script src="js/lottie-player-original.js"></script>
 
 </body>
 </html>
