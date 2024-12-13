@@ -5017,12 +5017,14 @@ a {
 .c-link.-btn {
   width: auto;
   text-align: center;
-  background: #194299;
-  padding: 8px 17px;
+  color: #ffffff !important;
+  background: #6D84A5;
+  border: 2px solid #6D84A5;
+  padding: 8px 15px;
   border-radius: 30px;
   overflow: hidden;
   will-change: transform;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 @media (width >= 500px) {
   .c-link.-btn {
@@ -5030,7 +5032,10 @@ a {
   }
 }
 .c-link.-btn:hover {
-  background: #6D84A5;
+  color: #6D84A5 !important;
+  background: #ffffff;
+  border: 2px solid #6D84A5;
+  padding: 8px 20px;
   transform: scale(1.025);
 }
 .c-link.-btn.-center {
@@ -5038,9 +5043,11 @@ a {
 }
 .c-link.-btn.-c-red {
   background: #df2323;
+  border: 2px solid #df2323;
 }
 .c-link.-btn.-c-red:hover {
-  background: #ff9245;
+  color: #df2323 !important;
+  background: #ffffff;
 }
 .c-link.-header {
   display: block;

@@ -42,17 +42,22 @@
 	&.-btn{
 		width: auto;
 		text-align: center;
-		background: $site-color02;
-		padding: 8px 17px;
+		color: $main-color--w !important;
+		background: $site-color03;
+		border: 2px solid $site-color03;
+		padding: 8px 15px;
 		border-radius: 30px;
 		overflow: hidden;
 		will-change: transform;
-		transition: all .5s;
+		transition: all .3s;
 		@include min(500){
 			padding: 8px 15px;
 		}
 		&:hover{
-			background: $site-color03;
+			color: $site-color03 !important;
+			background: $main-color--w;
+			border: 2px solid $site-color03;
+			padding: 8px 20px;
 			transform: scale(1.025);
 		}
 		&.-center{
@@ -60,8 +65,10 @@
 		}
 		&.-c-red{
 			background: $main-color--red;
+			border: 2px solid $main-color--red;
 			&:hover{
-				background: $main-color--orange;
+				color: $main-color--red !important;
+				background: $main-color--w;
 			}
 		}
 	}
