@@ -24,11 +24,26 @@
     }
 
     /* ---------------------------------
-        ファーストビュー > 画像縮小, 拡大
-
-        → _slider.scssに移動
+        タイピング風
     --------------------------------- */
-
+    &-typing{
+        position: relative;
+        &::after{
+            content: '';
+            border-right: 1px solid $main-color--b;
+            margin-left: 2px;
+            animation: flashing 1s linear infinite;
+            opacity: 0;
+        }
+    }
+    @keyframes flashing {
+        0%, 100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
     /* ---------------------------------------
         鳥の着地または飛び立つ動き
     --------------------------------------- */

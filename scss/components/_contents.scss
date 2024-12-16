@@ -251,7 +251,21 @@
 
 				// 注釈
 				// 共有
-				&.-comments{
+				&.-comments01,
+				&.-comments02{
+					p,span{
+						display: block;
+						width: max-content;
+						color: white;
+						font-size: clamp(4rem, 4vw, 8rem);
+						font-weight: bold;
+						text-align: start;
+						// writing-mode: vertical-rl;
+						letter-spacing: .3rem;
+						text-shadow: 2px 2px 5px $main-color--b;
+					}
+				}
+				&.-comments01{
 					position: absolute;
 					top: 90%;
 					left: 47.5%;
@@ -261,18 +275,7 @@
 						top: 85%;
 						left: 35.5%;
 					}
-					span{
-						display: block;
-						width: max-content;
-						color: white;
-						font-size: clamp(4rem, 4vw, 8rem);
-						font-weight: bold;
-						// writing-mode: vertical-rl;
-						letter-spacing: .3rem;
-						text-shadow: 2px 2px 5px $main-color--b;
-					}
 				}
-
 			}
 		}
 		&.-single{

@@ -4153,7 +4153,18 @@ button.swiper-pagination-bullet {
     left: 70%;
   }
 }
-.c-contents.-fv.-top .c-contentsBox.-comments {
+.c-contents.-fv.-top .c-contentsBox.-comments01 p, .c-contents.-fv.-top .c-contentsBox.-comments01 span, .c-contents.-fv.-top .c-contentsBox.-comments02 p, .c-contents.-fv.-top .c-contentsBox.-comments02 span {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  color: white;
+  font-size: clamp(4rem, 4vw, 8rem);
+  font-weight: bold;
+  text-align: start;
+  letter-spacing: 0.3rem;
+  text-shadow: 2px 2px 5px #3b3b3b;
+}
+.c-contents.-fv.-top .c-contentsBox.-comments01 {
   position: absolute;
   top: 90%;
   left: 47.5%;
@@ -4161,20 +4172,10 @@ button.swiper-pagination-bullet {
   z-index: 10;
 }
 @media (width >= 500px) {
-  .c-contents.-fv.-top .c-contentsBox.-comments {
+  .c-contents.-fv.-top .c-contentsBox.-comments01 {
     top: 85%;
     left: 35.5%;
   }
-}
-.c-contents.-fv.-top .c-contentsBox.-comments span {
-  display: block;
-  width: -moz-max-content;
-  width: max-content;
-  color: white;
-  font-size: clamp(4rem, 4vw, 8rem);
-  font-weight: bold;
-  letter-spacing: 0.3rem;
-  text-shadow: 2px 2px 5px #3b3b3b;
 }
 .c-contents.-fv.-single {
   position: relative;
@@ -9217,9 +9218,7 @@ body main {
       fade + ぼかし
   ------------------------------------------------*/
   /* ---------------------------------
-      ファーストビュー > 画像縮小, 拡大
-
-      → _slider.scssに移動
+      タイピング風
   --------------------------------- */
   /* ---------------------------------------
       鳥の着地または飛び立つ動き
@@ -9244,6 +9243,24 @@ body main {
     transform: scale(1.05);
     opacity: 1;
     filter: blur(0);
+  }
+}
+.a-typing {
+  position: relative;
+}
+.a-typing::after {
+  content: "";
+  border-right: 1px solid #3b3b3b;
+  margin-left: 2px;
+  animation: flashing 1s linear infinite;
+  opacity: 0;
+}
+@keyframes flashing {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 .a-bird_l01 {
