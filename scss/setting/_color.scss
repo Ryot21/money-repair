@@ -2,6 +2,7 @@
 $main-color--b: #3b3b3b;
 // $main-color--b: #202933;
 $main-color--w: #ffffff;
+$main-color--Lgray: #f8f7f7;
 $main-color--gray: #F6F6F6;
 $main-color--Dgray: #636363;
 $main-color--beige: #b1a595;
@@ -14,9 +15,9 @@ $main-color--yes: #ED604F;
 $main-color--no:  #668AD1;
 
 // サイト独自のカラー(3色 : 若い数字の方がよりメインカラー)
-$site-color01: #EBF9FF;// 薄い色
-$site-color02: #194299;// 濃い色
-$site-color03: #6D84A5;
+$site-color01: rgb(235, 249, 255);// 薄い色
+$site-color02: rgb(25, 66, 153);// 濃い色
+$site-color03: rgb(110, 133, 166);
 $site-color04: #E77C31;
 $site-color05: #61BBE3;
 $site-color_kome: #dacebc;
@@ -27,7 +28,7 @@ $house-color03: #DCECF0;
 $house-color04: #b6b343;
 
 $site-color01-hover: #5a8190;
-$site-color02-hover: #246579;
+$site-color02-hover: rgb(36, 101, 121);
 $site-color03-hover: #024c63;
 
 $sold-out:#5a8190;

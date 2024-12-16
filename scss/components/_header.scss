@@ -19,7 +19,7 @@
 	&.-fixed{//固定
 		position: sticky;
 		top: 0;
-		left: 5%;
+		left: 0;
 		z-index: 999;
 	}
 	&-wrapper{
@@ -32,6 +32,6 @@
 			margin: auto;
 		}
 		@include min(768){width: 82.5%;}
-		@include min(1600){max-width: 1120px;}
+		@include min(1600){max-width: 1380px;}
 	}
 }

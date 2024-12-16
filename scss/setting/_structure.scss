@@ -10,7 +10,8 @@ $breakpoints: (
     1100: 1100px,
     1200: 1200px,
     1400: 1400px,
-    1600: 1600px
+    1600: 1600px,
+    1800: 1800px
 );
 @mixin min($breakpoint) {
     @media(width >= #{map-get($breakpoints, $breakpoint)}){

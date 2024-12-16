@@ -20,8 +20,15 @@
 @keyframes sc-headerNav-gap {// header > ナビゲーション
     to {
         height: 40px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        background: #fff;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         border-radius: 30px;
+        // overflow: hidden;
+    }
+}
+@keyframes sc-headerNavContact-gap {// header > ナビゲーション > Contact
+    to {
+        border-radius: 0 30px 30px 0;
     }
 }
 
@@ -50,12 +57,16 @@
             }
 
             .c-navAreaBox{
-                // animation: sc-contact-gap 1s linear both;
                 animation: sc-headerNav-gap linear both;
-                animation-range: contain 50% contain 60%;
+                animation-range: contain 30% contain 35%;
                 animation-timeline: view();
                 will-change: transform;
-
+                .-contact{
+                    animation: sc-headerNavContact-gap linear both;
+                    animation-range: contain 30% contain 35%;
+                    animation-timeline: view();
+                    will-change: transform;
+                }
             }
         }
     }

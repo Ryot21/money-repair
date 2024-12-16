@@ -16,16 +16,56 @@ body{
 .p-top{
 	position: relative;
 	width: 100%;
-	background-size: 15px 15px;
-	background-image: linear-gradient(
-		-45deg,
-		$site-color01, $site-color01 48.5%,
-		white 49.5%, white 50.5%,
-		$site-color01 51.5%, $site-color01
-	) ;
-	animation: fadeAnime 3s forwards;
-	@include min(768){
-		background-size: 30px 30px;
-		animation: fadeAnime 2s forwards;
-	}
+	// background-size: 15px 15px;
+	// 背景（線状 > 斜め）
+	// background-image: linear-gradient(
+	// 	-45deg,
+	// 	$main-color--gray,$main-color--gray 45%,
+	// 	white 45.5%, white 54.5%,
+	// 	$main-color--gray 55.5%, $main-color--gray
+	// ) ;
+
+	background:
+	linear-gradient(
+		-55deg,
+		rgb(24 5 205 / 2%) 0%,
+		rgb(24 5 205 / 2%) 12%,
+		rgb(24 5 205 / 2%) 12%,
+		rgb(24 5 205 / 1%) 26%,
+		rgb(24 5 205 / 1%) 26%,
+		rgb(24 5 205 / 1%) 31%,
+		rgb(235 249 255 / 2.5%) 31%,
+		rgb(235 249 255 / 2.5%) 32%,
+		rgb(235 249 255 / 2.5%) 32%,
+		rgb(235 249 255 / 5%) 47%,
+		rgb(147 155 204 / 5%) 47%,
+		rgb(147 155 204 / 5%) 70%,
+		rgb(36 101 121 / 5%) 70%,
+		rgb(36 101 121 / 5%) 75%,
+		rgb(122 125 204 / 5%) 75%,
+		rgb(122 125 204 / 5%) 100%),
+	linear-gradient(
+		-55deg,
+		rgb(25 66 153 / 2.5%) 0%,
+		rgb(25 66 153 / 2.5%) 12.5%,
+		rgb(101 92 158 / 1%) 12.5%,
+		rgb(101 92 158 / 1%) 25%,
+		rgb(210 183 164 / 1%) 25%,
+		rgb(210 183 164 / 1%) 37.5%,
+		rgba(0 0 0 / 1%) 37.5%,
+		rgb(36 101 121 / 5%) 50%,
+		rgb(145 129 161 / 1%) 50%,
+		rgb(145 129 161 / 1%) 62.5%,
+		rgb(188 165 163 / 5%) 62.5%,
+		rgb(188 165 163 / 5%) 75%,
+		rgb(80 74 157 / 1%) 75%,
+		rgb(80 74 157 / 1%) 87.5%,
+		rgb(36 101 121 / 5%) 87.5%,
+		rgb(167 147 162 / 5%) 100%),
+	linear-gradient(
+		-98deg,
+		$site-color01,
+		$main-color--w);
+	animation: fadeAnime 2s forwards;	animation: fadeAnime 3s forwards;
+
 }

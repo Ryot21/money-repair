@@ -13,25 +13,27 @@
 }
 @font-face {// 英文フォント04
     font-family: "e-font04";
-    src: url("../fonts/en/Roboto-Regular.ttf") format("truetype");
+    src: url("../fonts/en/Roboto-Regular.ttf")               format("truetype");
 }
 @font-face {// 明朝フォント
     font-family: "mincho-font01";
     src: url("../fonts/mincho/ShipporiMincho-Regular.ttf")   format("truetype");
 }
-@font-face {// ゴシックフォント
+@font-face {// ゴシックフォント01
     font-family: "gothic-font01";
-    src: url("../fonts/gothic/Outfit-Regular.ttf") format("truetype");
-    // src: url("../fonts/gothic/LINESeedJP_OTF_Rg")       format("opentype");
+    src: url("../fonts/gothic/YakuHanRP-Regular.otf")        format("opentype");
+    // src: url("../fonts/gothic/Outfit-Regular.ttf") format("truetype");
 }
-// @font-face {// デザインフォント(WEBでは使用できない)
-//     font-family: "d-font01";
-//     src: url("../fonts/design/YDWbananaslipplus.otf") format("opentype");
-// }
+@font-face {// ゴシックフォント02
+    font-family: "gothic-font02";
+    // src: url("../fonts/gothic/font_1_honokamarugo_1.1.ttf") format("truetype");
+    src: url("../fonts/gothic/font_1_ant-kaku.ttf") format("truetype");
+}
 
 
 $f-mincho:    mincho-font01; // 明朝体01
-$f-gothic:    gothic-font01; // ゴシック体01
+$f-gothic01:  gothic-font01; // ゴシック体01
+$f-gothic02:  gothic-font02; // ゴシック体02
 $f-e01:       e-font01;      // 英文フォント01
 $f-e02:       e-font02;      // 英文フォント02
 $f-e03:       e-font03;      // 英文フォント03
@@ -46,7 +48,7 @@ $f-b: bold;
 // 基本テキスト
 h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
 	color: $main-color--b;
-    font-family: $f-gothic;
+    font-family: $f-gothic02;
     font-weight: $f-n;
     font-style: normal;
 	line-height: 1.3;
@@ -144,7 +146,6 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
     &.-f-En02{font-family: e-font02;}         // impact
     &.-f-En03{font-family: e-font03;}         // garamond
     &.-f-En04{font-family: e-font04;}         // Roboto
-    // &.-f-d01{font-family:  f-d01;}            // バナナ
 
     // 色
     &.-white{color: $main-color--w !important;}

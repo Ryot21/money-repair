@@ -16,7 +16,7 @@
 		margin: auto;
 		@include min(500){width: 85%;}
 		@include min(768){width: 82.5%;}
-		@include min(1600){max-width: 1120px;}
+		@include min(1600){max-width: 1380px;}
 
 		&.-bg-color01{background: $site-color01;}
 		&.-bg-color02{background: $site-color02;}
@@ -54,9 +54,227 @@
 		&.-right{text-align: end   !important;}
 	}
 
+	&--introduction{// 導入
+
+	}
+
 	&.-fv{//ファーストビュー
 		position: relative;
-		overflow: hidden;
+		&.-top{
+			position: relative;
+			.imgBox{
+				height: 90vh;
+				max-height: 950px !important;
+				@include min(500) {height: 80vh;}
+				@include min(1600){height: 80vh;}
+			}
+			.c-contentsBox{
+
+				// アスペクト比
+				// 共通
+				&.-pic16_9,
+				&.-pic9_16,
+				&.-pic4_3,
+				&.-pic3_4{
+					width: auto;
+					background: gray;
+					border-radius: 20px;
+					filter: drop-shadow(9px 9px 2px rgba(0, 0, 0, 0.123));
+					overflow: hidden;
+					img{
+						width: 100%;
+						object-fit: cover;
+					}
+
+					// ぼかす
+					&.-blur{
+						&-b01 {filter: blur(3px);}
+						&-b02 {filter: blur(8px);}
+						&-b03 {filter: blur(15px);}
+					}
+				}
+					&.-pic16_9{
+						img{aspect-ratio: 16 / 9;}
+						&_s{
+							@include max(500){
+								img{aspect-ratio: 16 / 9;}
+							}
+						}
+					}
+					&.-pic9_16{
+						img{aspect-ratio: 9 / 16;}
+						&_s{
+							@include max(500){
+								img{aspect-ratio: 9 / 16;}
+							}
+						}
+					}
+					&.-pic4_3{
+						img{aspect-ratio: 4 / 3;}
+						&_s{
+							@include max(500){
+								img{aspect-ratio: 4 / 3;}
+							}
+						}
+					}
+					&.-pic3_4{
+						img{aspect-ratio: 3 / 4;}
+						&_s{
+							@include max(500){
+								img{aspect-ratio: 3 / 4;}
+							}
+						}
+					}
+				// 位置
+				&.-p01,
+				&.-p02{transform: translate(-50%, -50%);}
+					&.-p01{
+						top: 50%;
+						left: 40%;
+						transform: translate(-50%, -50%);
+						width: 85%;
+						z-index: 4;
+						@include min(500){// tb, pc
+							top: 55%;
+							left: 51.5%;
+							width: 55%;
+						}
+						@include min(1600){// 大きめのブラウザ
+							width: 48%;
+						}
+					}
+					&.-p02{// 右下
+						top: 25%;
+						left: 5%;
+						width: 75%;
+						z-index: 3;
+						@include min(500){
+							top: 75%;
+							left: 90%;
+							width: 15%;
+						}
+						@include min(1600){
+							top: 71%;
+							left: 85%;
+							width: 15%;
+						}
+					}
+					&.-p03{// 右上
+						top: 15%;
+						left: 70%;
+						width: 45%;
+						z-index: 1;
+						@include min(500){
+							top: 27.5%;
+							left: 85%;
+							width: 10%;
+						}
+						@include min(1600){
+							width: 15%;
+						}
+					}
+					&.-p04{// 左上
+						top: 80%;
+						left: 50%;
+						width: 50%;
+						z-index: 5;
+						@include min(500){
+							top: 20%;
+							left: 5%;
+							width: 15%;
+						}
+						@include min(1600){
+							left: 10%;
+						}
+					}
+					&.-p05{// 左下
+						top: 80%;
+						left: 4%;
+						width: 35%;
+						z-index: 1;
+						@include min(500){
+							top: 85%;
+							left: 5%;
+							width: 12%;
+						}
+						@include min(1800){
+							top: 85%;
+							left: 5%;
+							width: 15%;
+						}
+					}
+
+				// キャッチコピー
+				// 共通
+				&.-catchCopy01,
+				&.-catchCopy02{
+					span{
+						font-size: clamp(3rem, 2vw, 4rem);
+						font-family: $f-gothic01;
+						font-weight: bold;
+						writing-mode: vertical-rl;
+						letter-spacing: .2rem;
+					}
+				}
+					&.-catchCopy01{
+						top:  50%;
+						left: 90%;
+						transform: translate(-50%, -50%);
+						background: $main-color--w;
+						padding: 1% 1%;
+						z-index: 10;
+						@include min(500){
+							top:  60%;
+							left: 78%;
+						}
+						@include min(1800){
+							top:  50%;
+							left: 74%;
+						}
+					}// 上文
+					&.-catchCopy02{
+						top:  55%;
+						left: 78%;
+						transform: translate(-50%, -50%);
+						background: $main-color--w;
+						padding: 1% 1%;
+						z-index: 9;
+						@include min(500){
+							top:  67%;
+							left: 73%;
+						}
+						@include min(1800){
+							top:  55%;
+							left: 70%;
+						}
+					}// 下文
+
+				// 注釈
+				// 共有
+				&.-comments{
+					position: absolute;
+					top: 90%;
+					left: 47.5%;
+					transform: translate(-50%,-50%);
+					z-index: 10;
+					@include min(500){
+						top: 85%;
+						left: 35.5%;
+					}
+					span{
+						display: block;
+						width: max-content;
+						color: white;
+						font-size: clamp(4rem, 4vw, 8rem);
+						font-weight: bold;
+						// writing-mode: vertical-rl;
+						letter-spacing: .3rem;
+						text-shadow: 2px 2px 5px $main-color--b;
+					}
+				}
+
+			}
+		}
 		&.-single{
 			position: relative;
 			.imgBox{
