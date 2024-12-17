@@ -6,6 +6,9 @@ table{
 }
 
 .c-table{
+    tbody th {
+        border-top: 1px solid #3c6690;
+    }
     th{
         text-align: center;
         color:white;
@@ -21,6 +24,7 @@ table{
         color: $main-color--w;
         &:first-child{
             width: 15%;
+            border-left: 1px solid #3c6690;
             border-radius: 10px 0 0 0;
             @include min(500) {width: 18%;}
             @include min(1000){width: 15%;}

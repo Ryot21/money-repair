@@ -307,10 +307,10 @@
     // 詳細ページ > 投稿者、企業
     &.-post-lists{
         .postItem{
-            width: 100%;
-            @include min(768){
-                &:nth-child(1){width: 35%;}
-                &:nth-child(2){width: 63%;}
+            &:nth-child(1){width: 35%;}
+            &:nth-child(2){width: 63%;}
+            @include max(500){
+                &:nth-child(2){width: 50%;}
             }
         }
     }

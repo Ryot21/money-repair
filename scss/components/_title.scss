@@ -121,3 +121,65 @@
     text-align: center;
     padding: 0 1px;
 }
+
+// サイドバー > タイトル
+.c-sideber--title{// s-L相当
+    position: relative;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-align: center;
+    padding: 0 1px;
+    &::before{
+        position: absolute;
+        top: -40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+        letter-spacing: .3rem;
+    }
+    // コンテンツタイトル > ボーダーライン
+    &.-b-btm{
+        &::after{// 基本設定
+            content: "";
+            display: block;
+            position: relative;
+            bottom: -10px;
+            left: 49.5%;
+            transform: translateX(-50%);
+            width: 30px;
+            max-width: 1100px;
+            height: 0;
+            background: #ffffff;
+            border-bottom: 2px dotted rgb(110, 133, 166);
+        }
+        // 色指定
+        &.-c01{&::after{background: $site-color01 !important;}}
+        &.-c02{&::after{background: $site-color02 !important;}}
+        &.-c03{&::after{background: $site-color03 !important;}}
+        &.-c04{&::after{background: $site-color04 !important;}}
+    }
+
+    // コンテンツタイトル > 英語表記 > カラー設定
+    &.-en-color01{&::before{color: $site-color01;}}
+    &.-en-color02{&::before{color: $site-color02;}}
+    &.-en-color03{&::before{color: $site-color03;}}
+    &.-en-color04{&::before{color: $site-color04;}}
+
+    // コンテンツタイトル > 英語表記
+    &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
+    &.-news     {&::before{content: "Information"; white-space: nowrap;}}   //お役立ち情報
+    &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}       //お役立ち情報
+    &.-point    {&::before{content: "POINT"; white-space: nowrap;}}         //お役立ち情報
+
+    // 画像
+    .imgBox{
+        width: 40%;
+        margin: 0 auto;
+        @include min(500){
+            width: 20%;
+            min-width: 160px;
+            max-width: 220px;
+        }
+    }
+}

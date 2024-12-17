@@ -408,7 +408,7 @@ h1.s-S, h2.s-S, h3.s-S, h4.s-S, h5.s-S, h6.s-S, p.s-S, a.s-S, span.s-S, label.s-
 }
 @media (width >= 768px) {
   h1.s-S, h2.s-S, h3.s-S, h4.s-S, h5.s-S, h6.s-S, p.s-S, a.s-S, span.s-S, label.s-S, select.s-S, button.s-S, th.s-S, td.s-S {
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
   }
 }
 h1.s-M, h2.s-M, h3.s-M, h4.s-M, h5.s-M, h6.s-M, p.s-M, a.s-M, span.s-M, label.s-M, select.s-M, button.s-M, th.s-M, td.s-M {
@@ -4448,6 +4448,87 @@ button.swiper-pagination-bullet {
   padding: 0 1px;
 }
 
+.c-sideber--title {
+  position: relative;
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  padding: 0 1px;
+}
+.c-sideber--title::before {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+}
+.c-sideber--title.-b-btm::after {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: -10px;
+  left: 49.5%;
+  transform: translateX(-50%);
+  width: 30px;
+  max-width: 1100px;
+  height: 0;
+  background: #ffffff;
+  border-bottom: 2px dotted rgb(110, 133, 166);
+}
+.c-sideber--title.-b-btm.-c01::after {
+  background: rgb(235, 249, 255) !important;
+}
+.c-sideber--title.-b-btm.-c02::after {
+  background: rgb(25, 66, 153) !important;
+}
+.c-sideber--title.-b-btm.-c03::after {
+  background: rgb(110, 133, 166) !important;
+}
+.c-sideber--title.-b-btm.-c04::after {
+  background: #E77C31 !important;
+}
+.c-sideber--title.-en-color01::before {
+  color: rgb(235, 249, 255);
+}
+.c-sideber--title.-en-color02::before {
+  color: rgb(25, 66, 153);
+}
+.c-sideber--title.-en-color03::before {
+  color: rgb(110, 133, 166);
+}
+.c-sideber--title.-en-color04::before {
+  color: #E77C31;
+}
+.c-sideber--title.-interview::before {
+  content: "User Interview";
+  white-space: nowrap;
+}
+.c-sideber--title.-news::before {
+  content: "Information";
+  white-space: nowrap;
+}
+.c-sideber--title.-contact::before {
+  content: "Contact";
+  white-space: nowrap;
+}
+.c-sideber--title.-point::before {
+  content: "POINT";
+  white-space: nowrap;
+}
+.c-sideber--title .imgBox {
+  width: 40%;
+  margin: 0 auto;
+}
+@media (width >= 500px) {
+  .c-sideber--title .imgBox {
+    width: 20%;
+    min-width: 160px;
+    max-width: 220px;
+  }
+}
+
 .c-flex {
   display: flex;
   flex-wrap: wrap;
@@ -4851,15 +4932,15 @@ button.swiper-pagination-bullet {
 .c-flex.-target-lists .flexItem:last-child {
   margin: 0;
 }
-.c-flex.-post-lists .postItem {
-  width: 100%;
+.c-flex.-post-lists .postItem:nth-child(1) {
+  width: 35%;
 }
-@media (width >= 768px) {
-  .c-flex.-post-lists .postItem:nth-child(1) {
-    width: 35%;
-  }
+.c-flex.-post-lists .postItem:nth-child(2) {
+  width: 63%;
+}
+@media (500px >= width) {
   .c-flex.-post-lists .postItem:nth-child(2) {
-    width: 63%;
+    width: 50%;
   }
 }
 .c-flex.-article-lists .articleItem {
@@ -6962,6 +7043,9 @@ table {
   border-spacing: 0;
 }
 
+.c-table tbody th {
+  border-top: 1px solid #3c6690;
+}
 .c-table th {
   text-align: center;
   color: white;
@@ -6977,6 +7061,7 @@ table {
 }
 .c-table th:first-child {
   width: 15%;
+  border-left: 1px solid #3c6690;
   border-radius: 10px 0 0 0;
 }
 @media (width >= 500px) {
@@ -7156,10 +7241,10 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-.c-form .required {
+.c-form.-page .required {
   position: relative;
 }
-.c-form .required::after {
+.c-form.-page .required::after {
   content: "必須";
   position: absolute;
   top: 50%;
@@ -7172,57 +7257,57 @@ table {
   border-radius: 3px;
 }
 @media (width >= 500px) {
-  .c-form .required::after {
+  .c-form.-page .required::after {
     right: 15px;
     padding: 4px 6px 3px;
   }
 }
-.c-form table th, .c-form table td {
+.c-form.-page table th, .c-form.-page table td {
   border-top: 1px solid #d7d7d7;
   border-bottom: 1px solid #d7d7d7;
   padding: 20px;
 }
 @media (500px >= width) {
-  .c-form table th, .c-form table td {
+  .c-form.-page table th, .c-form.-page table td {
     display: block;
     width: 100%;
     border: none;
   }
 }
-.c-form table th {
+.c-form.-page table th {
   width: 250px;
   position: relative;
   text-align: left;
   padding: 20px 15px;
 }
 @media (width >= 500px) {
-  .c-form table th {
+  .c-form.-page table th {
     padding: 15px;
   }
 }
 @media (500px >= width) {
-  .c-form table th {
+  .c-form.-page table th {
     width: 100%;
     background-image: linear-gradient(45deg, rgba(228, 235, 244, 0.2705882353), rgba(228, 235, 244, 0.5019607843));
   }
 }
-.c-form table td {
+.c-form.-page table td {
   padding: 20px 5px;
 }
 @media (width >= 500px) {
-  .c-form table td {
+  .c-form.-page table td {
     padding: 15px;
   }
 }
-.c-form table td input[type=submit],
-.c-form table td input[type=text],
-.c-form table td select, .c-form table td textarea, .c-form table td button {
+.c-form.-page table td input[type=submit],
+.c-form.-page table td input[type=text],
+.c-form.-page table td select, .c-form.-page table td textarea, .c-form.-page table td button {
   box-shadow: none;
   outline: none;
   border: none;
 }
-.c-form table td input[type=text],
-.c-form table td textarea {
+.c-form.-page table td input[type=text],
+.c-form.-page table td textarea {
   display: block;
   width: 480px;
   background: #f8f8f8;
@@ -7233,61 +7318,138 @@ table {
   transition: all 0.5s;
   border-radius: 0;
 }
-.c-form table td input[type=text]:focus,
-.c-form table td textarea:focus {
+.c-form.-page table td input[type=text]:focus,
+.c-form.-page table td textarea:focus {
   background: #e9f5fb;
   border: 1px solid #F6F6F6;
 }
-.c-form table td input[type=text]::-moz-placeholder, .c-form table td textarea::-moz-placeholder {
+.c-form.-page table td input[type=text]::-moz-placeholder, .c-form.-page table td textarea::-moz-placeholder {
   color: #ccc;
 }
-.c-form table td input[type=text]::placeholder,
-.c-form table td textarea::placeholder {
+.c-form.-page table td input[type=text]::placeholder,
+.c-form.-page table td textarea::placeholder {
   color: #ccc;
 }
 @media (500px >= width) {
-  .c-form table td input[type=text]#company, .c-form table td input[type=text]#name, .c-form table td input[type=text]#email, .c-form table td input[type=text]#tel, .c-form table td input[type=text]#message,
-  .c-form table td textarea#company,
-  .c-form table td textarea#name,
-  .c-form table td textarea#email,
-  .c-form table td textarea#tel,
-  .c-form table td textarea#message {
+  .c-form.-page table td input[type=text]#company, .c-form.-page table td input[type=text]#name, .c-form.-page table td input[type=text]#email, .c-form.-page table td input[type=text]#tel, .c-form.-page table td input[type=text]#message,
+  .c-form.-page table td textarea#company,
+  .c-form.-page table td textarea#name,
+  .c-form.-page table td textarea#email,
+  .c-form.-page table td textarea#tel,
+  .c-form.-page table td textarea#message {
     width: 100% !important;
   }
 }
 @media (width >= 500px) {
-  .c-form table td input[type=text]#company,
-  .c-form table td textarea#company {
+  .c-form.-page table td input[type=text]#company,
+  .c-form.-page table td textarea#company {
     width: 75%;
     max-width: 300px;
   }
-  .c-form table td input[type=text]#name,
-  .c-form table td textarea#name {
+  .c-form.-page table td input[type=text]#name,
+  .c-form.-page table td textarea#name {
     width: 55%;
     max-width: 180px;
   }
-  .c-form table td input[type=text]#email,
-  .c-form table td textarea#email {
+  .c-form.-page table td input[type=text]#email,
+  .c-form.-page table td textarea#email {
     width: 80%;
     max-width: 300px;
   }
-  .c-form table td input[type=text]#tel,
-  .c-form table td textarea#tel {
+  .c-form.-page table td input[type=text]#tel,
+  .c-form.-page table td textarea#tel {
     width: 45%;
     max-width: 150px;
   }
-  .c-form table td input[type=text]#message,
-  .c-form table td textarea#message {
+  .c-form.-page table td input[type=text]#message,
+  .c-form.-page table td textarea#message {
     resize: none;
     width: 100%;
     height: 300px;
   }
 }
-.c-form table td input[type=text]#submit,
-.c-form table td textarea#submit {
+.c-form.-page table td input[type=text]#submit,
+.c-form.-page table td textarea#submit {
   width: 100%;
   padding: 0;
   border: none;
+}
+.c-form.-page input {
+  vertical-align: middle;
+}
+.c-form.-page input[type=checkbox] {
+  display: none;
+}
+.c-form.-page input[type=checkbox] + label {
+  position: relative;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  font-weight: bold;
+  color: #3b3b3b;
+  cursor: pointer;
+}
+.c-form.-page input[type=checkbox] + label span::after {
+  content: "" !important;
+  position: absolute;
+  top: 30%;
+  left: -21px;
+  display: block;
+  width: 10px;
+  height: 7px;
+  border-bottom: 3px solid #df2323;
+  border-left: 3px solid #df2323;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: all 0.1s;
+  opacity: 0;
+}
+@media (500px >= width) {
+  .c-form.-page input[type=checkbox] + label span::after {
+    left: -16px;
+    width: 8px;
+    height: 5px;
+  }
+}
+.c-form.-page input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 2px solid rgb(25, 66, 153);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (width >= 500px) {
+  .c-form.-page input[type=checkbox] + label::before {
+    left: -25px;
+  }
+}
+.c-form.-page input[type=checkbox] + label.required {
+  position: relative;
+}
+.c-form.-page input[type=checkbox] + label.required::after {
+  content: "必須";
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: #df2323;
+  padding: 3px 5px 3px;
+  border-radius: 3px;
+}
+@media (width >= 500px) {
+  .c-form.-page input[type=checkbox] + label.required::after {
+    right: -45px;
+    padding: 4px 6px 3px;
+  }
+}
+.c-form.-page input[type=checkbox]:checked + label span::after {
+  opacity: 1;
 }
 .c-form--privacyPolicy {
   width: 100%;
@@ -7319,14 +7481,9 @@ table {
   top: 6px;
 }
 .c-form--privacyPolicy p, .c-form--privacyPolicy span {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
   letter-spacing: 0.2rem;
   line-height: 1.5;
-}
-@media (width >= 768px) {
-  .c-form--privacyPolicy p, .c-form--privacyPolicy span {
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
-  }
 }
 .c-form--privacyPolicy span {
   display: block;
@@ -7340,28 +7497,18 @@ table {
   margin-bottom: 3rem;
 }
 .c-form--privacyPolicy__detail h4 {
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 1.5vw, 2rem);
   font-weight: bold;
   letter-spacing: 0.2rem;
   margin-bottom: 1rem;
 }
-@media (width >= 768px) {
-  .c-form--privacyPolicy__detail h4 {
-    font-size: clamp(1.6rem, 1.5vw, 2rem);
-  }
-}
 .c-form--consent #error {
   display: none;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
   color: #df2323;
   text-align: center;
   letter-spacing: 0.2rem;
   line-height: 1.5;
-}
-@media (width >= 768px) {
-  .c-form--consent #error {
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
-  }
 }
 .c-form--consent .policyBox {
   font-size: 1rem;
@@ -7380,83 +7527,6 @@ table {
   font-size: clamp(1rem, 1.2vw, 1.2rem);
   text-align: center;
 }
-.c-form input {
-  vertical-align: middle;
-}
-.c-form input[type=checkbox] {
-  display: none;
-}
-.c-form input[type=checkbox] + label {
-  position: relative;
-  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
-  font-weight: bold;
-  color: #3b3b3b;
-  cursor: pointer;
-}
-.c-form input[type=checkbox] + label span::after {
-  content: "";
-  position: absolute;
-  top: 30%;
-  left: -21px;
-  display: block;
-  width: 10px;
-  height: 7px;
-  border-bottom: 3px solid #df2323;
-  border-left: 3px solid #df2323;
-  transform: rotate(-45deg) translateY(-50%);
-  transition: all 0.1s;
-  opacity: 0;
-}
-@media (500px >= width) {
-  .c-form input[type=checkbox] + label span::after {
-    left: -16px;
-    width: 8px;
-    height: 5px;
-  }
-}
-.c-form input[type=checkbox] + label::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -20px;
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: #ffffff;
-  border: 2px solid rgb(25, 66, 153);
-  border-radius: 2px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-@media (width >= 500px) {
-  .c-form input[type=checkbox] + label::before {
-    left: -25px;
-  }
-}
-.c-form input[type=checkbox] + label.required {
-  position: relative;
-}
-.c-form input[type=checkbox] + label.required::after {
-  content: "必須";
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-  color: #ffffff;
-  background: #df2323;
-  padding: 3px 5px 3px;
-  border-radius: 3px;
-}
-@media (width >= 500px) {
-  .c-form input[type=checkbox] + label.required::after {
-    right: -45px;
-    padding: 4px 6px 3px;
-  }
-}
-.c-form input[type=checkbox]:checked + label span::after {
-  opacity: 1;
-}
 .c-form--btn {
   text-align: center;
 }
@@ -7471,6 +7541,197 @@ table {
   border: none;
   opacity: 0.5;
 }
+.c-form.-sideber .required span {
+  position: relative;
+}
+.c-form.-sideber .required span::after {
+  content: "*";
+  position: absolute;
+  top: -5px;
+  right: -13px;
+  font-size: 1.3rem;
+  color: #df2323;
+  padding: 4px 6px 3px;
+}
+.c-form.-sideber table th, .c-form.-sideber table td {
+  display: block;
+  width: 100%;
+  border: none;
+}
+.c-form.-sideber table th {
+  width: 100%;
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  text-align: left;
+  padding: 10px 6px 5px;
+}
+.c-form.-sideber table td {
+  padding: 0 0 10px;
+}
+.c-form.-sideber table td input[type=text],
+.c-form.-sideber table td textarea {
+  display: block;
+  width: 480px;
+  background: #f8f8f8;
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  padding: 10px 15px;
+  border: 1px solid #f8f8f8;
+  border-radius: 5px !important;
+  transition: all 0.5s;
+  border-radius: 0;
+}
+.c-form.-sideber table td input[type=text]:focus,
+.c-form.-sideber table td textarea:focus {
+  background: #e9f5fb;
+  border: 1px solid #F6F6F6;
+}
+.c-form.-sideber table td input[type=text]::-moz-placeholder, .c-form.-sideber table td textarea::-moz-placeholder {
+  color: #ccc;
+}
+.c-form.-sideber table td input[type=text]::placeholder,
+.c-form.-sideber table td textarea::placeholder {
+  color: #ccc;
+}
+.c-form.-sideber table td input[type=text]#company, .c-form.-sideber table td input[type=text]#name, .c-form.-sideber table td input[type=text]#email, .c-form.-sideber table td input[type=text]#tel, .c-form.-sideber table td input[type=text]#message,
+.c-form.-sideber table td textarea#company,
+.c-form.-sideber table td textarea#name,
+.c-form.-sideber table td textarea#email,
+.c-form.-sideber table td textarea#tel,
+.c-form.-sideber table td textarea#message {
+  width: 100% !important;
+}
+.c-form.-sideber table td input[type=text]#message,
+.c-form.-sideber table td textarea#message {
+  resize: none;
+  width: 100%;
+  height: 150px;
+}
+.c-form.-sideber table td input[type=text]#submit,
+.c-form.-sideber table td textarea#submit {
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+.c-form.-sideber .c-form--privacyPolicy {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto 24px;
+  padding: 5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+@media (width >= 500px) {
+  .c-form.-sideber .c-form--privacyPolicy {
+    padding: 15px 20px;
+  }
+}
+.c-form.-sideber .c-form--privacyPolicy h3 {
+  position: relative;
+  font-size: 1.5rem;
+  margin: 2px 0 10px;
+  padding: 4px 0 6px 24px;
+  border-bottom: 2px solid #df2323;
+  font-weight: bold;
+}
+.c-form.-sideber .c-form--privacyPolicy h3::before {
+  content: url(../images/item/form-icon.png);
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.c-form.-sideber .c-form--privacyPolicy h4, .c-form.-sideber .c-form--privacyPolicy p, .c-form.-sideber .c-form--privacyPolicy a, .c-form.-sideber .c-form--privacyPolicy span {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+}
+.c-form.-sideber .c-form--privacyPolicy span {
+  display: block;
+}
+.c-form.-sideber .c-form--privacyPolicy a {
+  color: rgb(25, 66, 153);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.c-form.-sideber .c-form--privacyPolicy__detail {
+  margin-bottom: 3rem;
+}
+.c-form.-sideber input {
+  vertical-align: middle;
+}
+.c-form.-sideber input[type=checkbox] {
+  display: none;
+}
+.c-form.-sideber input[type=checkbox] + label {
+  position: relative;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  font-weight: bold;
+  color: #3b3b3b;
+  cursor: pointer;
+}
+.c-form.-sideber input[type=checkbox] + label span::after {
+  content: "" !important;
+  position: absolute;
+  top: 30%;
+  left: -21px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-bottom: 2px solid #df2323;
+  border-left: 2px solid #df2323;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: all 0.1s;
+  opacity: 0;
+}
+@media (500px >= width) {
+  .c-form.-sideber input[type=checkbox] + label span::after {
+    top: 25%;
+    left: -17px;
+  }
+}
+.c-form.-sideber input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 2px solid rgb(25, 66, 153);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (width >= 500px) {
+  .c-form.-sideber input[type=checkbox] + label::before {
+    left: -25px;
+  }
+}
+.c-form.-sideber input[type=checkbox] + label.required {
+  position: relative;
+}
+.c-form.-sideber input[type=checkbox] + label.required::after {
+  content: "必須";
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: #df2323;
+  padding: 3px 5px 3px;
+  border-radius: 3px;
+}
+@media (width >= 500px) {
+  .c-form.-sideber input[type=checkbox] + label.required::after {
+    right: -45px;
+    padding: 4px 6px 3px;
+  }
+}
+.c-form.-sideber input[type=checkbox]:checked + label span::after {
+  opacity: 1;
+}
 
 @media (width >= 500px) {
   .c-sideber {
@@ -7483,14 +7744,17 @@ table {
     display: grid;
   }
   .c-sideber .c-sideber--search {
-    order: 3;
+    order: 4;
   }
   .c-sideber .c-sideber--mokuji {
-    order: 2;
+    order: 3;
     margin-bottom: 20%;
   }
   .c-sideber .c-sideber--post {
     order: 1;
+  }
+  .c-sideber .c-sideber--ctaArea {
+    order: 2;
   }
 }
 .c-sideber--search #search {
@@ -7572,8 +7836,18 @@ table {
     border: 2px solid rgb(110, 133, 166);
   }
 }
-.c-sideber--articleArea {
-  margin-top: 15%;
+.c-sideber--ctaArea {
+  position: relative;
+  width: 100%;
+  padding: 10% 5%;
+  margin-top: 10%;
+  border: 2px solid rgb(110, 133, 166);
+  border-radius: 5px;
+}
+@media (width >= 500px) {
+  .c-sideber--ctaArea {
+    padding: 10% 2% 5% 5%;
+  }
 }
 
 body {
@@ -7635,15 +7909,14 @@ body main {
   background: rgb(110, 133, 166);
 }
 .p-single--post {
-  width: 75%;
-  padding: 5%;
+  width: 100%;
+  padding: 5% 5% 0;
   margin: 0 auto 10%;
   border: 2px solid rgb(110, 133, 166);
   border-radius: 5px;
 }
 @media (width >= 500px) {
   .p-single--post {
-    width: 100%;
     max-width: 500px;
     padding: 3% 5%;
     margin: 0 auto;
@@ -7660,7 +7933,7 @@ body main {
   padding-bottom: 5px;
 }
 .p-single--post p, .p-single--post a {
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-size: 1.2rem;
   letter-spacing: 0.2rem;
   padding-bottom: 10px;
 }
@@ -7678,9 +7951,8 @@ body main {
 @media (500px >= width) {
   .p-single--post .postman {
     display: block;
-    width: 50%;
+    width: 61%;
     text-align: center;
-    margin: 0 auto 3%;
   }
 }
 .p-single--post .-prof .imgBox {
@@ -7698,6 +7970,38 @@ body main {
     height: 150px;
     margin: 0 auto;
   }
+}
+.p-single--intro {
+  margin-top: 10%;
+}
+.p-single--intro p, .p-single--intro a, .p-single--intro span {
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  letter-spacing: 0.2rem;
+  line-height: 2;
+}
+.p-single--intro span {
+  font-weight: bold;
+}
+.p-single--intro a {
+  position: relative;
+  color: rgb(25, 66, 153);
+  transition: all 0.3s;
+}
+.p-single--intro a::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px dotted rgb(25, 66, 153);
+  transition: all 0.3s;
+}
+.p-single--intro a:hover {
+  opacity: 0.6;
+}
+.p-single--intro a:hover::after {
+  opacity: 0.6;
 }
 .p-single.-interview .p-single--detail p {
   font-size: clamp(1.2rem, 1.5vw, 1.6rem);
@@ -7849,6 +8153,9 @@ body main {
 }
 .p-single.-interview .p-single--post {
   border: 2px solid #636363;
+}
+.p-single.-information .p-single--detail {
+  margin-top: 10%;
 }
 .p-single.-information .p-single--detail h2, .p-single.-information .p-single--detail h3, .p-single.-information .p-single--detail h4, .p-single.-information .p-single--detail h5, .p-single.-information .p-single--detail h6 {
   font-weight: bold;
@@ -8061,6 +8368,44 @@ body main {
   background: rgb(110, 133, 166);
   border-radius: 5px;
   z-index: 1;
+}
+.p-single.-information .p-single--mokuji {
+  position: relative;
+  width: 100%;
+  padding: 3% 3% 3% 6%;
+  margin-top: 15%;
+  border: 2px solid rgb(110, 133, 166);
+  border-radius: 0 0 5px 5px;
+}
+@media (width >= 500px) {
+  .p-single.-information .p-single--mokuji {
+    padding: 5% 2% 5% 5%;
+    margin-top: 10%;
+    border: 2px solid rgb(110, 133, 166);
+  }
+}
+.p-single.-information .p-single--mokuji::before {
+  content: "目次";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  color: #ffffff;
+  font-weight: bold;
+  border: 2px solid #6D84A5;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  white-space: nowrap;
+  background: rgb(110, 133, 166);
+  border-radius: 5px 5px 0 0;
+  z-index: 1;
+}
+@media (width >= 500px) {
+  .p-single.-information .p-single--mokuji::before {
+    border: 2px solid rgb(110, 133, 166);
+  }
 }
 .p-single.-information .p-single--articleArea {
   margin-top: 15%;

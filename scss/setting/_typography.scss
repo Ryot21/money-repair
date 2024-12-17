@@ -188,7 +188,7 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
         }
         &.s-S{
             font-size: 1rem;
-            @include min(768){font-size: clamp(1rem, 1.2vw, 1.5rem);}
+            @include min(768){font-size: clamp(1rem, 1.5vw, 1.4rem);}
         }
         &.s-M{
             font-size: 1.2rem;

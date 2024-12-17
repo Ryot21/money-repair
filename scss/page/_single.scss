@@ -36,13 +36,12 @@
 
 	}
 	&--post{
-		width: 75%;
-		padding: 5%;
+		width: 100%;
+		padding: 5% 5% 0;
 		margin: 0 auto 10%;
 		border: 2px solid $site-color03;
 		border-radius: 5px;
 		@include min(500){
-			width: 100%;
 			max-width: 500px;
 			padding: 3% 5%;
 			margin: 0 auto;
@@ -59,7 +58,7 @@
 			padding-bottom: 5px;
 		}
 		p,a{
-			font-size: clamp(1rem, 1.2vw, 1.2rem);
+			font-size: 1.2rem;
 			letter-spacing: .2rem;
 			padding-bottom: 10px;
 		}
@@ -75,9 +74,8 @@
 			letter-spacing: .1rem;
 			@include max(500){
 				display: block;
-				width: 50%;
+				width: 61%;
 				text-align: center;
-				margin: 0 auto 3%;
 			}
 		}
 
@@ -96,6 +94,39 @@
 			}
 		}
 	}
+	&--intro{
+
+		margin-top: 10%;
+		p,a,span{
+			font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+			letter-spacing: .2rem;
+			line-height: 2;
+		}
+		// 個別設定
+		span{font-weight: bold;}
+		a{
+			position: relative;
+			color: $site-color02;
+			transition: all .3s;
+			&::after{
+				content: "";
+				position: absolute;
+				bottom: -5%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				border-bottom: 2px dotted $site-color02;
+				transition: all .3s;
+			}
+			&:hover{
+				opacity: .6;
+				&::after{
+					opacity: .6;
+				}
+			}
+		}
+	}
+
 	// お客様の声
 	&.-interview{
 		.p-single{
@@ -222,6 +253,8 @@
 	&.-information{
 		.p-single{
 			&--detail{
+				margin-top: 10%;
+
 				// --- 共通 ---
 				h2,h3,h4,h5,h6{
 					font-weight: bold;
@@ -378,7 +411,7 @@
 		
 				}
 			}
-			// 目次
+			// ターゲット
 			&--target{
 				position: relative;
 				padding: 7% 3% 3% 6%;
@@ -403,6 +436,42 @@
 					background: $site-color03;
 					border-radius: 5px;
 					z-index: 1;
+				}
+			}
+			// 目次
+			&--mokuji{// 目次
+				position: relative;
+				width: 100%;
+				padding: 3% 3% 3% 6%;
+				margin-top: 15%;
+				border: 2px solid $site-color03;
+				border-radius: 0 0 5px 5px;
+				@include min(500){
+					padding: 5% 2% 5% 5%;
+					margin-top: 10%;
+					border: 2px solid $site-color03;
+				}
+				&::before{
+					content: "目次";
+					position: absolute;
+					top: -30px;
+					left: 50%;
+					transform: translateX(-50%);
+		
+					width: 100%;
+					font-size: clamp(1.6rem, 2vw, 2rem);
+					color: $main-color--w;
+					font-weight: bold;
+					border: 2px solid #6D84A5;
+					text-align: center;
+					letter-spacing: .2rem;
+					white-space: nowrap;
+					background: $site-color03;
+					border-radius: 5px 5px 0 0;
+					z-index: 1;
+					@include min(500){
+						border: 2px solid $site-color03;
+					}
 				}
 			}
 			&--articleArea{// 関連記事
