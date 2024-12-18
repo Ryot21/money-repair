@@ -411,69 +411,6 @@
 		
 				}
 			}
-			// ターゲット
-			&--target{
-				position: relative;
-				padding: 7% 3% 3% 6%;
-				border: 3px solid $site-color03;
-				border-radius: 5px;
-				@include min(500){
-					padding: 5% 2% 2%;
-					border: 4px solid $site-color03;
-				}
-				&::before{
-					content: "この記事で解決できるお悩みは...";
-					position: absolute;
-					top: 0;
-					left: 5%;
-					transform: translateY(-65%);
-					padding: 1.5% 3%;
-					font-size: clamp(1.6rem, 1.6vw, 2rem);
-					color: $main-color--w;
-					font-weight: bold;
-					letter-spacing: .2rem;
-					white-space: nowrap;
-					background: $site-color03;
-					border-radius: 5px;
-					z-index: 1;
-				}
-			}
-			// 目次
-			&--mokuji{// 目次
-				position: relative;
-				width: 100%;
-				padding: 3% 3% 3% 6%;
-				margin-top: 15%;
-				border: 2px solid $site-color03;
-				border-radius: 0 0 5px 5px;
-				@include min(500){
-					padding: 5% 2% 5% 5%;
-					margin-top: 10%;
-					border: 2px solid $site-color03;
-				}
-				&::before{
-					content: "目次";
-					position: absolute;
-					top: -30px;
-					left: 50%;
-					transform: translateX(-50%);
-		
-					width: 100%;
-					font-size: clamp(1.6rem, 2vw, 2rem);
-					color: $main-color--w;
-					font-weight: bold;
-					border: 2px solid #6D84A5;
-					text-align: center;
-					letter-spacing: .2rem;
-					white-space: nowrap;
-					background: $site-color03;
-					border-radius: 5px 5px 0 0;
-					z-index: 1;
-					@include min(500){
-						border: 2px solid $site-color03;
-					}
-				}
-			}
 			&--articleArea{// 関連記事
 				margin-top: 15%;
 

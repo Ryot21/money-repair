@@ -115,7 +115,6 @@
                 // 画像
                 .c-thumbnail{
                     &--mark{width: 75%;}
-                    &--title{width: 85%;}
                 }
                 // テキスト
                 .postman {
@@ -152,7 +151,157 @@
             }
         }
     }
-    &.-t03{
+    &.-t03{// 目次
+        position: relative;
+        width: 100%;
+        margin-top: 15%;
+        background: $main-color--w;
+        border: 2px solid $site-color03;
+        border-radius: 5px;
+        h2{
+            font-size: clamp(1.6rem, 2vw, 2rem);
+            color: $main-color--w;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: .2rem;
+            background: $site-color03;
+            padding: 2.5px 0;
+            z-index: 1;
+            @include min(500){
+                border: 2px solid $site-color03;
+            }
+        }
+        .c-card-lists{//ul
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3% 3% 3% 6%;
+            transition: all .3s;
+            @include min(500){
+                align-items: flex-start;
+                padding: 10px 5px 5px 10px;
+            }
 
+            // 共通
+            &.-h2-lists,
+            &.-h3-lists,
+            &.-h4-lists,
+            &.-h5-lists,
+            &.-h6-lists{
+                .c-card-item{
+                    width: 100% !important;
+                    margin-bottom: 5px;
+                    &:last-child{margin-bottom: 0;}
+                    a{
+                        // 2行以降省略
+                        display: -webkit-box;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            // h2タグ
+            &.-h2-lists{
+                .c-card-item{
+                    position: relative;
+                    margin: 5px 0 5px 20px;
+                    a{font-size: clamp(1.2rem, 1.5vw, 1.6rem);}
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: -20px;
+
+                        display: block;
+                        font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+                        font-weight: bold;
+                    }
+                    &:nth-child(1){&::before{content: "1.";}}
+                    &:nth-child(2){&::before{content: "2.";}}
+                    &:nth-child(3){&::before{content: "3.";}}
+                    &:nth-child(4){&::before{content: "4.";}}
+                    &:nth-child(5){&::before{content: "5.";}}
+                    &:nth-child(6){&::before{content: "6.";}}
+                    &:nth-child(7){&::before{content: "7.";}}
+                }
+            }
+            // h3タグ
+            &.-h3-lists{
+                position: relative;
+                margin-bottom: 2.5px;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -10%;
+                    left: 0;
+                    width: 95%;
+                    height: 1px;
+                    border-bottom: 1px dotted $site-color03;
+                }
+                .c-card-item{
+                    position: relative;
+                    margin: 7px 0 3px 0;
+                    a{font-size: clamp(1rem, 1.5vw, 1.4rem);}
+                    &::before {
+                        content: "" !important;
+                        position: absolute;
+                        top: 1px;
+                        left: -10px;
+
+                        display: block;
+                        width: 1px;
+                        height: 80%;
+                        background: $main-color--Dgray;
+                        border-radius: 3px;
+                    }
+                }
+            }
+
+            // テキスト
+
+
+        }
+    }
+    &.-t04{// お悩み
+        position: relative;
+        padding: 30px 10px 20px 10px;
+        border: 2px solid $site-color03;
+        border-radius: 5px;
+        overflow: visible;
+        @include min(500){padding: 30px 20px 20px 0;}
+        &::before{
+            content: "この記事で解決できるお悩みは...";
+            position: absolute;
+            top: 0;
+            left: 5%;
+            transform: translateY(-65%);
+            padding: 1.5% 3%;
+            font-size: clamp(1.6rem, 1.6vw, 2rem);
+            color: $main-color--w;
+            font-weight: bold;
+            letter-spacing: .2rem;
+            white-space: nowrap;
+            background: $site-color03;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        .c-card-lists{//ul
+            .c-card-item{
+                width: 100% !important;
+                margin: 0 0 10px 0;
+                &:last-child{margin: 0;}
+                a{
+                    // 2行以降省略
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    overflow: hidden;
+                }
+            }
+        }
     }
 }
