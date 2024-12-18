@@ -1,0 +1,158 @@
+// カードレイアウト
+
+.c-card{
+    border-radius: 5px;
+    overflow: hidden;
+
+    &.-t01{// 投稿者
+        background: $main-color--w;
+        border: 2px solid $site-color03;
+
+        .c-card-lists{//ul
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3% 5%;
+
+            .c-card-item{//li
+                &:nth-child(1){width: 35%;}
+                &:nth-child(2){width: 58%;}
+                @include min(500){
+                    &:nth-child(2){width: 63%;}
+                }
+                // 画像
+                .imgBox{
+                    width: 120px;
+                    height: 120px;
+                    background: #F6F6F6;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                // テキスト
+                .postman {
+                    display: inline-block;
+                    width: auto;
+                    font-weight: bold;
+                    color: $main-color--w;
+                    background: $main-color--Dgray;
+                    padding: 2% 3%;
+                    margin-bottom: 3%;
+                    border-radius: 3px;
+                    letter-spacing: 0.1rem;
+                }
+                h5 {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    letter-spacing: 0.2rem;
+                    line-height: 1.5;
+                    padding-bottom: 5px;
+                }
+                p {
+                    font-size: 1.2rem;
+                    letter-spacing: 0.2rem;
+                    padding-bottom: 10px;
+                }
+
+            }
+        }
+    }
+    &.-t02{// 内部リンク > 合わせて読みたい
+        position: relative;
+        top: 0;
+        border: 2px solid $site-color03;
+        overflow: visible;
+        transition: all .3s;
+
+        &::after{
+            content: "合わせて読みたい";
+            position: absolute;
+            top: 0;
+            left: 2.5%;
+            transform: translateY(-50%);
+
+            padding: 1% 2.5%;
+            font-weight: bold;
+            color: $main-color--w;
+            letter-spacing: .2rem;
+            background: $site-color03;
+            border: 2px solid $site-color03;
+            border-radius: 30px;
+            transition: all .3s;
+
+        }
+        &:hover{
+            top: .5rem;
+            background: $main-color--Lgray;
+            border: 1px solid $site-color02;
+            &::after{
+                color: $site-color03;
+                background: $main-color--w;
+                padding: 1% 3%;
+            }
+        }
+        a{
+            display: block;
+            will-change: transform;
+            transition: all .3s;
+        }
+        .c-card-lists{//ul
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4% 3%;
+            transition: all .3s;
+            @include min(500){align-items: flex-start;}
+
+            .c-card-item{//li
+                &:nth-child(1){width: 35%;}
+                &:nth-child(2){width: 58%;}
+                @include min(500){
+                    &:nth-child(1){width: 30%;}
+                    &:nth-child(2){width: 67%;}
+                }
+                // 画像
+                .c-thumbnail{
+                    &--mark{width: 75%;}
+                    &--title{width: 85%;}
+                }
+                // テキスト
+                .postman {
+                    display: inline-block;
+                    width: auto;
+                    font-weight: bold;
+                    color: $main-color--w;
+                    background: $main-color--Dgray;
+                    padding: 2% 3%;
+                    margin-bottom: 3%;
+                    border-radius: 3px;
+                    letter-spacing: 0.1rem;
+                }
+                time{
+                }
+                h5 {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    letter-spacing: 0.2rem;
+                    line-height: 1.2;
+                    padding: 10px 0;
+                }
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                    letter-spacing: 0.2rem;
+                    // ３行以降省略
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    &.-t03{
+
+    }
+}
