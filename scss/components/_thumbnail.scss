@@ -7,8 +7,9 @@
     .imgBox{
         width: 100%;
         height: auto;
+        img{aspect-ratio: 16 / 9;}
     }
-    // 共通パーツ
+    // 共通
     &--mark{// 画像左上
         position: absolute;
         top: 5%;
@@ -33,8 +34,8 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
-        z-index: 2;
-        opacity: 0;
+        z-index: auto;
+        opacity: .2;
         &__text{
             position: absolute;
             top: 50%;
@@ -45,29 +46,48 @@
             font-size: 1.4rem;
             font-weight: bold;
             letter-spacing: .2rem;
+            opacity: 0;
         }
+    }
+    &--title{// タイトル
+        position: absolute;
+        z-index: 1;
+        span{
+            font-family: $f-gothic01;
+            text-shadow: 1px 1px 3px $main-color--w;
+            padding: 1% 3%;
+            line-height: 1.5;
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .3));
+            @include max(500){
+                line-height: 1.5;
+            }
+
+            // ３行以降省略
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    }
+    &--subTitle{// サブタイトル
+        position: absolute;
+        font-family: $f-gothic01;
+        text-shadow: 1px 1px 1px $main-color--w;
+        z-index: 1;
     }
 
     &.-interview{
         .c-thumbnail{
             &--title{
-                position: absolute;
                 top: 35%;
                 left: 5%;
                 width: 60%;
                 @include max(1000){top: 41%;}
-                span{
-                    font-family: $f-gothic01;
-                    padding: 1% 3%;
-                    line-height: 1.75;
-                    background: $main-color--w;
-                }
             }
             &--subTitle{
-                position: absolute;
                 top: 25%;
                 left: 5%;
-                font-family: $f-gothic01;
 
                 @include min(500){top: 32%;}
                 @include min(768){top: 25%;}
@@ -77,28 +97,16 @@
     &.-news{
         .c-thumbnail{
             &--title{
-                position: absolute;
                 top: 45%;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 90%;
                 text-align: center;
-                @include min(500){
-                    width: 100%;
-                }
-                span{
-                    font-family: $f-gothic01;
-                    padding: 1% 3%;
-                    line-height: 1.75;
-                    background: $main-color--w;
-                }
             }
             &--subTitle{
-                position: absolute;
                 top: 35%;
                 left: 50%;
                 transform: translateX(-50%);
-                font-family: $f-gothic01;
                 white-space: nowrap;
             }
         }
