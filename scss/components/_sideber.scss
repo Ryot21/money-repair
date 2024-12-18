@@ -28,8 +28,8 @@
                 width:80%;
                 padding:0 15px;
                 border-radius:5px 0 0 5px;	
-                background: $main-color--gray;
-                border:none;
+                background: $main-color--w;
+                border: 1px solid $site-color03;
                 outline:0;
             }
             button{
@@ -55,11 +55,11 @@
         width: 100%;
         padding: 3% 3% 3% 6%;
         margin-top: 15%;
-        border: 2px solid $site-color03;
+        border: 1px solid $site-color03;
         border-radius: 0 0 5px 5px;
         @include min(500){
             padding: 5% 2% 5% 5%;
-            border: 2px solid $site-color03;
+            border: 1px solid $site-color03;
         }
         &::before{
             content: "目次";
@@ -72,7 +72,7 @@
             font-size: clamp(1.6rem, 2vw, 2rem);
             color: $main-color--w;
             font-weight: bold;
-            border: 2px solid #6D84A5;
+            border: 1px solid #6D84A5;
             text-align: center;
             letter-spacing: .2rem;
             white-space: nowrap;
@@ -80,7 +80,7 @@
             border-radius: 5px 5px 0 0;
             z-index: 1;
             @include min(500){
-                border: 2px solid $site-color03;
+                border: 1px solid $site-color03;
             }
         }
     }
@@ -89,11 +89,11 @@
         width: 100%;
         padding: 7% 3% 3% 6%;
         margin-top: 15%;
-        border: 2px solid $site-color03;
+        border: 1px solid $site-color03;
         border-radius: 5px;
         @include min(500){
             padding: 5% 2% 2%;
-            border: 2px solid $site-color03;
+            border: 1px solid $site-color03;
         }
 
     }
@@ -102,11 +102,12 @@
         width: 100%;
         padding: 10% 5%;
         margin-top: 10%;
-        border: 2px solid $site-color03;
+        background: $main-color--w;
+        border: 1px solid $site-color03;
         border-radius: 5px;
 
         @include min(500){
-            padding: 10% 2% 5% 5%;
+            padding: 10% 5% 5% 5%;
          }
 
     }

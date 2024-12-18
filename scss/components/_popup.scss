@@ -211,7 +211,7 @@
         width: 35px;
         height: 35px;
         background: $main-color--w;
-        border: 2px solid $site-color02;
+        border: 1px solid $site-color02;
         border-radius: 50%;
         z-index: 10000;
         @include min(768){

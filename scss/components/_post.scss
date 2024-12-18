@@ -6,20 +6,25 @@
         top: 0;
         display: block;
         will-change: transform;
-        transition: all .5s;
+        transition: all .3s;
         .imgBox,
         .c-thumbnail--picter,
         .c-thumbnail--title,
         .c-thumbnail--subTitle,
-        .c-thumbnail--cover{
+        .c-thumbnail--cover,
+        .c-thumbnail--cover__text{
             will-change: transform;
-            transition: all .5s;
+            transition: all .3s;
         }
         &:hover{
             top: .5rem;
             .imgBox               {transform: scale(1.005);}
             .c-thumbnail--picter  {transform: translate(-50%, -50%) scale(.98);}
-            .c-thumbnail--cover   {opacity: 1;}
+            .c-thumbnail--cover   {
+                opacity: 1;
+                z-index: 2;
+            }
+            .c-thumbnail--cover__text   {opacity: 1;}
         }
     }
     &--title{

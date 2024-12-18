@@ -6,6 +6,7 @@
 .w80,.w80s,
 .w75,.w75s,
 .w50,.w50s,
+.w40,.w40s,
 .w30,.w30s{
     &.-right{
         margin-left: auto;
@@ -84,6 +85,10 @@
     width: 50%;
     margin: auto;
 }
+.w40{
+    width: 40%;
+    margin: auto;
+}
 .w30{
     width: 30% !important;
     margin: auto;
@@ -133,6 +138,12 @@
 .w50s{
     @include max(500){
         width: 50% !important;
+        margin: auto;
+    }
+}
+.w40s{
+    @include max(500){
+        width: 40% !important;
         margin: auto;
     }
 }
@@ -240,7 +251,7 @@
 .c-img{
     // ボーダー枠
     &.-b-frame{
-        border: 2px solid $main-color--b;
+        border: 1px solid $main-color--b;
         overflow: hidden;
         &.-left{
             border-top: 2px solid $main-color--b;

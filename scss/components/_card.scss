@@ -6,7 +6,7 @@
 
     &.-t01{// 投稿者
         background: $main-color--w;
-        border: 2px solid $site-color03;
+        border: 1px solid $site-color03;
 
         .c-card-lists{//ul
             display: flex;
@@ -60,7 +60,7 @@
     &.-t02{// 内部リンク > 合わせて読みたい
         position: relative;
         top: 0;
-        border: 2px solid $site-color03;
+        border: 1px solid $site-color03;
         overflow: visible;
         transition: all .3s;
 
@@ -76,7 +76,7 @@
             color: $main-color--w;
             letter-spacing: .2rem;
             background: $site-color03;
-            border: 2px solid $site-color03;
+            border: 1px solid $site-color03;
             border-radius: 30px;
             transition: all .3s;
 
@@ -156,7 +156,7 @@
         width: 100%;
         margin-top: 15%;
         background: $main-color--w;
-        border: 2px solid $site-color03;
+        border: 1px solid $site-color03;
         border-radius: 5px;
         h2{
             font-size: clamp(1.6rem, 2vw, 2rem);
@@ -168,7 +168,7 @@
             padding: 2.5px 0;
             z-index: 1;
             @include min(500){
-                border: 2px solid $site-color03;
+                border: 1px solid $site-color03;
             }
         }
         .c-card-lists{//ul
@@ -268,7 +268,7 @@
     &.-t04{// お悩み
         position: relative;
         padding: 30px 10px 20px 10px;
-        border: 2px solid $site-color03;
+        border: 1px solid $site-color03;
         border-radius: 5px;
         overflow: visible;
         @include min(500){padding: 30px 20px 20px 0;}

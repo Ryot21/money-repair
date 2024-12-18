@@ -45,7 +45,7 @@
 		color: $main-color--w !important;
 		font-family: $f-gothic01;
 		background: $site-color03;
-		border: 2px solid $site-color03;
+		border: 1px solid $site-color03;
 		padding: 8px 15px;
 		border-radius: 30px;
 		overflow: hidden;
@@ -57,7 +57,7 @@
 		&:hover{
 			color: $site-color03 !important;
 			background: $main-color--w;
-			border: 2px solid $site-color03;
+			border: 1px solid $site-color03;
 			padding: 8px 20px;
 			transform: scale(1.025);
 		}
@@ -66,7 +66,7 @@
 		}
 		&.-c-red{
 			background: $main-color--red;
-			border: 2px solid $main-color--red;
+			border: 1px solid $main-color--red;
 			&:hover{
 				color: $main-color--red !important;
 				background: $main-color--w;

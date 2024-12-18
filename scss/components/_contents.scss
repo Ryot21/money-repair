@@ -12,7 +12,7 @@
 	&.-bg-gray   {background: $main-color--gray;}
 
 	&--inner{
-		width: 90%;
+		width: 92.5%;
 		margin: auto;
 		@include min(500){width: 85%;}
 		@include min(768){width: 82.5%;}
@@ -60,7 +60,7 @@
 
 	&.-fv{//ファーストビュー
 		position: relative;
-		&.-top{
+		&.-top{// TOP
 			position: relative;
 			.imgBox{
 				height: 90vh;
@@ -278,13 +278,13 @@
 				}
 			}
 		}
-		&.-single{
+		&.-single{// 下層ページ
 			position: relative;
 			.imgBox{
 				width: 100lvw;
 				height: 50vh;
 				max-height: 550px !important;
-				background: $main-color--gray;
+				background: $main-color--Lgray;
 				background-position: 50% 50%;
 				@include max(500){height: 25vh;}
 			}

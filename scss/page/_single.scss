@@ -4,7 +4,34 @@
 
 	// 共通
 	&--title{
-		time,span{
+		position: relative;
+		margin-bottom: 10%;
+		@include min(500){margin-bottom: 5%;}
+		&::after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			border-bottom: 4px dotted $site-color03;
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		time{
+			position: absolute;
+			bottom: -20px;
+			right: 0;
+			font-size: 1rem;
+			font-weight: bold;
+			letter-spacing: .1rem;
+			text-align: end;
+			@include min(500){
+				bottom: 10px;
+				letter-spacing: .2rem;
+			}
+		}
+		span{
 			font-size: clamp(1rem, 2vw, 2rem);
 			font-weight: bold;
 			letter-spacing: .2rem;
@@ -14,8 +41,6 @@
 			font-weight: bold;
 			letter-spacing: .2rem;
 			padding-bottom: 10px;
-			margin-bottom: 4%;
-			border-bottom: 4px dotted $site-color03;
 		}
 	}
 	&--category{// a
@@ -23,7 +48,7 @@
 		font-size: clamp(.8rem, 1.2vw, 1rem);
 		font-weight: bold;
 		white-space: nowrap;
-		padding: 3px 5px 2px;
+		padding: 3px 5px 4px;
 		margin-right: 5px;
 		background: $main-color--w;
 		border: 1px solid $site-color03;
@@ -39,7 +64,7 @@
 		width: 100%;
 		padding: 5% 5% 0;
 		margin: 0 auto 10%;
-		border: 2px solid $site-color03;
+		border: 1px solid $site-color03;
 		border-radius: 5px;
 		@include min(500){
 			max-width: 500px;
@@ -208,7 +233,7 @@
 			}
 			&--company{
 				padding: 5%;
-				border: 2px solid $site-color03;
+				border: 1px solid $site-color03;
 				border-radius: 5px;
 				@include min(500){
 					width: 75%;
@@ -244,7 +269,7 @@
 				}
 			}
 			&--post{
-				border: 2px solid $main-color--Dgray;
+				border: 1px solid $main-color--Dgray;
 			}
 		}
 	}
@@ -252,6 +277,16 @@
 	// お役立ち情報
 	&.-information{
 		.p-single{
+			&--title{
+				margin-bottom: 10%;
+				@include min(500){margin-bottom: 10%;}
+				time{
+					bottom: -20px;
+					@include min(500){
+						bottom: -25px;
+					}
+				}
+			}
 			&--detail{
 				margin-top: 10%;
 
@@ -376,7 +411,7 @@
 			}
 			&--company{
 				padding: 5%;
-				border: 2px solid $site-color03;
+				border: 1px solid $site-color03;
 				border-radius: 5px;
 				@include min(500){
 					width: 75%;
