@@ -160,10 +160,24 @@
 				will-change: transform;
 				transition: all .3s;
 				a{
+					position: relative;
 					display: inline-block;
 					margin: 0 auto;
-					padding: 1rem 1.5rem;
+					padding: 1rem 4.5rem 1rem 1.5rem;
 					text-align: center;
+					svg{
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 10%;
+						width:  25px;
+						height: 25px;
+						path,rect{
+							fill: $main-color--w;
+							will-change: transform;
+							transition: all .3;
+						}
+					}
 				}
 				&.-cv01{// cvボタン01
 					background: $site-color02;
@@ -172,6 +186,7 @@
 						background: $main-color--w;
 						a{
 							color: $site-color02 !important;
+							path,rect{fill: $site-color02;}
 						}
 					}
 				}
@@ -184,6 +199,7 @@
 							background: $main-color--w;
 							a{
 								color: $main-color--red !important;
+								path,rect{fill: $main-color--red;}
 							}
 						}
 					}

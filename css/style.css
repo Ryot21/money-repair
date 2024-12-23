@@ -3623,10 +3623,24 @@ button.swiper-pagination-bullet {
   transition: all 0.3s;
 }
 .c-navAreaBox .c-navlists .navItem.-cvBtn a {
+  position: relative;
   display: inline-block;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 4.5rem 1rem 1.5rem;
   text-align: center;
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn a svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+  width: 25px;
+  height: 25px;
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn a svg path, .c-navAreaBox .c-navlists .navItem.-cvBtn a svg rect {
+  fill: #ffffff;
+  will-change: transform;
+  transition: all 0.3;
 }
 .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv01 {
   background: rgb(25, 66, 153);
@@ -3637,6 +3651,9 @@ button.swiper-pagination-bullet {
 }
 .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv01:hover a {
   color: rgb(25, 66, 153) !important;
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn.-cv01:hover a path, .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv01:hover a rect {
+  fill: rgb(25, 66, 153);
 }
 @media (width >= 500px) {
   .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv02 {
@@ -3649,6 +3666,9 @@ button.swiper-pagination-bullet {
   }
   .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv02:hover a {
     color: #df2323 !important;
+  }
+  .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv02:hover a path, .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv02:hover a rect {
+    fill: #df2323;
   }
 }
 
