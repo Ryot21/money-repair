@@ -142,6 +142,13 @@
             }
         }
     }
+    // cvエリア
+    &.-cvArea{
+        .cvItem{
+            width: 100%;
+            @include min(500){width: 40%;}
+        }// li
+    }
     // footer関係
     &.-footer{
         .flexItem{

@@ -160,10 +160,10 @@ h1.b-text::after, h2.b-text::after, h3.b-text::after, h4.b-text::after, h5.b-tex
   content: "";
   position: absolute;
   bottom: -3px;
-  left: 48%;
+  left: 50%;
   transform: translateX(-50%);
   height: 10px;
-  width: 90%;
+  width: 95%;
   z-index: -1;
 }
 h1.b-text.-y::after, h2.b-text.-y::after, h3.b-text.-y::after, h4.b-text.-y::after, h5.b-text.-y::after, h6.b-text.-y::after, p.b-text.-y::after, a.b-text.-y::after, span.b-text.-y::after, label.b-text.-y::after, select.b-text.-y::after, button.b-text.-y::after, th.b-text.-y::after, td.b-text.-y::after {
@@ -4756,6 +4756,14 @@ button.swiper-pagination-bullet {
     background: #ff9245;
   }
 }
+.c-flex.-cvArea .cvItem {
+  width: 100%;
+}
+@media (width >= 500px) {
+  .c-flex.-cvArea .cvItem {
+    width: 40%;
+  }
+}
 @media (500px >= width) {
   .c-flex.-footer .flexItem.-logoArea, .c-flex.-footer .flexItem.-snsArea {
     display: contents;
@@ -5249,32 +5257,28 @@ a {
   transition-duration: 0.2s;
 }
 .c-link.-btn {
-  width: auto;
+  display: inline-block;
+  width: auto !important;
+  height: auto !important;
   text-align: center;
   color: #ffffff !important;
   font-family: gothic-font01;
   background: rgb(110, 133, 166);
   border: 1px solid rgb(110, 133, 166);
-  padding: 8px 15px;
+  padding: 10px 20px;
   border-radius: 30px;
   overflow: hidden;
   will-change: transform;
   transition: all 0.3s;
 }
-@media (width >= 500px) {
-  .c-link.-btn {
-    padding: 8px 15px;
-  }
-}
 .c-link.-btn:hover {
   color: rgb(110, 133, 166) !important;
   background: #ffffff;
-  border: 1px solid rgb(110, 133, 166);
-  padding: 8px 20px;
-  transform: scale(1.025);
+  padding: 10px 30px;
 }
 .c-link.-btn.-center {
   margin: 0 auto;
+  line-height: 1.5;
 }
 .c-link.-btn.-c-red {
   background: #df2323;
@@ -5283,6 +5287,40 @@ a {
 .c-link.-btn.-c-red:hover {
   color: #df2323 !important;
   background: #ffffff;
+}
+.c-link.-btn.-c-blue {
+  background: rgb(25, 66, 153);
+  border: 1px solid rgb(25, 66, 153);
+}
+.c-link.-btn.-c-blue:hover {
+  color: rgb(25, 66, 153) !important;
+  background: #ffffff;
+}
+.c-link.-btn.-icon {
+  position: relative;
+}
+.c-link.-btn.-icon.-dl {
+  padding: 10px 30px 10px 20px;
+}
+.c-link.-btn.-icon.-dl::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background: url(../images/SVG/note.svg);
+  background-repeat: no-repeat;
+  will-change: transform;
+  transition: all 0.3s;
+}
+.c-link.-btn.-icon.-dl:hover {
+  padding: 10px 35px 10px 25px;
+}
+.c-link.-btn.-icon.-dl:hover::after {
+  right: 7%;
 }
 .c-link.-header {
   display: block;

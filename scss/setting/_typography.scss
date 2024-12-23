@@ -61,10 +61,10 @@ h1,h2,h3,h4,h5,h6,p,a,span,label,select,button,th,td{
             content: "";
             position: absolute;
             bottom: -3px;
-            left: 48%;
+            left: 50%;
             transform: translateX(-50%);
             height: 10px;
-            width: 90%;
+            width: 95%;
             z-index: -1;
         }
         &.-y{&::after{background: $main-color--yellow;}}

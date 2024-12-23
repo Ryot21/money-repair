@@ -40,29 +40,28 @@
 		}
 	}
 	&.-btn{
-		width: auto;
+		display: inline-block;
+		width : auto !important;
+		height: auto !important;
 		text-align: center;
-		color: $main-color--w !important;
+		color : $main-color--w !important;
 		font-family: $f-gothic01;
 		background: $site-color03;
 		border: 1px solid $site-color03;
-		padding: 8px 15px;
+		padding: 10px 20px;
 		border-radius: 30px;
 		overflow: hidden;
 		will-change: transform;
 		transition: all .3s;
-		@include min(500){
-			padding: 8px 15px;
-		}
+
 		&:hover{
 			color: $site-color03 !important;
 			background: $main-color--w;
-			border: 1px solid $site-color03;
-			padding: 8px 20px;
-			transform: scale(1.025);
+			padding: 10px 30px;
 		}
 		&.-center{
 			margin: 0 auto;
+			line-height: 1.5;
 		}
 		&.-c-red{
 			background: $main-color--red;
@@ -70,6 +69,43 @@
 			&:hover{
 				color: $main-color--red !important;
 				background: $main-color--w;
+			}
+		}
+		&.-c-blue{
+			background: $site-color02;
+			border: 1px solid $site-color02;
+			&:hover{
+				color: $site-color02 !important;
+				background: $main-color--w;
+			}
+		}
+
+		// アイコンあり
+		&.-icon{
+			position: relative;
+			&.-dl{
+				padding: 10px 30px 10px 20px;
+				&::after{
+					content: "";
+					display: block;
+					position: absolute;
+					top: 50%;
+					right: 5%;
+					transform: translateY(-50%);
+
+					width: 22px;
+					height: 22px;
+					background: url(../images/SVG/note.svg);
+					background-repeat: no-repeat;
+					will-change: transform;
+					transition: all .3s;
+				}
+				&:hover{
+					padding: 10px 35px 10px 25px;
+					&::after{
+						right: 7%;
+					}
+				}
 			}
 		}
 	}
@@ -117,8 +153,7 @@
 		}
 	}
 
-	// お悩み
-	&.-check{
+	&.-check{// お悩み
 		position: relative;
 		display: inline-block;
 		margin-left: 25px;
@@ -160,8 +195,7 @@
 			}
 		}
 	}
-	// 目次
-	&.-mokuji{
+	&.-mokuji{// 目次
 		transition: all .3s;
 		&:hover{
 			color: $site-color03;
