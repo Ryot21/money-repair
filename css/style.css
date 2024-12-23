@@ -4308,8 +4308,8 @@ button.swiper-pagination-bullet {
 }
 .c-contents.-fv.-single .imgBox {
   width: 100lvw;
-  height: 50vh;
-  max-height: 550px !important;
+  height: 25vh;
+  max-height: 300px !important;
   background: #f8f7f7;
   background-position: 50% 50%;
 }

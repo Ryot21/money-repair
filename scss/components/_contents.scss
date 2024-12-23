@@ -282,8 +282,8 @@
 			position: relative;
 			.imgBox{
 				width: 100lvw;
-				height: 50vh;
-				max-height: 550px !important;
+				height: 25vh;
+				max-height: 300px !important;
 				background: $main-color--Lgray;
 				background-position: 50% 50%;
 				@include max(500){height: 25vh;}
