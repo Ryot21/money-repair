@@ -41,50 +41,65 @@
     <!-- Header -->
     <header id="js-header" class="c-header -fixed">
         <div class="c-header-wrapper">
-            <ul class="c-flex -header -jc-sb -h-cen">
-                <li class="flexItem -logoArea">
+            <ul class="c-header-lists -jc-sb -h-cen">
+                <!-- Header > ロゴ -->
+                <li class="headerItem flexItem -logoArea">
                     <div class="logo">
                         <a class="c-link -img" href="https://money-repair.jp"><img src="images/logo/mp/money-repair-logo_black.svg" alt="福利厚生で金融教育するならマネーリペア"></a>
                     </div>
                 </li>
-                <li class="flexItem -navArea tb-pc">
+                <!-- Header > ナビゲーション -->
+                <li class="headerItem flexItem -navArea tb-pc">
                     <div class="c-navAreaBox">
-                        <ul class="c-flex -nav-contact -jc-sb -h-cen">
-                            <li class="flexItem -pageLink">
+                        <ul class="c-navlists">
+                            <!-- サイト内リンク -->
+                            <li class="navItem -pageLink">
                                 <nav class="c-hnav">
-                                    <ul class="c-flex -jc-sb -h-cen">
-                                        <li class="navItem "><a class="c-hnav--link s-M -b -ls-3 -ws-n" href="service.html">特徴</a></li>
-                                        <li class="navItem archiveItem">
+                                    <ul class="c-hnav-lists">
+                                        <!-- 特徴 -->
+                                        <li class="hnavItem">
+                                            <a class="c-hnav--link s-M -b -ls-3 -ws-n" href="service.html">特徴</a>
+                                        </li>
+                                        <!-- ご利用者の声 -->
+                                        <li class="hnavItem archiveItem">
                                             <a class="c-hnav--link -archive s-M -b -ls-3 -ws-n" href="archive-interview.html">ご利用者の声</a>
+                                            <!-- ドロップダウンメニュー -->
                                             <div class="c-hnav--dropdown">
-                                                <ul class="archive-lists">
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
+                                                <ul class="c-hnav--archiveLists">
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li class="navItem archiveItem">
+                                        <!-- お役立ち情報 -->
+                                        <li class="hnavItem archiveItem">
                                             <a class="c-hnav--link -archive s-M -b -ls-3 -ws-n" href="archive-information.html">お役立ち情報</a>
+                                            <!-- ドロップダウンメニュー -->
                                             <div class="c-hnav--dropdown">
-                                                <ul class="archive-lists">
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
-                                                    <li class="archive-list "><a href="" class="c-link s-SS -b">#カテゴリー01</a></li>
+                                                <ul class="c-hnav--archiveLists">
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
+                                                    <li class="archiveItem"><a href="" class="c-link s-S -b">#カテゴリー01</a></li>
                                                 </ul>
                                             </div>
                                         </li>
                                     </ul>
                                 </nav>
                             </li>
-                            <li class="flexItem -contact">
-                                <a class="c-hnav--contact" href="contact.html"><span class="s-M -s14 -b -white -ls-3 -ws-n">資料請求</span></a>
+                            <!-- 資料請求 -->
+                            <li class="navItem -cvBtn -cv01">
+                                <a class="s-M -s14 -b -white -ls-3 -ws-n" href="contact.html">資料請求</a>
+                            </li>
+                            <!-- お問い合わせ -->
+                            <li class="navItem -cvBtn -cv02">
+                                <a class="s-M -s14 -b -white -ls-3 -ws-n" href="contact.html">お問い合わせ</a>
                             </li>
                         </ul>
                     </div>
@@ -101,10 +116,14 @@
         </label>
         <label class="c-hb-nav__cheakbox c-hb-nav__close" for="c-hb-nav__checkbox"></label>
         <div class="c-hb-nav__content">
-            <ul class="">
-                <li class="navItem "><a class="-active" href="/"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">TOP</span></a></li>
-                <li class="navItem "><a class="" href="service.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">マネーリペアの特徴</span></a></li>
-                <li class="navItem c-borderBtm -dotted ">
+            <ul class="c-hb-nav__lists">
+                <li class="hbNavItem ">
+                    <a class="-active" href="/"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">TOP</span></a>
+                </li>
+                <li class="hbNavItem ">
+                    <a class="" href="service.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">マネーリペアの特徴</span></a>
+                </li>
+                <li class="hbNavItem c-borderBtm -dotted ">
                     <a class="mgb5 mgb5s" href="archive-interview.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">ご利用者の声</span></a>
                     <ul class="c-flex -col2 -jc-end">
                         <li class="flexItem mgb5 mgb5s"><a class="s-M -s14 -b -white -center" href="">カテゴリー01</a></li>
@@ -115,7 +134,7 @@
                         <li class="flexItem mgb5 mgb5s"><a class="s-M -s14 -b -white -center" href="">カテゴリー01</a></li>
                     </ul>
                 </li>
-                <li class="navItem c-borderBtm -dotted ">
+                <li class="hbNavItem c-borderBtm -dotted ">
                     <a class="mgb5 mgb5s" href="archive-information.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">お役立ち情報</span></a>
                     <ul class="c-flex -col2 -jc-end">
                         <li class="flexItem mgb5 mgb5s"><a class="s-M -s14 -b -white -center" href="">カテゴリー01</a></li>
@@ -126,7 +145,16 @@
                         <li class="flexItem mgb5 mgb5s"><a class="s-M -s14 -b -white -center" href="">カテゴリー01</a></li>
                     </ul>
                 </li>
-                <li class="navItem "><a class="" href="contact.html"><span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">資料請求</span></a></li>
+                <li class="hbNavItem ">
+                    <a class="" href="contact.html">
+                        <span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">資料請求</span>
+                    </a>
+                </li>
+                <li class="hbNavItem ">
+                    <a class="" href="contact.html">
+                        <span class="s-ML -s20 -b -white -ls-2 pdr5 pdr4s">お問い合わせ</span>
+                    </a>
+                </li>
 
             </ul>
         </div>
@@ -446,12 +474,12 @@
                 <div class="c-contents--btnArea w80 w100s">
                     <ul class="c-flex -cvArea -jc-cen">
                         <li class="cvItem mgb10s">
-                            <p class="s-S -s14 -blur-b03 -f-gothic01 -center -ls-2 mgb4 mgb5s"><span class="-f-gothic01 -b">お役立ち資料</span>はこちら</p>
-                            <a class="c-link -btn -c-blue -center s-M -s16 -b -ls-2" href="">資料ダウンロード</a>
+                            <p class="s-S -s14 -blur-b03 -f-gothic01 -center -ls-2 mgb4 mgb3s"><span class="-f-gothic01 -b">お役立ち資料</span>はこちら</p>
+                            <a class="c-link -btn -c-blue -center s-M -s16 -b -ls-2 -ws-n" href="">資料ダウンロード</a>
                         </li>
                         <li class="cvItem">
-                            <p class="s-S -s14 -blur-b03 -f-gothic01 -center -ls-2 mgb4 mgb5s">ご不明な点は<br class="sp"><span class="-f-gothic01 -b">お気軽にお問い合わせ下さい。</span></p>
-                            <a class="c-link -btn -c-red -center s-M -s16 -b -ls-2" href="">お問い合わせをする</a>
+                            <p class="s-S -s14 -blur-b03 -f-gothic01 -center -ls-2 mgb4 mgb3s"><span class="-f-gothic01 -b">お気軽にお問い合わせ下さい。</span></p>
+                            <a class="c-link -btn -c-red -center s-M -s16 -b -ls-2 -ws-n" href="">お問い合わせをする</a>
                         </li>
                     </ul>
                 </div>

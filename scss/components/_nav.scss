@@ -1,79 +1,87 @@
 // ナビゲーション（nav）
 
-// ヘッダーナビゲーション
+// ヘッダー > ナビゲーション
 .c-hnav{
-	padding: 0 0 0 8%;
-	// ナビゲーション関係
-	.navItem{
-		width: auto;
-		margin: 0 5px;
-		&.archiveItem{
-			position: relative;
-			&:hover{
-				.c-hnav--dropdown{
-					transform: translateY(0);
-					pointer-events: auto;
-					opacity: 1;
-
-				}
-			}
-		}
-		.c-hnav--dropdown{
-			position: absolute;
-			top: 105%;
-
+	// ヘッダー > ナビゲーション関係
+	&-lists{// ul
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		.hnavItem{
 			width: auto;
-			height: auto;
-			background: $main-color--w;
-			border: 1px solid $main-color--b;
-
-			padding: 15px 20px 10px 19px;
-			border-radius: 5px;
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-
-			pointer-events: none;
-			will-change: transform;
-			opacity: 0;
-			transform: translateY(-10px);
-			transition: opacity 0.3s ease, transform 0.3s ease;
-
-
-			.archive-lists{ // ul
-
-				.archive-list{ // li
-					margin-bottom: 10px;
-					a{
-						position: relative;
-						display: block;
-						&::before{
-							content: "";
-							width: 0;
-							height: 1px;
-							background: $main-color--w;
-							border-radius: 5px;
-				
-							position: absolute;
-							bottom: -2px;
-							left: 50%;
-							transform: translateX(-50%);
-							opacity: 0;
-							will-change: transform;
-							transition: all .5s;
-						}
-						&:hover{
-							color: $site-color03;
-							&::before{
-								width: 90%;
-								background: $site-color03;
-								opacity: 1;
-							}
-						}
+			a{
+				display: inline-block;
+				white-space: nowrap;
+			}
+			&.archiveItem{
+				position: relative;
+				&:hover{
+					.c-hnav--dropdown{
+						transform: translateY(0);
+						pointer-events: auto;
+						opacity: 1;
+	
 					}
 				}
 			}
 		}
+	}
+	// ドロップダウンメニュー
+	&--dropdown{
+		position: absolute;
+		top: 105%;
+
+		width: auto;
+		height: auto;
+		background: $main-color--w;
+		border: 1px solid $main-color--b;
+
+		padding: 15px 20px 10px 19px;
+		border-radius: 5px;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+		pointer-events: none;
+		will-change: transform;
+		opacity: 0;
+		transform: translateY(-10px);
+		transition: opacity 0.3s ease, transform 0.3s ease;
 
 	}
+	// ドロップダウンリスト > 一覧ページ
+	&--archiveLists{// ul
+		.archiveItem{ // li
+			margin-bottom: 10px;
+			a{
+				position: relative;
+				display: block;
+				&::before{
+					content: "";
+					width: 0;
+					height: 1px;
+					background: $main-color--w;
+					border-radius: 5px;
+		
+					position: absolute;
+					bottom: -2px;
+					left: 50%;
+					transform: translateX(-50%);
+					opacity: 0;
+					will-change: transform;
+					transition: all .5s;
+				}
+				&:hover{
+					color: $site-color03;
+					&::before{
+						width: 90%;
+						background: $site-color03;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	// aタグ
 	&--link{
 		position: relative;
 		&::before{
@@ -93,15 +101,15 @@
 		}
 		&:hover,
 		&.-active{
-			color: $main-color--yellow;
+			color: $site-color03;
 			&::before{
 				width: 90%;
-				background: $main-color--yellow;
+				background: $site-color03;
 				opacity: 1;
 			}
 		}
 		&.-archive{
-			padding-right: 15px;
+			padding: 8px 20px 8px 0;
 			&::before{display: none;}
 			&::after{
 				content: "";
@@ -119,33 +127,70 @@
 			&:hover,
 			&.-active{
 				&::after{
-					background: $main-color--yellow;
+					background: $site-color03;
 				}
 			}
-		}
-	}
-	&--contact{
-		position: relative;
-		display: block;
-		width: auto;
-		height: 100%;
-		span{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
 		}
 	}
 }
 .c-navAreaBox{
 	width: 100%;
 	height: 50px;
-	// background: #fefefe;
-	// border: 1px solid $main-color--Dgray;
-	border-radius: 15px;
+	// border-radius: 15px;
 	will-change: transform;
 	transition: all .5s;
 	overflow: visible;
+
+	.c-navlists{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: end;
+
+        .navItem{
+            &.-pageLink{// ページ内リンク
+				@include min(500) {width: 49%;}
+				@include min(1000){
+					max-width: 360px;
+				}
+            }
+			&.-cvBtn{// cvボタン
+				width: auto;
+				border-radius: 30px;
+				margin-left: 20px;
+				will-change: transform;
+				transition: all .3s;
+				a{
+					display: inline-block;
+					margin: 0 auto;
+					padding: 1rem 1.5rem;
+					text-align: center;
+				}
+				&.-cv01{// cvボタン01
+					background: $site-color02;
+					border: 1px solid $site-color02;
+					&:hover{
+						background: $main-color--w;
+						a{
+							color: $site-color02 !important;
+						}
+					}
+				}
+				&.-cv02{// cvボタン02
+					@include min(500){
+						background: $main-color--red;
+						border: 1px solid $main-color--red;
+						margin-left: 2%;
+						&:hover{
+							background: $main-color--w;
+							a{
+								color: $main-color--red !important;
+							}
+						}
+					}
+				}
+			}
+        }
+	}
 }
 
 // ハンバーガーメニュー
@@ -169,7 +214,7 @@
 		&:checked ~ .c-hb-nav__content{
 			transform: translateX(0%);
 			box-shadow: -5px 0px 11px rgba(0, 0, 0, 0.15);
-			.navItem{
+			.hbNavItem{
 				animation-name:fadeRightAnime;
 				animation-fill-mode: forwards;
 		
@@ -187,6 +232,14 @@
 				&:nth-child(4){
 					animation-duration:0.5s;
 					animation-delay:.3s;
+				}
+				&:nth-child(5){
+					animation-duration:0.5s;
+					animation-delay:.4s;
+				}
+				&:nth-child(6){
+					animation-duration:0.5s;
+					animation-delay:.5s;
 				}
 			}
 		}
@@ -266,26 +319,6 @@
 				filter: drop-shadow(0px 0px 2px $main-color--w);
 			}
 		}
-
-		// &.is-active {
-			// span {
-			// 	padding-top: 5px;
-			// 	&::before {
-			// 		top: 2.5px;
-			// 		left: 42%;
-			// 		width: 25px;
-			// 		height: 3px;
-			// 		transform: rotate(43deg) translate(-50%, -50%);
-			// 	}
-			// 	&::after  {
-			// 		top: -15px;
-			// 		left: 43%;
-			// 		width: 25px;
-			// 		height: 3px;
-			// 		transform: rotate(-43deg) translate(-50%, -50%);
-			// 	}
-			// }
-		// }
 	}
 	&__close {
 		display: block;
@@ -318,7 +351,6 @@
 		transition: 0.2s ease-in-out;
 		transform: translateX(100%);
 		z-index: 9998;
-
 		&::before{
 			content: "© 2016-2024 株式会社インプレーム All rights reserved.";
 			position: absolute;
@@ -329,7 +361,9 @@
 			font-weight: bold;
 			transform:rotate(270deg);
 		}
-		.navItem{
+	}
+	&__lists{
+		.hbNavItem{
 			margin-bottom: 16.5px;
 			will-change: transform;
 			transition: .5s all;

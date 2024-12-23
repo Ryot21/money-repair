@@ -57,10 +57,12 @@
             }
 
             .c-navAreaBox{
-                animation: sc-headerNav-gap linear both;
-                animation-range: contain 30% contain 35%;
-                animation-timeline: view();
-                will-change: transform;
+                // .-pageLink{
+                //     animation: sc-headerNav-gap linear both;
+                //     animation-range: contain 30% contain 35%;
+                //     animation-timeline: view();
+                //     will-change: transform;
+                // }
                 .-contact{
                     animation: sc-headerNavContact-gap linear both;
                     animation-range: contain 30% contain 35%;

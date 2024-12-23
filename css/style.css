@@ -3390,6 +3390,44 @@ button.swiper-pagination-bullet {
     max-width: 1380px;
   }
 }
+.c-header-lists {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.c-header-lists .headerItem.-logoArea {
+  width: 100%;
+}
+@media (500px >= width) {
+  .c-header-lists .headerItem.-logoArea {
+    margin-left: 10%;
+  }
+}
+@media (width >= 400px) {
+  .c-header-lists .headerItem.-logoArea {
+    width: 90%;
+  }
+}
+@media (width >= 500px) {
+  .c-header-lists .headerItem.-logoArea {
+    width: 20%;
+  }
+}
+@media (width >= 1200px) {
+  .c-header-lists .headerItem.-logoArea {
+    max-width: 180px;
+  }
+}
+@media (width >= 500px) {
+  .c-header-lists .headerItem.-navArea {
+    width: 80%;
+  }
+}
+@media (width >= 1200px) {
+  .c-header-lists .headerItem.-navArea {
+    width: 75%;
+  }
+}
 
 .c-footer {
   width: 100vw;
@@ -3440,22 +3478,28 @@ button.swiper-pagination-bullet {
   background: #F6F6F6;
 }
 
-.c-hnav {
-  padding: 0 0 0 8%;
+.c-hnav-lists {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-.c-hnav .navItem {
+.c-hnav-lists .hnavItem {
   width: auto;
-  margin: 0 5px;
 }
-.c-hnav .navItem.archiveItem {
+.c-hnav-lists .hnavItem a {
+  display: inline-block;
+  white-space: nowrap;
+}
+.c-hnav-lists .hnavItem.archiveItem {
   position: relative;
 }
-.c-hnav .navItem.archiveItem:hover .c-hnav--dropdown {
+.c-hnav-lists .hnavItem.archiveItem:hover .c-hnav--dropdown {
   transform: translateY(0);
   pointer-events: auto;
   opacity: 1;
 }
-.c-hnav .navItem .c-hnav--dropdown {
+.c-hnav--dropdown {
   position: absolute;
   top: 105%;
   width: auto;
@@ -3471,14 +3515,14 @@ button.swiper-pagination-bullet {
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list {
+.c-hnav--archiveLists .archiveItem {
   margin-bottom: 10px;
 }
-.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a {
+.c-hnav--archiveLists .archiveItem a {
   position: relative;
   display: block;
 }
-.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a::before {
+.c-hnav--archiveLists .archiveItem a::before {
   content: "";
   width: 0;
   height: 1px;
@@ -3492,10 +3536,10 @@ button.swiper-pagination-bullet {
   will-change: transform;
   transition: all 0.5s;
 }
-.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a:hover {
+.c-hnav--archiveLists .archiveItem a:hover {
   color: rgb(110, 133, 166);
 }
-.c-hnav .navItem .c-hnav--dropdown .archive-lists .archive-list a:hover::before {
+.c-hnav--archiveLists .archiveItem a:hover::before {
   width: 90%;
   background: rgb(110, 133, 166);
   opacity: 1;
@@ -3518,15 +3562,15 @@ button.swiper-pagination-bullet {
   transition: all 0.5s;
 }
 .c-hnav--link:hover, .c-hnav--link.-active {
-  color: #FFDA2A;
+  color: rgb(110, 133, 166);
 }
 .c-hnav--link:hover::before, .c-hnav--link.-active::before {
   width: 90%;
-  background: #FFDA2A;
+  background: rgb(110, 133, 166);
   opacity: 1;
 }
 .c-hnav--link.-archive {
-  padding-right: 15px;
+  padding: 8px 20px 8px 0;
 }
 .c-hnav--link.-archive::before {
   display: none;
@@ -3546,28 +3590,66 @@ button.swiper-pagination-bullet {
   transition: all 0.5s;
 }
 .c-hnav--link.-archive:hover::after, .c-hnav--link.-archive.-active::after {
-  background: #FFDA2A;
-}
-.c-hnav--contact {
-  position: relative;
-  display: block;
-  width: auto;
-  height: 100%;
-}
-.c-hnav--contact span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: rgb(110, 133, 166);
 }
 
 .c-navAreaBox {
   width: 100%;
   height: 50px;
-  border-radius: 15px;
   will-change: transform;
   transition: all 0.5s;
   overflow: visible;
+}
+.c-navAreaBox .c-navlists {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: end;
+}
+@media (width >= 500px) {
+  .c-navAreaBox .c-navlists .navItem.-pageLink {
+    width: 49%;
+  }
+}
+@media (width >= 1000px) {
+  .c-navAreaBox .c-navlists .navItem.-pageLink {
+    max-width: 360px;
+  }
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn {
+  width: auto;
+  border-radius: 30px;
+  margin-left: 20px;
+  will-change: transform;
+  transition: all 0.3s;
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn a {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn.-cv01 {
+  background: rgb(25, 66, 153);
+  border: 1px solid rgb(25, 66, 153);
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn.-cv01:hover {
+  background: #ffffff;
+}
+.c-navAreaBox .c-navlists .navItem.-cvBtn.-cv01:hover a {
+  color: rgb(25, 66, 153) !important;
+}
+@media (width >= 500px) {
+  .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv02 {
+    background: #df2323;
+    border: 1px solid #df2323;
+    margin-left: 2%;
+  }
+  .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv02:hover {
+    background: #ffffff;
+  }
+  .c-navAreaBox .c-navlists .navItem.-cvBtn.-cv02:hover a {
+    color: #df2323 !important;
+  }
 }
 
 .c-hb-nav {
@@ -3593,24 +3675,32 @@ button.swiper-pagination-bullet {
   transform: translateX(0%);
   box-shadow: -5px 0px 11px rgba(0, 0, 0, 0.15);
 }
-.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .navItem {
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .hbNavItem {
   animation-name: fadeRightAnime;
   animation-fill-mode: forwards;
 }
-.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .navItem:nth-child(1) {
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .hbNavItem:nth-child(1) {
   animation-duration: 0.5s;
 }
-.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .navItem:nth-child(2) {
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .hbNavItem:nth-child(2) {
   animation-duration: 0.5s;
   animation-delay: 0.1s;
 }
-.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .navItem:nth-child(3) {
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .hbNavItem:nth-child(3) {
   animation-duration: 0.5s;
   animation-delay: 0.2s;
 }
-.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .navItem:nth-child(4) {
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .hbNavItem:nth-child(4) {
   animation-duration: 0.5s;
   animation-delay: 0.3s;
+}
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .hbNavItem:nth-child(5) {
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+}
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__content .hbNavItem:nth-child(6) {
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
 }
 .c-hb-nav__cheakbox:checked ~ .c-hb-nav__button span {
   padding-top: 5px;
@@ -3732,21 +3822,21 @@ button.swiper-pagination-bullet {
   font-weight: bold;
   transform: rotate(270deg);
 }
-.c-hb-nav__content .navItem {
+.c-hb-nav__lists .hbNavItem {
   margin-bottom: 16.5px;
   will-change: transform;
   transition: 0.5s all;
   opacity: 0;
 }
-.c-hb-nav__content .navItem a, .c-hb-nav__content .navItem label {
+.c-hb-nav__lists .hbNavItem a, .c-hb-nav__lists .hbNavItem label {
   display: block;
   position: relative;
   transition: 0.5s all;
 }
-.c-hb-nav__content .navItem a span, .c-hb-nav__content .navItem label span {
+.c-hb-nav__lists .hbNavItem a span, .c-hb-nav__lists .hbNavItem label span {
   transition: 0.5s all;
 }
-.c-hb-nav__content .navItem a.-active span, .c-hb-nav__content .navItem label.-active span {
+.c-hb-nav__lists .hbNavItem a.-active span, .c-hb-nav__lists .hbNavItem label.-active span {
   color: #FFDA2A !important;
   font-weight: bold;
 }
@@ -4701,40 +4791,6 @@ button.swiper-pagination-bullet {
 }
 .c-flex.-col5 .flexItem {
   width: calc(20% - 10px);
-}
-.c-flex.-header .flexItem.-logoArea {
-  width: 100%;
-}
-@media (500px >= width) {
-  .c-flex.-header .flexItem.-logoArea {
-    margin-left: 10%;
-  }
-}
-@media (width >= 400px) {
-  .c-flex.-header .flexItem.-logoArea {
-    width: 90%;
-  }
-}
-@media (width >= 500px) {
-  .c-flex.-header .flexItem.-logoArea {
-    width: 30%;
-  }
-}
-@media (width >= 768px) {
-  .c-flex.-header .flexItem.-logoArea {
-    width: 20%;
-    max-width: 180px;
-  }
-}
-@media (width >= 500px) {
-  .c-flex.-header .flexItem.-navArea {
-    width: 69%;
-  }
-}
-@media (width >= 768px) {
-  .c-flex.-header .flexItem.-navArea {
-    max-width: 550px;
-  }
 }
 .c-flex.-nav-contact {
   height: 100%;
@@ -9416,12 +9472,6 @@ body main {
     animation-timeline: scroll();
     will-change: transform;
   }
-}
-.is-scroll .c-header-wrapper .c-navAreaBox {
-  animation: sc-headerNav-gap linear both;
-  animation-range: contain 30% contain 35%;
-  animation-timeline: view();
-  will-change: transform;
 }
 .is-scroll .c-header-wrapper .c-navAreaBox .-contact {
   animation: sc-headerNavContact-gap linear both;
