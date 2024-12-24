@@ -12,7 +12,7 @@
         top: -20%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: clamp(1.2rem, 2vw, 1.6rem);
+        font-size: 1rem;
         letter-spacing: .3rem;
     }
     // コンテンツタイトル > ボーダーライン
@@ -89,7 +89,7 @@
         left: 50%;
         transform: translateX(-50%);
         color: $site-color03;
-        font-size: clamp(1rem, 1.5vw, 1.6rem);
+        font-size: 1rem;
         letter-spacing: .3rem;
         white-space: nowrap;
         @include min(500){

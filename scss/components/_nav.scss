@@ -216,7 +216,7 @@
     left: 85%;
 	width:  50px;
 	height: 50px;
-	background: $site-color03;
+	// background: $site-color03;
 	border-radius: 50%;
 	z-index: 9999;
 	&__cheakbox{
@@ -261,7 +261,15 @@
 		}
 		&:checked ~ .c-hb-nav__button{
 			span {
+				color: $main-color--w !important;
+				text-shadow: none;
 				padding-top: 5px;
+				&::before,
+				&::after{
+					background: $main-color--w !important;
+					box-shadow: none;
+				}
+
 				&::before {
 					top: 2.5px;
 					left: 42%;
@@ -293,6 +301,8 @@
 			position: relative;
 			top: 59%;
 			display: block;
+			color: $site-color03 !important;
+			text-shadow: 1px 1px 1px $main-color--w;
 			width: 100%;
 			padding-top: 1px;
 			transition: all .1s;
@@ -305,7 +315,9 @@
 				height: 2px;
 				width: 50px;
 				border-radius: 3px;
-				background: $main-color--w;
+				// background: $main-color--w;
+				background: $site-color03;
+				box-shadow: 1px 1px 1px $main-color--w;
 				cursor: pointer;
 				will-change: transform;
 				transition: all .1s;

@@ -3678,7 +3678,6 @@ button.swiper-pagination-bullet {
   left: 85%;
   width: 50px;
   height: 50px;
-  background: rgb(110, 133, 166);
   border-radius: 50%;
   z-index: 9999;
 }
@@ -3723,7 +3722,13 @@ button.swiper-pagination-bullet {
   animation-delay: 0.5s;
 }
 .c-hb-nav__cheakbox:checked ~ .c-hb-nav__button span {
+  color: #ffffff !important;
+  text-shadow: none;
   padding-top: 5px;
+}
+.c-hb-nav__cheakbox:checked ~ .c-hb-nav__button span::before, .c-hb-nav__cheakbox:checked ~ .c-hb-nav__button span::after {
+  background: #ffffff !important;
+  box-shadow: none;
 }
 .c-hb-nav__cheakbox:checked ~ .c-hb-nav__button span::before {
   top: 2.5px;
@@ -3757,6 +3762,8 @@ button.swiper-pagination-bullet {
   position: relative;
   top: 59%;
   display: block;
+  color: rgb(110, 133, 166) !important;
+  text-shadow: 1px 1px 1px #ffffff;
   width: 100%;
   padding-top: 1px;
   transition: all 0.1s;
@@ -3768,7 +3775,8 @@ button.swiper-pagination-bullet {
   height: 2px;
   width: 50px;
   border-radius: 3px;
-  background: #ffffff;
+  background: rgb(110, 133, 166);
+  box-shadow: 1px 1px 1px #ffffff;
   cursor: pointer;
   will-change: transform;
   transition: all 0.1s;
@@ -4431,7 +4439,7 @@ button.swiper-pagination-bullet {
   top: -20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: 1rem;
   letter-spacing: 0.3rem;
 }
 .c-contents--title.-b-btm::after {
@@ -4535,7 +4543,7 @@ button.swiper-pagination-bullet {
   left: 50%;
   transform: translateX(-50%);
   color: rgb(110, 133, 166);
-  font-size: clamp(1rem, 1.5vw, 1.6rem);
+  font-size: 1rem;
   letter-spacing: 0.3rem;
   white-space: nowrap;
 }
