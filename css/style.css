@@ -8138,13 +8138,13 @@ table {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3% 3% 3% 6%;
+  padding: 3% 3% 4% 6%;
   transition: all 0.3s;
 }
 @media (width >= 500px) {
   .c-card.-t03 .c-card-lists {
     align-items: flex-start;
-    padding: 10px 5px 5px 10px;
+    padding: 10px 5px 15px 10px;
   }
 }
 .c-card.-t03 .c-card-lists.-h2-lists .c-card-item, .c-card.-t03 .c-card-lists.-h3-lists .c-card-item, .c-card.-t03 .c-card-lists.-h4-lists .c-card-item, .c-card.-t03 .c-card-lists.-h5-lists .c-card-item, .c-card.-t03 .c-card-lists.-h6-lists .c-card-item {
