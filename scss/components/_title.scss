@@ -50,6 +50,7 @@
     &.-interview{&::before{content: "User Interview"; white-space: nowrap;}}// インタビュー
     &.-news     {&::before{content: "Information"; white-space: nowrap;}}   //お役立ち情報
     &.-contact  {&::before{content: "Contact"; white-space: nowrap;}}       //お役立ち情報
+    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}       //お役立ち情報
     &.-point    {&::before{content: "POINT"; white-space: nowrap;}}         //お役立ち情報
 
     // 画像
@@ -61,6 +62,9 @@
             min-width: 160px;
             max-width: 220px;
         }
+    }
+    span{
+        font-size: clamp(1.2rem, 1.5vw, 1.6rem);
     }
 }
 
@@ -97,6 +101,8 @@
     &.-interview  {&::before{content: "USER INTERVIEW";}}
     &.-information{&::before{content: "INFORMATION";}}
     &.-contact    {&::before{content: "CONTACT";}}
+    &.-contact02{&::before{content: "Request For Information"; white-space: nowrap;}}       //お役立ち情報
+
 }
 
 // サービスページ > サービス内容内のタイトル

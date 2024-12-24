@@ -1,7 +1,14 @@
 // 一覧ページ
 
 .p-archive{
-
+	background-size: 50px 15px;
+	// 背景（線状 > 斜め）
+	background-image: linear-gradient(
+		-45deg,
+		$site-color01,$site-color01 45%,
+		white 45.5%, white 54.5%,
+		$site-color01 55.5%, $site-color01
+	);
 
 
 }

@@ -3,7 +3,9 @@
 	max-width: 1000px;
 	margin: auto;
 	padding: 10px 0;
-	background: $main-color--w;
+	// background: $main-color--w;
+	// border: 1px solid $site-color03;
+	// border-radius: 30px;
 	
 	@include min(768){width: 80%;}
 	&__lists{// ul

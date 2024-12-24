@@ -26,10 +26,11 @@
 
 		
 		&.-card{
-			padding: 10% 2.5%;
-			border-radius: 5px;
+			padding: 15% 2.5% 10%;
+			border-radius: 10px;
+			box-shadow: 0px 0px 5px #8080802b;
 			@include min(768){
-				padding: 5% 2.5%;
+				padding: 7% 2.5% 5%;
 			}
 		}
 	
@@ -286,7 +287,7 @@
 				max-height: 300px !important;
 				background: $main-color--Lgray;
 				background-position: 50% 50%;
-				@include max(500){height: 25vh;}
+				@include max(500){height: 20vh;}
 			}
 		}
 	}
